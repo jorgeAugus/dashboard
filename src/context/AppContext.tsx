@@ -16,6 +16,9 @@ interface AppContextType {
   setActiveCampaign: (camp: string) => void;
   toastMessage: string | null;
   showToast: (msg: string) => void;
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: (open: boolean) => void;
+  toggleSidebar: () => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -28,6 +31,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [isPresentationOpen, setIsPresentationOpen] = useState(false);
   const [activeCampaign, setActiveCampaign] = useState('Kajel Perú - Campaña Primavera / Flores Amarillas');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -52,7 +60,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         activeCampaign,
         setActiveCampaign,
         toastMessage,
-        showToast
+        showToast,
+        isSidebarOpen,
+        setIsSidebarOpen,
+        toggleSidebar
       }}
     >
       {children}

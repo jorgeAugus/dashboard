@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AuthProvider } from './context/AuthContext';
 import { AppProvider, useApp } from './context/AppContext';
 import { Header } from './components/layout/Header';
@@ -51,20 +51,15 @@ const ToastNotification: React.FC = () => {
 };
 
 const MainLayout: React.FC = () => {
-  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-[#0b1326] text-slate-100 font-sans selection:bg-[#ffb951]/30 selection:text-[#ffb951]">
-      {/* Sidebar Navigation */}
-      <Sidebar
-        isMobileOpen={mobileSidebarOpen}
-        onCloseMobile={() => setMobileSidebarOpen(false)}
-      />
+      {/* Sidebar Navigation (collapsible, in-flow on desktop, overlay on mobile) */}
+      <Sidebar />
 
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col h-full overflow-hidden bg-[#0b1326]">
+      {/* Main Content Area (automatically resizes when sidebar is collapsed/expanded) */}
+      <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden bg-[#0b1326]">
         {/* Header Bar */}
-        <Header onToggleMobile={() => setMobileSidebarOpen((prev) => !prev)} />
+        <Header />
 
         {/* Dynamic Module Body */}
         <main className="flex-1 overflow-y-auto bg-[#0b1326] p-4 lg:p-6 custom-scrollbar">

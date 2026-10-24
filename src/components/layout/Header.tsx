@@ -3,7 +3,7 @@ import { useApp } from '../../context/AppContext';
 import { useAuth } from '../../context/AuthContext';
 
 interface HeaderProps {
-  onToggleMobile: () => void;
+  onToggleMobile?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
@@ -15,7 +15,9 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
     activeCampaign,
     setActiveCampaign,
     setCurrentModule,
-    showToast
+    showToast,
+    isSidebarOpen,
+    toggleSidebar
   } = useApp();
   const { profile, openAuthModal, user } = useAuth();
   const [showNotifications, setShowNotifications] = useState(false);
@@ -47,17 +49,37 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
     }
   ];
 
+  const handleToggle = () => {
+    if (onToggleMobile) {
+      onToggleMobile();
+    } else {
+      toggleSidebar();
+    }
+  };
+
   return (
-    <header className="fixed top-0 left-0 lg:left-72 right-0 h-16 bg-[#0b1326]/85 backdrop-blur-xl z-40 border-b border-[#222a3d]/50 shadow-[0_1px_8px_rgba(0,0,0,0.1)]">
+    <header className="h-16 w-full shrink-0 bg-[#0b1326]/90 backdrop-blur-xl z-30 border-b border-[#222a3d]/50 shadow-[0_1px_8px_rgba(0,0,0,0.1)]">
       <div className="w-full h-full px-4 lg:px-6 flex items-center justify-between gap-3">
-        {/* Left side: Hamburger on mobile + Store/Campaign Selector */}
-        <div className="flex items-center gap-3">
+        {/* Left side: Toggle button (desktop + mobile) + Store/Campaign Selector */}
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
-            onClick={onToggleMobile}
-            className="p-2 rounded-lg text-[#d8c3ad] hover:text-[#dae2fd] hover:bg-[#222a3d] lg:hidden transition-colors"
-            title="Abrir menú"
+            onClick={handleToggle}
+            className={`p-2 rounded-lg transition-all flex items-center gap-1.5 ${
+              !isSidebarOpen 
+                ? 'bg-[#171f33] text-[#ffc174] hover:bg-[#222a3d] border border-[#ffc174]/30' 
+                : 'text-[#d8c3ad] hover:text-[#dae2fd] hover:bg-[#222a3d]'
+            }`}
+            title={isSidebarOpen ? 'Ocultar menú lateral' : 'Mostrar menú lateral'}
+            aria-label={isSidebarOpen ? 'Ocultar menú lateral' : 'Mostrar menú lateral'}
           >
-            <span className="material-symbols-outlined text-2xl">menu</span>
+            <span className="material-symbols-outlined text-2xl">
+              {isSidebarOpen ? 'menu_open' : 'menu'}
+            </span>
+            {!isSidebarOpen && (
+              <span className="text-xs font-semibold pr-1 hidden sm:inline">
+                Menú
+              </span>
+            )}
           </button>
 
           {/* Campaign Selector Dropdown */}
@@ -67,7 +89,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
               className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#131b2e] hover:bg-[#171f33] border border-[#222a3d]/60 text-[#dae2fd] text-xs font-medium transition-colors"
             >
               <span className="material-symbols-outlined text-base text-[#ffc174]">storefront</span>
-              <span className="font-semibold text-xs text-[#dae2fd] max-w-[220px] sm:max-w-xs md:max-w-sm truncate text-left">
+              <span className="font-semibold text-xs text-[#dae2fd] max-w-[180px] sm:max-w-xs md:max-w-sm truncate text-left">
                 {activeCampaign}
               </span>
               <span className="material-symbols-outlined text-sm text-[#d8c3ad]">unfold_more</span>
@@ -105,7 +127,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
           {/* Date range chip */}
           <div className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#171f33] text-[#d8c3ad] text-xs font-medium border border-[#222a3d]/60">
             <span className="material-symbols-outlined text-base text-[#ffc640]">date_range</span>
-            <span>Últimos 30 días - Mar 2026</span>
+            <span>Flores Amarillas 2026</span>
           </div>
         </div>
 
@@ -132,7 +154,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
         </div>
 
         {/* Right side: Notifications & User Profile */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* Notifications button and dropdown */}
           <div className="relative">
             <button
