@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { NavigationModule } from '../types';
 
 interface AppContextType {
@@ -19,6 +19,9 @@ interface AppContextType {
   isSidebarOpen: boolean;
   setIsSidebarOpen: (open: boolean) => void;
   toggleSidebar: () => void;
+  theme: 'dark' | 'light';
+  setTheme: (t: 'dark' | 'light') => void;
+  toggleTheme: () => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -32,9 +35,38 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeCampaign, setActiveCampaign] = useState('Kajel Perú - Campaña Primavera / Flores Amarillas');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    try {
+      const saved = localStorage.getItem('kajel_theme');
+      return saved === 'light' ? 'light' : 'dark';
+    } catch {
+      return 'dark';
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('kajel_theme', theme);
+      if (theme === 'light') {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {
+      console.error('Error saving theme to localStorage', e);
+    }
+  }, [theme]);
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
+  };
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    showToast(next === 'light' ? 'Tema claro activado' : 'Tema oscuro activado');
   };
 
   const showToast = (msg: string) => {
@@ -63,7 +95,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         showToast,
         isSidebarOpen,
         setIsSidebarOpen,
-        toggleSidebar
+        toggleSidebar,
+        theme,
+        setTheme,
+        toggleTheme
       }}
     >
       {children}

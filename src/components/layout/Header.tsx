@@ -17,7 +17,9 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
     setCurrentModule,
     showToast,
     isSidebarOpen,
-    toggleSidebar
+    toggleSidebar,
+    theme,
+    toggleTheme
   } = useApp();
   const { profile, openAuthModal, user } = useAuth();
   const [showNotifications, setShowNotifications] = useState(false);
@@ -210,6 +212,18 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
               </div>
             )}
           </div>
+
+          {/* Theme Toggle Button (Modo Claro / Oscuro) al costado de la campana */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg text-[#d8c3ad] hover:text-[#ffc174] hover:bg-[#222a3d] transition-all flex items-center justify-center relative group"
+            title={theme === 'dark' ? 'Cambiar a Tema Claro' : 'Cambiar a Tema Oscuro'}
+            aria-label={theme === 'dark' ? 'Cambiar a Tema Claro' : 'Cambiar a Tema Oscuro'}
+          >
+            <span className="material-symbols-outlined text-xl transition-transform duration-300 group-hover:rotate-45">
+              {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+            </span>
+          </button>
 
           {/* Profile Trigger */}
           <button
