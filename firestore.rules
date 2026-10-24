@@ -1,0 +1,52 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // User profile: only owner can read and write their private profile
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId) && isValidId(userId);
+      allow delete: if isOwner(userId);
+    }
+
+    // Operational shared collections: team members authenticated can read and manage
+    match /calendar_posts/{postId} {
+      allow read, write: if isSignedIn() && isValidId(postId);
+    }
+
+    match /support_tickets/{ticketId} {
+      allow read, write: if isSignedIn() && isValidId(ticketId);
+    }
+
+    match /crisis_alerts/{alertId} {
+      allow read, write: if isSignedIn() && isValidId(alertId);
+    }
+
+    match /creators/{creatorId} {
+      allow read, write: if isSignedIn() && isValidId(creatorId);
+    }
+
+    // Test connection document
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+  }
+}

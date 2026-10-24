@@ -1,0 +1,233 @@
+---
+name: Amber Slate Intelligence
+colors:
+  surface: '#0b1326'
+  surface-dim: '#0b1326'
+  surface-bright: '#31394d'
+  surface-container-lowest: '#060e20'
+  surface-container-low: '#131b2e'
+  surface-container: '#171f33'
+  surface-container-high: '#222a3d'
+  surface-container-highest: '#2d3449'
+  on-surface: '#dae2fd'
+  on-surface-variant: '#d8c3ad'
+  inverse-surface: '#dae2fd'
+  inverse-on-surface: '#283044'
+  outline: '#a08e7a'
+  outline-variant: '#534434'
+  surface-tint: '#ffb95f'
+  primary: '#ffc174'
+  on-primary: '#472a00'
+  primary-container: '#f59e0b'
+  on-primary-container: '#613b00'
+  inverse-primary: '#855300'
+  secondary: '#ffc640'
+  on-secondary: '#402d00'
+  secondary-container: '#e3aa00'
+  on-secondary-container: '#5a4100'
+  tertiary: '#ffc08e'
+  on-tertiary: '#4d2600'
+  tertiary-container: '#ff9837'
+  on-tertiary-container: '#6a3700'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#ffddb8'
+  primary-fixed-dim: '#ffb95f'
+  on-primary-fixed: '#2a1700'
+  on-primary-fixed-variant: '#653e00'
+  secondary-fixed: '#ffdf9f'
+  secondary-fixed-dim: '#f9bd22'
+  on-secondary-fixed: '#261a00'
+  on-secondary-fixed-variant: '#5c4300'
+  tertiary-fixed: '#ffdcc3'
+  tertiary-fixed-dim: '#ffb77d'
+  on-tertiary-fixed: '#2f1500'
+  on-tertiary-fixed-variant: '#6e3900'
+  background: '#0b1326'
+  on-background: '#dae2fd'
+  surface-variant: '#2d3449'
+typography:
+  display-lg:
+    fontFamily: Inter
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Inter
+    fontSize: 30px
+    fontWeight: '700'
+    lineHeight: 38px
+    letterSpacing: -0.01em
+  headline-xl:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-xl-mobile:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  title-md:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-xs:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+  metric-num:
+    fontFamily: Inter
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 32px
+    letterSpacing: -0.02em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 0.75rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system establishes an analytical, high-precision environment for social intelligence and community operations. The aesthetic merges executive SaaS utility with the vibrant vitality of radiant yellow bloom motifs, translating dynamic market signals into decisive operational clarity.
+
+- **Audience:** Data analysts, community directors, growth marketers, and digital strategists tracking cross-network momentum in high-growth Latin American markets.
+- **Tone & Mood:** Analytical, vigilant, prosperous, authoritative, and clean. It balances executive restraint with energetic signal accents.
+- **Design Movement:** Corporate Modern engineered with subtle glassmorphic depth, dark slate architectural layering, and high-visibility amber telemetry.
+
+## Colors
+
+The palette leverages a deep dark foundation to elevate amber signal metrics and multi-platform data streams without visual fatigue.
+
+- **Primary & Tonal Amber (`#F59E0B`, `#FBBF24`, `#D97706`):** Reserved for primary interactive triggers, active tabs, aggregated performance indicators, and key metric summaries. Represents momentum and community vitality.
+- **Dark Neutral Stack:**
+  - Base Canvas (`#090D16`): The ultimate background plane, minimizing eye strain during extended analytical sessions.
+  - Surface Tier 1 (`#0F172A`): Structural panels, persistent navigation bars, and data grid backgrounds.
+  - Surface Tier 2 (`#1E293B`): Interactive cards, popovers, table headers, and hovering states.
+  - Borders & Dividers (`#334155` at 40-60% opacity): Crisp structural dividers maintaining geometric order.
+- **Platform Semantic Tokens:**
+  - TikTok: `#06B6D4` (Cyan) and `#F43F5E` (Rose).
+  - Instagram: `#E1306C` transitioning to `#F77737` (Coral Fuchsia).
+  - Pinterest: `#E60023` (Crimson Red).
+  - Positive Growth / Delta: `#10B981` (Emerald).
+  - Negative Drop / Alert: `#EF4444` (Coral Red).
+
+## Typography
+
+Typography prioritizes tabular clarity, high data density, and effortless scannability across dense reporting modules.
+
+- **Tabular Figures:** All numeric data representations (metrics, currency values in PEN/USD, timestamps, and growth percentages) must enforce tabular numerals (`font-variant-numeric: tabular-nums`) to prevent horizontal jitter during real-time streaming updates.
+- **Hierarchy Enforcement:** Section titles use `headline-sm` or `title-md` in high-contrast neutral (`#F8FAFC`). Data descriptors and micro-copy leverage `label-md` or `label-xs` in muted slate (`#94A3B8`) with subtle positive letter spacing.
+- **Readability on Dark Canvas:** Body text defaults to `#CBD5E1` rather than pure white to avoid glare against deep `#090D16` surfaces.
+
+## Layout & Spacing
+
+The layout is built upon a rigid, fluid 12-column grid system tailored for data aggregation, feed monitoring, and deep analytical filtering.
+
+- **Desktop (1280px+):** 12 columns with standard 1.5rem (`gutter`) column separation and 2rem (`margin`) canvas inset. Sidebar navigation is fixed (260px wide), allowing the central telemetry canvas to flex dynamically.
+- **Tablet (768px - 1279px):** 8-column layout. Navigation folds into an icon rail or collapsible drawer. KPI cards reflow to 2 or 4 columns.
+- **Mobile (<768px):** 4-column layout with 0.75rem (`gutter-mobile`) and 1rem (`margin-mobile`). All dense dashboards collapse into vertical sequential cards, prioritizing summary metrics over complex visual graphs.
+- **Vertical Spacing Rhythm:** Internal card structures adhere to strict multiples of `space-xs` (4px) and `space-sm` (8px), securing visual alignment across split analytical widgets.
+
+## Elevation & Depth
+
+Visual depth is achieved through layered chromatic density, subtle translucent planes, and low-contrast perimeter highlights rather than heavy muddy drop shadows.
+
+- **Tonal Hierarchy:**
+  - Base Canvas (`#090D16`): Flat ground floor.
+  - Surface-01 (`#0F172A` with 90% opacity + `backdrop-filter: blur(12px)`): Navigation docks, filters bar, and resting card panels.
+  - Surface-02 (`#1E293B`): Modals, floating dropdown menus, and elevated metric cards.
+- **Borders & Micro-Highlights:** Flat panels utilize a 1px inner or perimeter outline using `rgba(255, 255, 255, 0.08)`. Hovered interactive widgets shift border color to `rgba(245, 158, 11, 0.4)`.
+- **Amber Glow / Ambient Cast:** For active high-priority cards or primary buttons, use an ambient glow: `0 4px 20px -2px rgba(245, 158, 11, 0.18)`.
+
+## Shapes
+
+The interface employs consistent 0.5rem (`8px`) corner radius across primary elements, projecting an engineered balance between utilitarian precision and modern comfort.
+
+- **Standard Containers (`0.5rem` / `8px`):** Metric tiles, data table containers, filter selectors, input fields, and standard buttons.
+- **Nested Inner Elements (`0.25rem` / `4px`):** Checkboxes, status badges, progress bars, and sparkline containers.
+- **Large Overlays & Modals (`1rem` / `16px`):** Modal dialogues, slide-out trend drawers, and platform configuration dialogs.
+
+## Components
+
+### Buttons
+- **Primary:** Background `#F59E0B`, text `#090D16` (`font-weight: 600`), 0.5rem radius, padded with `space-sm` vertically and `space-md` horizontally. On hover, shifts to `#FBBF24` with a subtle amber ambient glow.
+- **Secondary / Outline:** Background `rgba(30, 41, 59, 0.6)`, border `1px solid rgba(255, 255, 255, 0.12)`, text `#F8FAFC`. On hover, border tint becomes `#F59E0B` with text shifting to `#FBBF24`.
+- **Tertiary / Ghost:** No background or border. Text `#94A3B8`. Hover brings `#F1F5F9` text and a slight `rgba(255, 255, 255, 0.05)` backdrop.
+
+### Chips & Badges
+- **Platform Badges:** Compact labels (`label-xs`) with a 0.25rem radius.
+  - Instagram: `rgba(225, 48, 108, 0.15)` fill with `#F43F5E` text.
+  - TikTok: `rgba(6, 182, 212, 0.15)` fill with `#22D3EE` text.
+  - Pinterest: `rgba(230, 0, 35, 0.15)` fill with `#F87171` text.
+- **Status Indicators:** Pill-shaped indicator dots (6px) accompanied by text in `label-xs` (`#10B981` for active streams, `#F59E0B` for synced processing).
+
+### Cards & Metric Tiles
+- Built with `#0F172A` background, 1px border (`rgba(255, 255, 255, 0.07)`), and 0.5rem border radius.
+- Includes header slot for metric title (`label-md`), real-time status pill, high-contrast metric value (`metric-num`), and integrated bottom slot for sparkline micro-charts.
+
+### Inputs & Selectors
+- Background `#090D16`, border `1px solid #334155`, text `#F8FAFC`, placeholder `#64748B`.
+- Focus state reveals a crisp outline of `1px solid #F59E0B` with an ambient glow of `0 0 0 2px rgba(245, 158, 11, 0.2)`.
+
+### Checkboxes & Radio Controls
+- Base control is 16x16px with a 0.25rem radius (checkbox) or circular (radio), styled with a `#1E293B` background and `#475569` border.
+- Selected state turns the fill to `#F59E0B` with an internal dark checkmark (`#090D16`).
+
+### Tables & Data Grids
+- Clean borders dividing rows (`rgba(255, 255, 255, 0.05)`). Alternating zebra striping is omitted in favor of hover highlighting via `#1E293B`.
+- Header text uses uppercase `label-xs` with `#64748B` color.

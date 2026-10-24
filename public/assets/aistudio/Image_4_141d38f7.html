@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#93000a", "on-secondary-container": "#5a4100", "tertiary-fixed": "#ffdcc3", "secondary": "#ffc640", "surface-container-highest": "#2d3449", "secondary-fixed": "#ffdf9f", "on-tertiary-container": "#6a3700", "on-tertiary-fixed-variant": "#6e3900", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary-fixed": "#2a1700", "on-secondary-fixed-variant": "#5c4300", "on-primary-fixed-variant": "#653e00", "on-primary": "#472a00", "primary-fixed-dim": "#ffb95f", "surface-container-low": "#131b2e", "surface-container-high": "#222a3d", "outline": "#a08e7a", "secondary-fixed-dim": "#f9bd22", "outline-variant": "#534434", "surface-container": "#171f33", "surface": "#0b1326", "surface-dim": "#0b1326", "on-background": "#dae2fd", "on-secondary-fixed": "#261a00", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "secondary-container": "#e3aa00", "on-surface": "#dae2fd", "on-tertiary": "#4d2600", "on-secondary": "#402d00", "surface-tint": "#ffb95f", "tertiary-fixed-dim": "#ffb77d", "tertiary-container": "#ff9837", "background": "#0b1326", "surface-bright": "#31394d", "error": "#ffb4ab", "inverse-on-surface": "#283044", "on-tertiary-fixed": "#2f1500", "primary": "#ffc174", "surface-variant": "#2d3449", "primary-container": "#f59e0b", "inverse-primary": "#855300", "tertiary": "#ffc08e", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "body-md": ["Inter"], "headline-md": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "metric-num": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"], "display-lg": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "metric-num": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="Kajel Bloom Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTd0jSXqnGHLaU8hSBnNWuuXbrRJ2pjykpawMAPzNsQapl0SrvAWoCZQ5CQojiZy2bcs50Uwq5MqobIiXMengpzsfAkgmej-JQOrUQneO2njxLIJpKQCT61smwSbXmZ-75BWRRoB5jMhrBNyH9bhqWBeasjAbIEgoiw1YV0mo74CECuwuEh8THmPri4NGMyDtXXN9POeQTe7zvl74vgofhuah5z6ma7xm0UovqyMxpTISEZCzdpoH5wt4"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Kajel Bloom</span></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs">v2.4 Pro</span></div><div class="px-space-lg py-space-sm"><div class="px-space-sm py-1 bg-surface-container rounded-lg flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Región Activa</span><span class="font-label-xs text-label-xs text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Perú Retail</span></div></div><nav class="flex flex-col gap-1 px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tablero-analitico" href="#"><span class="material-symbols-outlined text-lg">analytics</span><span>Tablero Analítico</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calendario-de-contenido" href="#"><span class="material-symbols-outlined text-lg">calendar_month</span><span>Calendario Contenido</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="social-listening-sentinel" href="#"><span class="material-symbols-outlined text-lg">radar</span><span>Social Listening</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="directorio-de-influencers" href="#"><span class="material-symbols-outlined text-lg">group</span><span>Directorio Influencers</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inbox-comunitario" href="#"><span class="material-symbols-outlined text-lg">forum</span><span>Inbox Comunitario</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-apis" href="#"><span class="material-symbols-outlined text-lg">tune</span><span>Configuración &amp; APIs</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">APIs Conectadas</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><div class="flex items-center justify-between py-0.5"><span>TikTok Marketing API</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Meta Graph API v19</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Pinterest Ads API v5</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div></div><div class="pt-space-xs"><div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant mb-1"><span>Cuota Data Mensual</span><span>84%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-1.5 rounded-full" style="width: 84%"></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-base text-primary">storefront</span><span class="font-title-md text-body-sm text-on-surface">Kajel Perú - Campaña Primavera / Flores Amarillas</span><span class="material-symbols-outlined text-base text-on-surface-variant">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-base text-secondary">date_range</span><span>Últimos 30 días - Mar 2026</span></div></div><div class="flex-1 max-w-md hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar métricas, creadores o hashtags..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs flex items-center gap-1 shadow-[0_4px_20px_-2px_rgba(245,158,11,0.18)]">2</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXpUnsIRItTquH23ywd23_xs9kdclB_-IjEuD48aFcHp0PqhorJkHLBY7XNHnnfKoq2YmAzJrRzDCW8AS-Z2zzdva7Nlilld_R9YDHe_8QFlA8bbApQ1QCKvhhFzyEVkEXiWEwNDkWzGPbBc4_q6cyMLPrR2i5Voxso9KRTIUfvV9Bme-O3tvM6u5sxBEfFRFKd7n4mGa13Sn4ahwHO_AofIKRhfCLWLpQLzUaC7dyzWvMCWRAcNv9MQ"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface">Brand Manager</span><span class="font-label-xs text-label-xs text-on-surface-variant">retail@kajel.pe</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Command & Filter Bar -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm mb-1">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Calendario de Contenidos &amp; Programador Multiplataforma</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs uppercase tracking-wide">RF-1.1 Master Grid</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span>Sincronización activa con BullMQ Worker Pool</span>
+</div>
+<span class="text-on-surface-variant/40 font-body-sm text-body-sm">•</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-primary">event_available</span>
+<span class="text-on-surface font-label-md text-label-md">18 publicaciones programadas</span>
+<span>para Marzo 2026</span>
+</div>
+<span class="text-on-surface-variant/40 font-body-sm text-body-sm">•</span>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-xs">local_fire_department</span>
+<span>Semana Pico Flores Amarillas (21M)</span>
+</div>
+</div>
+</div>
+<!-- Main Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-secondary">verified_user</span>
+<span>Aprobaciones Pendientes</span>
+<span class="w-5 h-5 flex items-center justify-center rounded-full bg-surface-variant text-primary font-label-xs text-label-xs">3</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-primary">auto_awesome</span>
+<span>Optimizador IA de Copys</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-secondary font-title-md text-body-sm shadow-[0_4px_20px_-2px_rgba(245,158,11,0.25)] transition-all" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>Nueva Publicación Multi-Asset</span>
+</button>
+</div>
+</div>
+<!-- Filter & View Ribbon -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col lg:flex-row lg:items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- View Toggle -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-lowest">
+<button class="px-space-md py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Mes</button>
+<button class="px-space-md py-1 rounded bg-surface-container-high text-primary font-label-md text-label-md shadow-sm" type="button">Semana</button>
+<button class="px-space-md py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Día</button>
+<button class="px-space-md py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Lista</button>
+</div>
+<!-- Date Stepper -->
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-lg">
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<div class="flex items-center gap-1.5 px-space-xs font-title-md text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">calendar_today</span>
+<span>Semana del 16 al 22 de Marzo 2026</span>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-xs text-label-xs" type="button">
+          Hoy
+        </button>
+</div>
+<!-- Network and Status Quick Filters -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Red:</span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-bright text-on-surface font-label-xs text-label-xs" type="button">Todas</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-xs text-label-xs hover:bg-surface-container-high transition-colors" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span>TikTok</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-xs text-label-xs hover:bg-surface-container-high transition-colors" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+<span>Instagram</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-xs text-label-xs hover:bg-surface-container-high transition-colors" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+<span>Pinterest</span>
+</button>
+</div>
+<div class="h-4 w-px bg-surface-container-highest mx-1"></div>
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Estado:</span>
+<select class="bg-surface-container text-on-surface font-body-sm text-body-sm px-space-sm py-1 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Todos los estados</option>
+<option>Borrador</option>
+<option>En Revisión</option>
+<option selected="">Aprobado</option>
+<option>Publicado</option>
+</select>
+</div>
+</div>
+</section>
+<!-- 2-Column Master Layout (Grid 70% + Inspector/Copilot 30%) -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Weekly Master Grid (approx 70%) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Day Headers Bar -->
+<div class="grid grid-cols-7 gap-space-xs text-center">
+<!-- Lun 16 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col items-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Lun 16</span>
+<span class="font-title-md text-title-md text-on-surface">16</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant/80 mt-1">Pico 8:00 PM</span>
+</div>
+<!-- Mar 17 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col items-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Mar 17</span>
+<span class="font-title-md text-title-md text-on-surface">17</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant/80 mt-1">Pico 6:30 PM</span>
+</div>
+<!-- Mie 18 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col items-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Mié 18</span>
+<span class="font-title-md text-title-md text-on-surface">18</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant/80 mt-1">Pico 1:15 PM</span>
+</div>
+<!-- Jue 19 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center">
+<span class="font-label-xs text-label-xs text-primary uppercase font-bold">Jue 19</span>
+<span class="font-title-md text-title-md text-primary">19</span>
+<span class="font-label-xs text-[10px] text-secondary mt-1">Pico 7:45 PM</span>
+</div>
+<!-- Vie 20 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center">
+<span class="font-label-xs text-label-xs text-primary uppercase font-bold">Vie 20</span>
+<span class="font-title-md text-title-md text-primary">20</span>
+<span class="font-label-xs text-[10px] text-secondary mt-1">Pico 6:30 PM</span>
+</div>
+<!-- Sab 21 (Día Clave) -->
+<div class="p-space-sm rounded-lg bg-secondary-container/20 flex flex-col items-center relative overflow-hidden">
+<div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-secondary/30 blur-sm"></div>
+<span class="font-label-xs text-label-xs text-secondary uppercase font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">arrow_back_ios_new</span> Sáb 21
+          </span>
+<span class="font-title-md text-title-md text-secondary font-bold">21</span>
+<span class="font-label-xs text-[10px] text-primary-container font-semibold mt-1">Tráfico Extremo</span>
+</div>
+<!-- Dom 22 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col items-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Dom 22</span>
+<span class="font-title-md text-title-md text-on-surface">22</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant/80 mt-1">Pico 9:00 PM</span>
+</div>
+</div>
+<!-- Time Slot Canvas -->
+<div class="space-y-space-md">
+<!-- Slot: Mañana (09:00 - 12:00) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-primary">wb_twilight</span>
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant">Franja Matutina • 09:00 - 12:00 PET</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant/60">2 Publicaciones programadas</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Blank / Target Slot on Wednesday -->
+<div class="p-space-md rounded-lg bg-surface-container-low/40 border border-dashed border-outline-variant/30 flex flex-col items-center justify-center text-center gap-1 hover:bg-surface-container-high/40 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-xl text-primary/70 group-hover:scale-110 transition-transform">add_circle_outline</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Soltar post para Mié 18 • 10:30 AM</span>
+<span class="font-body-sm text-[11px] text-secondary">Horario sugerido por IA (+34% interacción)</span>
+</div>
+<!-- Card: Sábado 21 - Pinterest 09:00 AM -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-red-400"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-on-surface-variant/60 group-hover:text-on-surface">drag_indicator</span>
+<span class="px-1.5 py-0.5 rounded bg-red-500/15 text-red-400 font-label-xs text-label-xs font-semibold">Pinterest Pin 2:3</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">09:00 AM</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-bright text-secondary font-label-xs text-label-xs">Aprobado</span>
+</div>
+<div class="flex gap-space-sm items-center">
+<img class="w-12 h-16 rounded object-cover flex-shrink-0" data-alt="A vertical photography pin of yellow sunflowers and mimosa flowers packaged in premium luxury artisanal paper with yellow silk ribbons, warm studio golden lighting, high resolution product display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK74hcWdfJd_z2rxkRzADLoNft6X7uRD83O84I8i23qq8W243QR0DW074nJmVqIomQDHYRAb1-e3N3Xmapg-uvNcFxAcoLaiBBu8krXs4Zbawo4UT7qoEDyqdpEU9XfnvIzv0wuL1uyt_PcjNffdD4LsJ4QATspuihYq1Ne57IM1hx9JddAV1J6xzaBCTpzlIPiXSfZ2mvf_dR_XJQe5rSd76xdYvi4A_54_EvUxArtYAnHcm2zWz48A"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-body-md text-on-surface truncate group-hover:text-primary transition-colors">Guía de Regalos Flores Amarillas 2026</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Enlace directo a Shopify &amp; Niubiz express checkout...</p>
+<span class="font-label-xs text-[11px] text-on-surface-variant/70 mt-1">Autor: Rodrigo Paz • Retail Merch</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-highest/40 text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-xs">storefront</span> Catálogo Listo
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">sync</span> Cola BullMQ #2940
+                </span>
+</div>
+</div>
+<!-- Card: Lunes 16 - TikTok Draft -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-on-surface-variant/60">drag_indicator</span>
+<span class="px-1.5 py-0.5 rounded bg-cyan-500/15 text-cyan-300 font-label-xs text-label-xs font-semibold">TikTok 9:16</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">11:15 AM</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs">Borrador</span>
+</div>
+<div class="flex gap-space-sm items-center">
+<img class="w-12 h-16 rounded object-cover flex-shrink-0" data-alt="A vertical TikTok framing showing behind the scenes preparation of a flower warehouse in Surquillo Lima, staff sorting bright yellow blooms and tulips, warm natural ambient morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqO4M3lUd1F9rbJQs0g6PjymSsAtvG2s7PwLMDrU2R4OECIvM4niabeWupiXODVHwAMHZaN47HuLNDvLg3nLr0X1-4WxBKzPdbzmnATfSStIdZPe3Yixw0o1PDt9GmO80v-UQaRWtzeFodhFPx625ZeEbzLqWrn5xHo-3ZYm56tIHj1Sfv_duqTSRZeB9DkDvbJeyR2Cto7JhxyVwvq7lXWZ2s3hxnEmez9rBH2lJZV_VsoIB4uMaSg"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-body-md text-on-surface truncate">Detrás de cámaras: Armado de 500 ramos</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Audio viral en tendencia: Floricienta Remix Lo-Fi</p>
+<span class="font-label-xs text-[11px] text-on-surface-variant/70 mt-1">Autor: Camila R. (Diseñadora)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-xs">pending</span> Falta Audio Licenciado
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">history</span> Modif. hace 1h
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Slot: Tarde (13:00 - 17:00) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-secondary">wb_sunny</span>
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant">Franja Tarde • 13:00 - 17:00 PET</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant/60">3 Publicaciones en timeline</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Card: Sábado 21 - TikTok UGC Colab 03:00 PM -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-cyan-400"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-on-surface-variant/60 group-hover:text-on-surface">drag_indicator</span>
+<span class="px-1.5 py-0.5 rounded bg-cyan-500/15 text-cyan-300 font-label-xs text-label-xs font-semibold">TikTok Live &amp; UGC 9:16</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">03:00 PM</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-bright text-secondary font-label-xs text-label-xs">Aprobado</span>
+</div>
+<div class="flex gap-space-sm items-center">
+<img class="w-12 h-16 rounded object-cover flex-shrink-0" data-alt="A joyful young Peruvian woman content creator holding an oversized bouquet of radiant yellow flowers near Miraflores cliffs overlooking the Pacific Ocean, golden hour, selfie vertical angle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4IeNsLGJkuTvvfxm5JYOyblP16YweePcuxerbwmL3FnOpooiq-a7JvUFkWbEEpuAtgkBhbppVxEe1_FlhxcSnCxCRbpmsYnA6MtAs6L5DiKZFIrOqVzbgmdkvdpTRT9wyRUxxJLmjZoWMMbna-REeP47FNndX-kdjNWRl72eZY_Mq3ar60C3Kug0WmmSGTK_G6r6xbZUTEIOQCEs1m9bw15avIkMPgEX7Ma6zB4-lzf1G5oLJZA5aJw"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-body-md text-on-surface truncate group-hover:text-primary transition-colors">UGC Colab: @valeria.lifestyle</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Hook: "¿A ti ya te mandaron tus flores amarillas hoy? 🌻💛"</p>
+<span class="font-label-xs text-[11px] text-on-surface-variant/70 mt-1">Asignado: Diego V. (Lead de Marca)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-highest/40 text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-xs">record_voice_over</span> Creador Confirmado
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">rocket_launch</span> Listo en Worker
+                </span>
+</div>
+</div>
+<!-- Card: Jueves 19 - Repost IG Story Promo -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-on-surface-variant/60">drag_indicator</span>
+<span class="px-1.5 py-0.5 rounded bg-rose-500/15 text-rose-300 font-label-xs text-label-xs font-semibold">Instagram Story</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">04:30 PM</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-bright text-secondary font-label-xs text-label-xs">Aprobado</span>
+</div>
+<div class="flex gap-space-sm items-center">
+<img class="w-12 h-16 rounded object-cover flex-shrink-0" data-alt="Vertical mobile story design graphic with bright yellow typography announcing 24-hour preorder guarantee in Lima, Peru with countdown sticker badge over dark floral texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqREn3BDLpzICDhTU1JZOktVoFV4qz7uD57ra51Oz5ulbmgGUqC8CnLiDNS3Nv3TLX658-NAsbqYY7DUCGXbon9BIVFIvoeYuUeBKtzGFdZYIwaMhpEBnn4Ae9QJ-245ki2ODrLYwO68-kIWd-edK-Fz3t9sJWcBCxHfn_ddJ4k1fwJYcD8yDm4_-AdIDT3d-n378sapOC56lKwX_YyZ6Jbh4fQtFLsR-mV3vrpTgfsdkoAIqFDyD6xQ"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-body-md text-on-surface truncate">Cuenta Regresiva: Asegura tu ramo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Sticker interactivo con enlace a pasarela Yape/Plin</p>
+<span class="font-label-xs text-[11px] text-on-surface-variant/70 mt-1">Autor: Camila R. (Diseñadora)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-xs">link</span> Enlace con UTM
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">alarm</span> Disparo autom.
+                </span>
+</div>
+</div>
+<!-- Card: Drop Zone Placeholder -->
+<div class="p-space-md rounded-lg bg-surface-container-low/40 border border-dashed border-outline-variant/30 flex flex-col items-center justify-center text-center gap-1 hover:bg-surface-container-high/40 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-xl text-primary/70 group-hover:scale-110 transition-transform">add_circle_outline</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Programar contenido de media tarde</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant/60">Ideal para stories de stock en tiempo real</span>
+</div>
+</div>
+</div>
+<!-- Slot: Prime Time (18:00 - 21:30) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-primary">nights_stay</span>
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant">Prime Time Perú • 18:00 - 21:30 PET (Mayor Retención)</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">Horario de Alta Conversión</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Card 1: Jueves 19 - TikTok Tutorial 7:45 PM (Active / Selected) -->
+<div class="rounded-lg bg-surface-container-high p-space-md flex flex-col gap-space-sm shadow-md ring-1 ring-primary relative overflow-hidden cursor-pointer">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-primary">drag_indicator</span>
+<span class="px-1.5 py-0.5 rounded bg-cyan-500/15 text-cyan-300 font-label-xs text-label-xs font-semibold">TikTok Video 9:16</span>
+<span class="font-label-xs text-label-xs text-primary font-bold">07:45 PM</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-xs text-label-xs">En Inspector</span>
+</div>
+<div class="flex gap-space-sm items-center">
+<img class="w-12 h-16 rounded object-cover flex-shrink-0" data-alt="Close up of florist hands wrapping vibrant yellow sunflowers in modern Kraft paper, adding silk ribbons and a personalized note card in a minimalist Lima aesthetic studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7pEhFTXk-GfKTTZJByFWpoR4ujDz5eOa7GUisOrZF3nHUW9mT12sUc3tNGZ3THDJa2oQ51inoQDLK0RSfJFyhBr6lGRd0UBtg5a-Iaf7NkGOG_cKR-8RQ6PG0a3sU9-xSgKCx5XclHEQ7RqFqFIDZLS49uwk6tMsOlMW7KFBW-dQE-q090dKrrAJRfY6qDoGqsTfJuGp3VtzQAYMbAEfv4zaVLpgEhEd9kKmcxIBth7ZalOnZkQ17MQ"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-body-md text-on-surface truncate">Tutorial: 3 Formas de envolver Ramos</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Hook: "El truco para que duren 10 días frescos..."</p>
+<span class="font-label-xs text-[11px] text-on-surface-variant/70 mt-1">Aprobado por: Diego V. (Lead de Marca)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-highest/40 text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-xs">auto_graph</span> Pico 7:45 PM Detectado
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">task_alt</span> Transcodificado OK
+                </span>
+</div>
+</div>
+<!-- Card 2: Viernes 20 - IG Lookbook 6:30 PM -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-rose-400"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-on-surface-variant/60 group-hover:text-on-surface">drag_indicator</span>
+<span class="px-1.5 py-0.5 rounded bg-rose-500/15 text-rose-300 font-label-xs text-label-xs font-semibold">Instagram Reel 9:16</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">06:30 PM</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-bright text-tertiary font-label-xs text-label-xs">En Revisión</span>
+</div>
+<div class="flex gap-space-sm items-center">
+<img class="w-12 h-16 rounded object-cover flex-shrink-0" data-alt="Chic editorial fashion photoshoot in Barranco Lima with model carrying minimalist yellow floral arrangement paired with warm linen summer blazer and sun sunglasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhua4uhLnTkhT94j7keVqFWc43fY3MUTwMCBvcJK_aMLITttZq26O_BBoQWH2UgwvIj92RJbWD7X7fg_ibYlOIRkvmGMnnWvti4snDSm_ELszIn7SIuLQwvL-gXBsvyJx13Iecx7UnNEz1d0bGHWCp1igbqHnhCOuFwT6L8myb-S_M3RI6va_8ckjlKbBmn5d5RftqXqbL7cnqoUEiqW2J3weSMtJJ_nqADxojoDf8-3AUxb-lwsuiVw"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-body-md text-on-surface truncate group-hover:text-primary transition-colors">Lookbook Primavera: Oficina &amp; Casual</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Formato carrusel + audio trending pop latino</p>
+<span class="font-label-xs text-[11px] text-on-surface-variant/70 mt-1">Autor: Camila R. (Diseñadora)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-highest/40 text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-xs">rate_review</span> Pendiente Visto Bueno
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">tune</span> Copy 90%
+                </span>
+</div>
+</div>
+<!-- Card 3: Sábado 21 - IG Reel Entrega Express 07:00 PM -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-on-surface-variant/60 group-hover:text-on-surface">drag_indicator</span>
+<span class="px-1.5 py-0.5 rounded bg-rose-500/15 text-rose-300 font-label-xs text-label-xs font-semibold">Instagram Reel 9:16</span>
+<span class="font-label-xs text-label-xs text-secondary font-bold">07:00 PM</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-bright text-secondary font-label-xs text-label-xs">Aprobado</span>
+</div>
+<div class="flex gap-space-sm items-center">
+<img class="w-12 h-16 rounded object-cover flex-shrink-0" data-alt="Emotional genuine reaction shot of an office worker in San Isidro Lima receiving a surprise bouquet of yellow blossoms on March 21st, candid documentary photography style, warm soft tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUkNsRONZXVT6HtdlISR2FfWctDmW5RcmAsMydCnHPJgdQSFncDzvQlAxO2ccxIxjpZBVcGMRpWMksIZNWk8T0MX_c53_ylRMvdavepSeDjJCQKKlFNMncoiMTn9wh47OF7I1Pb13HKxfX5oPB3kLgbnldTPhCO5BnKv_CiyVRiHyiGeWGuesDwHmomyBxX4ENSmsyew5DBGvVmnsT8orkoMyvKRWz3Kw9MzgeEmabMP3ZZaMjNTGvnQ"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-body-md text-on-surface truncate group-hover:text-primary transition-colors">Reacción sorpresa entrega express</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Grabado en vivo en San Isidro y Miraflores</p>
+<span class="font-label-xs text-[11px] text-on-surface-variant/70 mt-1">Aprobado por: Diego V. (Lead de Marca)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-highest/40 text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-xs">local_shipping</span> Cobertura Lima Top
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">queue</span> Cola Meta API v19
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Domingo 22 Wrap-up Draft -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">celebration</span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-body-md text-on-surface">Dom 22 • 08:30 PM: "Agradecimiento Masivo + Cierre de Campaña Flores Amarillas"</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs">Borrador</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Post multi-red TikTok, IG &amp; Pinterest agradeciendo a los más de 1,200 pedidos atendidos.</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+            Editar Borrador
+          </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Dockable Quick Inspector & Copilot IA (approx 30%) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md shadow-lg sticky top-20">
+<!-- Inspector Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">tune</span>
+</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Inspector &amp; Copiloto IA</h3>
+<p class="font-label-xs text-label-xs text-on-surface-variant">Post ID: #KB-2026-03-JUE19</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">fullscreen</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+<!-- RF-1.2: Multi-Asset Transcoding Preview & Ratio Selector -->
+<div class="flex flex-col gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant">Transcodificación Multi-Asset</span>
+<span class="font-label-xs text-label-xs text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">bolt</span> GPU Worker Ready
+            </span>
+</div>
+<!-- Video Preview Box -->
+<div class="relative w-full aspect-[9/10] rounded-lg overflow-hidden bg-surface-container flex items-center justify-center group">
+<img class="w-full h-full object-cover" data-alt="Detailed mockup preview screen of a vertical TikTok video showing a close-up of hands arranging delicate yellow roses and sunflowers in wrapping paper with brand overlays and sound badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoiDyXqzP4hkh_mkezDsXlkJ-PK8atuju4aNSfjggS_xqoSuX2Jk-zeMDsjsyHNP2F1cUe-f2QkrOxbi1S1j3ZNYLrV9Hq4St9BM7N8nOBMjqNEMv51YXSe_nmRMHgIMU9aN5eMT69kDTE02z8DSZ1pjAm64H3MQz32bw-jj8-wtkK2k7iPo7xRlwYVuBrvaYgfNig7hI_YNBvCImLm_4_a62ImAxfUBxPPGO5rOVmGTCQI5CItUxIvg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<!-- Floating overlay controls -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-xs text-label-xs">00:34s</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-xs text-label-xs text-primary">1080x1920 (9:16)</span>
+</div>
+<button class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:bg-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Aspect Ratio Toggle -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 py-1 rounded bg-surface-container-high text-primary font-label-xs text-label-xs" type="button">
+<span class="material-symbols-outlined text-xs">smartphone</span>
+<span>9:16 (TikTok/Reel)</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-xs text-label-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-xs">crop_portrait</span>
+<span>2:3 (Pinterest Pin)</span>
+</button>
+</div>
+</div>
+<!-- RF-1.3: Copiloto Copywriting Peruano & Generador de Hashtags -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant">Copy &amp; Asistente Cultural IA</span>
+<!-- Tone selector -->
+<select class="bg-surface-container text-on-surface font-label-xs text-label-xs px-2 py-0.5 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+<option selected="">Casual / Jerga sutil (Pilas/Pata)</option>
+<option>Estético Pinterest / Minimal</option>
+<option>Corporativo / Retail Niubiz</option>
+</select>
+</div>
+<!-- Copy Text Area -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-xs">auto_awesome</span> Sugerencia IA optimizada
+              </span>
+<span>184/2200 car.</span>
+</div>
+<textarea class="w-full bg-transparent text-on-surface font-body-sm text-body-sm resize-none focus:outline-none leading-relaxed" rows="4">¡Este 21 de marzo que no se te pase el detalle! 💛🌻 Llegamos a todo Lima y provincias con delivery express garantizado. Haz tu pedido al toque en el link de la bio antes que vuelen los ramos. 🛵✨</textarea>
+<div class="flex justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-xs text-label-xs hover:bg-surface-container-high transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">refresh</span> Regenerar
+              </button>
+</div>
+</div>
+<!-- Hashtag Cloud -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Hashtags de Alta Conversión PE</span>
+<button class="font-label-xs text-label-xs text-primary hover:underline" type="button">+ Añadir todos</button>
+</div>
+<div class="flex flex-wrap gap-1">
+<button class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-xs text-[11px] flex items-center gap-1" type="button">
+<span>#FloresAmarillasPeru</span>
+<span class="text-secondary font-bold">12.4M</span>
+</button>
+<button class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-xs text-[11px] flex items-center gap-1" type="button">
+<span>#LimaTrend</span>
+<span class="text-on-surface-variant">840K</span>
+</button>
+<button class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-xs text-[11px] flex items-center gap-1" type="button">
+<span>#KajelBloom</span>
+<span class="text-secondary font-bold">Oficial</span>
+</button>
+<button class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-xs text-[11px] flex items-center gap-1" type="button">
+<span>#RegalosPeru</span>
+<span class="text-on-surface-variant">320K</span>
+</button>
+<button class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-xs text-[11px] flex items-center gap-1" type="button">
+<span>#SpringVibesLima</span>
+<span class="text-on-surface-variant">190K</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RF-1.4: Hierarchical Approval Timeline -->
+<div class="flex flex-col gap-space-sm pt-space-xs border-t border-surface-container-highest/40">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant">Flujo Jerárquico de Aprobación</span>
+<div class="flex flex-col gap-2">
+<!-- Step 1 -->
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-xs">check</span>
+</span>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm text-on-surface">Creado por Camila R. (Diseñadora)</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant">14 Mar, 10:20 AM • Asset exportado</span>
+</div>
+</div>
+<!-- Connector -->
+<div class="w-0.5 h-3 bg-secondary/40 ml-2.5"></div>
+<!-- Step 2 -->
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-xs">check</span>
+</span>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm text-on-surface">Revisado por Redacción &amp; Copy</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant">15 Mar, 04:15 PM • Tono verificado</span>
+</div>
+</div>
+<!-- Connector -->
+<div class="w-0.5 h-3 bg-secondary/40 ml-2.5"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-xs">done_all</span>
+</span>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm text-primary">Aprobado por Diego V. (Lead de Marca)</span>
+<span class="font-label-xs text-[10px] text-secondary">16 Mar, 09:30 AM • Listo para disparo</span>
+</div>
+</div>
+</div>
+<!-- Role Action Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<button class="py-2 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+              Solicitar Cambios
+            </button>
+<button class="py-2 px-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-secondary font-title-md text-label-md transition-colors shadow-sm flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Encolar BullMQ</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom BullMQ Queue Telemetry Status Bar -->
+<footer class="mt-space-sm p-space-md rounded-xl bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-title-md text-body-sm text-on-surface">Colas BullMQ: Redis Cluster Activo</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0 fallos de renderizado • Tasa de éxito 99.8%</span>
+<div class="h-4 w-px bg-surface-container-highest hidden sm:block"></div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+<span>Próximo disparo en <strong class="text-on-surface">2h 14m</strong> vía Meta Graph API v19</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1 text-primary hover:text-secondary font-label-md text-label-md transition-colors" onclick="document.querySelector('[data-path=\'tablero-analitico\']')?.click()" type="button">
+<span>Ver métricas en Tablero Analítico</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</footer>
+</div>
+<script>
+  // Micro-interaction for Drag-and-Drop aesthetic preview & visual feedback
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.cursor-grab');
+    cards.forEach(card => {
+      card.addEventListener('dragstart', () => {
+        card.classList.add('opacity-50', 'scale-95');
+      });
+      card.addEventListener('dragend', () => {
+        card.classList.remove('opacity-50', 'scale-95');
+      });
+    });
+  });
+</script></main></div></body></html>

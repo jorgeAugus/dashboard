@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#93000a", "on-secondary-container": "#5a4100", "tertiary-fixed": "#ffdcc3", "secondary": "#ffc640", "surface-container-highest": "#2d3449", "secondary-fixed": "#ffdf9f", "on-tertiary-container": "#6a3700", "on-tertiary-fixed-variant": "#6e3900", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary-fixed": "#2a1700", "on-secondary-fixed-variant": "#5c4300", "on-primary-fixed-variant": "#653e00", "on-primary": "#472a00", "primary-fixed-dim": "#ffb95f", "surface-container-low": "#131b2e", "surface-container-high": "#222a3d", "outline": "#a08e7a", "secondary-fixed-dim": "#f9bd22", "outline-variant": "#534434", "surface-container": "#171f33", "surface": "#0b1326", "surface-dim": "#0b1326", "on-background": "#dae2fd", "on-secondary-fixed": "#261a00", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "secondary-container": "#e3aa00", "on-surface": "#dae2fd", "on-tertiary": "#4d2600", "on-secondary": "#402d00", "surface-tint": "#ffb95f", "tertiary-fixed-dim": "#ffb77d", "tertiary-container": "#ff9837", "background": "#0b1326", "surface-bright": "#31394d", "error": "#ffb4ab", "inverse-on-surface": "#283044", "on-tertiary-fixed": "#2f1500", "primary": "#ffc174", "surface-variant": "#2d3449", "primary-container": "#f59e0b", "inverse-primary": "#855300", "tertiary": "#ffc08e", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "body-md": ["Inter"], "headline-md": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "metric-num": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"], "display-lg": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "metric-num": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="Kajel Bloom Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTd0jSXqnGHLaU8hSBnNWuuXbrRJ2pjykpawMAPzNsQapl0SrvAWoCZQ5CQojiZy2bcs50Uwq5MqobIiXMengpzsfAkgmej-JQOrUQneO2njxLIJpKQCT61smwSbXmZ-75BWRRoB5jMhrBNyH9bhqWBeasjAbIEgoiw1YV0mo74CECuwuEh8THmPri4NGMyDtXXN9POeQTe7zvl74vgofhuah5z6ma7xm0UovqyMxpTISEZCzdpoH5wt4"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Kajel Bloom</span></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs">v2.4 Pro</span></div><div class="px-space-lg py-space-sm"><div class="px-space-sm py-1 bg-surface-container rounded-lg flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Región Activa</span><span class="font-label-xs text-label-xs text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Perú Retail</span></div></div><nav class="flex flex-col gap-1 px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tablero-analitico" href="#"><span>Tablero Analítico</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calendario-contenido" href="#"><span>Calendario Contenido</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="social-listening" href="#"><span>Social Listening</span></a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="directorio-de-influencers" href="#"><span>Directorio Influencers</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inbox-comunitario" href="#"><span>Inbox Comunitario</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-apis" href="#"><span>Configuración &amp; APIs</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">APIs Conectadas</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><div class="flex items-center justify-between py-0.5"><span>TikTok Marketing API</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Meta Graph API v19</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Pinterest Ads API v5</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div></div><div class="pt-space-xs"><div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant mb-1"><span>Cuota Data Mensual</span><span>84%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-1.5 rounded-full" style="width: 84%"></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-base text-primary">storefront</span><span class="font-title-md text-body-sm text-on-surface">Kajel Perú - Campaña Primavera / Flores Amarillas</span><span class="material-symbols-outlined text-base text-on-surface-variant">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-base text-secondary">date_range</span><span>Últimos 30 días - Mar 2026</span></div></div><div class="flex-1 max-w-md hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar métricas, creadores o hashtags..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs flex items-center gap-1 shadow-[0_4px_20px_-2px_rgba(245,158,11,0.18)]">2</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXpUnsIRItTquH23ywd23_xs9kdclB_-IjEuD48aFcHp0PqhorJkHLBY7XNHnnfKoq2YmAzJrRzDCW8AS-Z2zzdva7Nlilld_R9YDHe_8QFlA8bbApQ1QCKvhhFzyEVkEXiWEwNDkWzGPbBc4_q6cyMLPrR2i5Voxso9KRTIUfvV9Bme-O3tvM6u5sxBEfFRFKd7n4mGa13Sn4ahwHO_AofIKRhfCLWLpQLzUaC7dyzWvMCWRAcNv9MQ"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface">Brand Manager</span><span class="font-label-xs text-label-xs text-on-surface-variant">retail@kajel.pe</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- CABECERA DE MÓDULO & ACCIONES PRINCIPALES -->
+<section class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-1 max-w-3xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-xs text-label-xs text-primary uppercase tracking-widest bg-primary-container/20 px-2 py-0.5 rounded">MÓDULO 04 • CREATOR OPS &amp; ATTRIBUTION</span>
+<span class="font-label-xs text-label-xs text-secondary-fixed bg-surface-container-highest px-2 py-0.5 rounded">PE-RETAIL ENGINE v3.2</span>
+<span class="flex items-center gap-1 font-label-xs text-label-xs text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live Attribution Sync
+        </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Directorio de Creadores &amp; Calculadora de ROI / EMV</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Auditoría algorítmica de autenticidad de audiencia, cálculo estandarizado de Earned Media Value (EMV) en Soles (PEN) y atribución directa con UTMs para Retail Perú.
+      </p>
+</div>
+<!-- Acciones Rápidas -->
+<div class="flex items-center gap-space-sm flex-wrap xl:self-end">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-title-md text-body-md hover:bg-surface-variant transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg text-primary">manage_search</span>
+<span>Auditar Nuevo Perfil</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-title-md text-body-md hover:bg-surface-variant transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">link</span>
+<span>Generador UTM</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-title-md text-body-md hover:bg-secondary-container transition-all shadow-[0_4px_20px_-2px_rgba(245,158,11,0.25)]" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>+ Registrar Colaboración</span>
+</button>
+</div>
+</section>
+<!-- FILA DE KPIS EJECUTIVOS (AMBER SLATE INTELLIGENCE) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Inversión Activada</span>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">+18.5% proyectado</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-metric-num text-metric-num text-on-surface tracking-tight">S/ 42,500</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">PEN</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>14 creadores contratados</span>
+<span class="text-primary font-medium">92% cuota Q1</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Earned Media Value</span>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-primary-container/20 text-primary font-semibold">IAB Perú Standard</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-metric-num text-metric-num text-secondary-fixed tracking-tight">S/ 148,650</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">PEN</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>Multiplicador de Retorno</span>
+<span class="text-secondary font-semibold">3.5x EMV / ROAS</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Ventas Atribuidas (UTM)</span>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-surface-container text-secondary font-semibold">CPA Prom. S/ 33.10</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-metric-num text-metric-num text-on-surface tracking-tight">S/ 89,400</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">PEN</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>1,284 pedidos confirmados</span>
+<span class="text-on-surface font-medium">Shopify + Niubiz</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Audiencia Legítima</span>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">Score Seguridad Alto</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-metric-num text-metric-num text-on-surface tracking-tight">94.2%</span>
+<span class="font-label-xs text-label-xs text-primary">Auténtica</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>Tasa bot/fantasma: 5.8%</span>
+<span class="text-primary font-medium">Bajo Riesgo</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</section>
+<!-- SIMULADOR DINÁMICO DE EMV & PROYECCIÓN DE CONVERSIÓN (RF-4.2) -->
+<section class="rounded-2xl bg-surface-container-low p-space-lg shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">calculate</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Simulador Dinámico de EMV &amp; Proyección de Conversión</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Ajuste las variables para pre-evaluar acuerdos comerciales antes de la emisión de órdenes de compra (OC Retail).
+        </p>
+</div>
+<!-- Switch de Modelo -->
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-lg">
+<button class="px-space-md py-1 rounded bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-colors" type="button">
+          Fórmula Estándar Retail
+        </button>
+<button class="px-space-md py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+          CPM Spark TikTok
+        </button>
+<button class="px-space-md py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+          CPA Performance
+        </button>
+</div>
+</div>
+<!-- Controles & Resultados en vivo -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Sliders / Parámetros (8 cols) -->
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md p-space-md rounded-xl bg-surface-container">
+<!-- Alcance -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant">Alcance Estimado (Impresiones)</label>
+<span class="font-title-md text-title-md text-secondary" id="val-reach">450,000 imp.</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" max="1500000" min="50000" oninput="document.getElementById('val-reach').innerText = Number(this.value).toLocaleString('es-PE') + ' imp.'; updateSim();" step="25000" type="range" value="450000"/>
+<div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>50K</span>
+<span>750K</span>
+<span>1.5M</span>
+</div>
+</div>
+<!-- Tasa ER -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant">Tasa Engagement (ER) Proyectada</label>
+<span class="font-title-md text-title-md text-secondary" id="val-er">7.2%</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" max="15.0" min="1.0" oninput="document.getElementById('val-er').innerText = parseFloat(this.value).toFixed(1) + '%'; updateSim();" step="0.2" type="range" value="7.2"/>
+<div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>1.0%</span>
+<span>8.0%</span>
+<span>15.0%</span>
+</div>
+</div>
+<!-- Costo Fee -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant">Costo Fee Creador (Tarifa PEN)</label>
+<span class="font-title-md text-title-md text-on-surface" id="val-fee">S/ 3,500</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" max="15000" min="500" oninput="document.getElementById('val-fee').innerText = 'S/ ' + Number(this.value).toLocaleString('es-PE'); updateSim();" step="250" type="range" value="3500"/>
+<div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>S/ 500</span>
+<span>S/ 7,500</span>
+<span>S/ 15,000</span>
+</div>
+</div>
+<!-- Tasa CVR -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant">CVR Estimado Carrito / Web</label>
+<span class="font-title-md text-title-md text-on-surface" id="val-cvr">2.4%</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" max="6.0" min="0.5" oninput="document.getElementById('val-cvr').innerText = parseFloat(this.value).toFixed(1) + '%'; updateSim();" step="0.1" type="range" value="2.4"/>
+<div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>0.5%</span>
+<span>3.0%</span>
+<span>6.0%</span>
+</div>
+</div>
+</div>
+<!-- Tarjeta Destacada de Resultado Dorado (4 cols) -->
+<div class="lg:col-span-4 rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low p-space-md flex flex-col justify-between shadow-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary font-semibold">Proyección Algorítmica</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-xs text-label-xs font-bold">ALTO RETORNO</span>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant">EMV PROYECTADO</span>
+<div class="font-metric-num text-metric-num text-primary tracking-tight" id="sim-emv">S/ 14,250 PEN</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-xs text-label-xs text-on-surface-variant block">Beneficio Neto</span>
+<span class="font-title-md text-title-md text-secondary" id="sim-net">+S/ 10,750</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-xs text-label-xs text-on-surface-variant block">ROI Proyectado</span>
+<span class="font-title-md text-title-md text-primary" id="sim-roi">307%</span>
+</div>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 px-space-md rounded-lg bg-primary-container hover:bg-secondary-container text-on-primary-container font-title-md text-body-md transition-all flex items-center justify-center gap-space-xs shadow-[0_4px_16px_rgba(245,158,11,0.2)]" type="button">
+<span class="material-symbols-outlined text-base">assignment_add</span>
+<span>Aplicar Parámetros a Contrato</span>
+</button>
+</div>
+</div>
+</section>
+<!-- TABLERO DE EXPLORACIÓN: DIRECTORIO & AUDITORÍA DE FRAUDE (RF-4.1) -->
+<section class="flex flex-col gap-space-md">
+<!-- Toolbar de filtros -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col xl:flex-row gap-space-md items-stretch xl:items-center justify-between shadow-sm">
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm flex-1">
+<!-- Búsqueda -->
+<div class="relative flex-1 min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-base">search</span>
+<input class="w-full pl-9 pr-space-md py-2 rounded-lg bg-surface-container text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar por @handle, nombre o nicho..." type="text"/>
+</div>
+<!-- Filtros de Nicho -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0">
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold whitespace-nowrap" type="button">
+            Todos (14)
+          </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+            Moda &amp; Outfits (5)
+          </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+            Lifestyle &amp; Flores (4)
+          </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+            Foodie &amp; Momentos (3)
+          </button>
+</div>
+</div>
+<!-- Filtros Secundarios y Ordenamiento -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<select class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Todas las Plataformas</option>
+<option>TikTok</option>
+<option>Instagram</option>
+<option>Pinterest</option>
+</select>
+<select class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Ubicación: Lima Met. (78%)</option>
+<option>Arequipa (12%)</option>
+<option>Trujillo (10%)</option>
+</select>
+<select class="px-space-md py-2 rounded-lg bg-surface-container-high text-secondary-fixed font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Ordenar por: Mayor EMV</option>
+<option>Tasa Autenticidad</option>
+<option>Engagement Rate</option>
+<option>Menor CPC</option>
+</select>
+</div>
+</div>
+<!-- GRID DE K-PROFILES (4 PERFILES REPRESENTATIVOS) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-space-md">
+<!-- CREADOR 1: VALERIA MORALES -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<!-- Cabecera de Tarjeta -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-md" data-alt="Portrait photography of young female Peruvian fashion influencer smiling stylishly against neutral studio lighting, wearing chic modern blazer, professional beauty lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs10ew7_fQ2xi3TQm8zn-RwoID2hgHvhHM3t2hvueqApDQtScRWT3fYV30ZQNz0Kn-7CDRL0Gut6nftjKm-R36yfYz5ECMQprSmyqVXc7Yk4Ewxfa4z5UClsrGiL-ZHIuhUUpXSIcB4iyVgHgoLer_gwJdWt1s3kNvxE6qN2mCCfHnL1TxIgNotcB_gIOfJ_kTktViwHJW-RPYmLGQHOlkmeDF41ydLobG7_tOv87cXW506qV36mzv1Q"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-secondary flex items-center justify-center text-on-secondary text-[10px] font-bold">★</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Valeria Morales</h3>
+<span class="material-symbols-outlined text-sm text-primary" title="Perfil Auditado">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">@valeria.lifestyle</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">Moda &amp; Lifestyle • Lima</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs font-semibold">Campaña Activa</span>
+<span class="font-label-xs text-label-xs text-secondary">Sobrecumplimiento</span>
+</div>
+</div>
+<!-- Plataformas & Audiencia -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Plataformas</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#F43F5E] font-label-xs text-label-xs">IG 420K</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#22D3EE] font-label-xs text-label-xs">TT 680K</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Autenticidad</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-primary">96.4%</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Bots 3.6%</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Engagement Rate</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-secondary">8.4%</span>
+<span class="font-label-xs text-label-xs text-primary font-medium">vs 4.1% cat.</span>
+</div>
+</div>
+</div>
+<!-- Métricas Financieras y de Atribución -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Fee Contratado</span>
+<span class="font-title-md text-body-md text-on-surface mt-1">S/ 6,500</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">3 Reels + 4 TT + 5 Stories</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">EMV Generado</span>
+<span class="font-title-md text-body-md text-secondary mt-1">S/ 38,200</span>
+<span class="font-label-xs text-label-xs text-secondary-fixed mt-0.5">Retorno: 5.8x</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Ventas Atribuidas</span>
+<span class="font-title-md text-body-md text-primary mt-1">S/ 34,800</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">482 pedidos</span>
+</div>
+</div>
+<!-- UTM Box -->
+<div class="p-2 rounded bg-surface-container-highest flex items-center justify-between text-on-surface font-label-xs text-label-xs">
+<div class="flex items-center gap-1 truncate">
+<span class="text-secondary font-mono">UTM:</span>
+<span class="font-mono text-on-surface-variant truncate">?utm_source=valeria_marzo21</span>
+</div>
+<span class="text-primary font-medium shrink-0 ml-2">Flores Amarillas Premium</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Última auditoría: Hoy 08:30 AM</span>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver Análisis Profundo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CREADOR 2: DIEGO LIMA TRENDS -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<!-- Cabecera de Tarjeta -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-md" data-alt="Portrait photography of young male Peruvian content creator laughing dynamically, modern urban background, high contrast warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4bTxAUOpI7D9VxzzOs7_v3S8kaAWaE4jjDL68SjZQnSy5j8-tUM5Gxe_dRPlGt-Rbot6hPsHdWS2IUlmZXOhNynTmdQboSKTLQ4u-9MzyQttVcA1_amp69BCZ6iYzCvWl3Tq-B4kJVMLPH64XBPMs_z3_OqMRnjrGAzk1Xg84hc0IUDbC8rP1cndcqqOhRXeNKhpjY1Ttba1viOmv7ZDlh6ec7N3WWrnWiblWA2zot75O10eFdrpjCA"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#22D3EE] flex items-center justify-center text-surface text-[10px] font-bold">♪</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Diego Lima Trends</h3>
+<span class="material-symbols-outlined text-sm text-primary" title="Perfil Auditado">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">@diego_lima_trends</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">Humor &amp; Tendencias • Lima Urbana</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary-fixed font-label-xs text-label-xs font-semibold">Campaña Activa</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">TikTok Spark Focus</span>
+</div>
+</div>
+<!-- Plataformas & Audiencia -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Plataformas</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#22D3EE] font-label-xs text-label-xs">TT 950K</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#F43F5E] font-label-xs text-label-xs">IG 180K</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Autenticidad</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-on-surface">92.8%</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Bots 7.2%</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Engagement Rate</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-secondary">7.1%</span>
+<span class="font-label-xs text-label-xs text-primary font-medium">Picos 14%</span>
+</div>
+</div>
+</div>
+<!-- Métricas Financieras y de Atribución -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Fee Contratado</span>
+<span class="font-title-md text-body-md text-on-surface mt-1">S/ 4,800</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">2 Spark Ads + 1 Storie</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">EMV Generado</span>
+<span class="font-title-md text-body-md text-secondary mt-1">S/ 24,100</span>
+<span class="font-label-xs text-label-xs text-secondary-fixed mt-0.5">Retorno: 5.0x</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Ventas Atribuidas</span>
+<span class="font-title-md text-body-md text-primary mt-1">S/ 21,500</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">310 pedidos</span>
+</div>
+</div>
+<!-- UTM Box -->
+<div class="p-2 rounded bg-surface-container-highest flex items-center justify-between text-on-surface font-label-xs text-label-xs">
+<div class="flex items-center gap-1 truncate">
+<span class="text-secondary font-mono">UTM:</span>
+<span class="font-mono text-on-surface-variant truncate">?utm_source=diegotrends_express</span>
+</div>
+<span class="text-secondary font-medium shrink-0 ml-2">Promo Pack Viral</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Última auditoría: Ayer 06:15 PM</span>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver Análisis Profundo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CREADOR 3: CAMILA & DECOR -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<!-- Cabecera de Tarjeta -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-md" data-alt="Portrait photography of young Peruvian interior designer woman with aesthetic flowers and minimalist interior design background, warm natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkq_tKPZsXQ-HBu7kXfU2qPdk4PN26mhUC6cAdshRGS5fwyennDiuK3T1ej82kMMY04k3yW-S-i1L7USg6ZubZdQkA01uU8YsVhorHZ8Ii7vgW_7pvnNjioDXWJrJOy4Ri2qV8SFLyIsFt1NxTZabf7lYx7aH8taHObwtZqz7x6jti9U8HoLnOyJIIwAXwRnVS8aeiWTIIzbcxolBYHx2UTPBwDjC3VZn8vTpWJk6973vXOoRZmSxKIQ"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#F87171] flex items-center justify-center text-surface text-[10px] font-bold">📌</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Camila Salazar</h3>
+<span class="material-symbols-outlined text-sm text-primary" title="Perfil Auditado">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">@deco_peru</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">Decoración, Flores &amp; Mesas • Lima/Arequipa</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary-fixed font-label-xs text-label-xs font-semibold">Campaña Activa</span>
+<span class="font-label-xs text-label-xs text-primary">Aesthetic Focus</span>
+</div>
+</div>
+<!-- Plataformas & Audiencia -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Plataformas</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#F87171] font-label-xs text-label-xs">Pin 140K</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#F43F5E] font-label-xs text-label-xs">IG 95K</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Autenticidad</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-primary">98.1%</span>
+<span class="font-label-xs text-label-xs text-primary font-medium">Bots 1.9%</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Engagement Rate</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-secondary">9.8%</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Alto Guardado</span>
+</div>
+</div>
+</div>
+<!-- Métricas Financieras y de Atribución -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Fee Contratado</span>
+<span class="font-title-md text-body-md text-on-surface mt-1">S/ 3,200</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">4 Pins + 2 Carruseles</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">EMV Generado</span>
+<span class="font-title-md text-body-md text-secondary mt-1">S/ 18,900</span>
+<span class="font-label-xs text-label-xs text-secondary-fixed mt-0.5">Retorno: 5.9x</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Ventas Atribuidas</span>
+<span class="font-title-md text-body-md text-primary mt-1">S/ 16,800</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">220 pedidos</span>
+</div>
+</div>
+<!-- UTM Box -->
+<div class="p-2 rounded bg-surface-container-highest flex items-center justify-between text-on-surface font-label-xs text-label-xs">
+<div class="flex items-center gap-1 truncate">
+<span class="text-secondary font-mono">UTM:</span>
+<span class="font-mono text-on-surface-variant truncate">?utm_source=deco_peru_shop</span>
+</div>
+<span class="text-primary font-medium shrink-0 ml-2">Arreglos Corporativos</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Última auditoría: Hoy 10:00 AM</span>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver Análisis Profundo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CREADOR 4: RODRIGO PAZ -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<!-- Cabecera de Tarjeta -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-md" data-alt="Portrait photography of young Peruvian male food reviewer holding an artisan coffee and floral dessert, warm atmospheric cafe lighting in Miraflores Lima" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0skp6MzjdQrhmsjVlsCn610PZ1D3PeTDAdEzHBlbwy6Y-M3Mx402rdLNwWINsApdeV2k7MY_dPiVjirEmkm7ad2muhHO2V1OCZDOXV37dPqp_94EF4tEyL5hQrr2xIaObN63JjltLFx_KywK6vXoTDby454kKTAiNdFZIqldEysnalY-YaM0xk8I6kcQw8IB771A10geQs8pHdl37FjFIYEMQ-RYbXcNm-G_pWizaYZ8fzXbxItljHw"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary text-[10px] font-bold">⚡</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Rodrigo Paz</h3>
+<span class="material-symbols-outlined text-sm text-primary" title="Perfil Auditado">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">@rodrigo_foodie_pe</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">Experiencias, Citas &amp; Flores • Lima</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold">Micro-Influencer</span>
+<span class="font-label-xs text-label-xs text-secondary-fixed">Renovación Q2</span>
+</div>
+</div>
+<!-- Plataformas & Audiencia -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Plataformas</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#22D3EE] font-label-xs text-label-xs">TT 85K</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[#F43F5E] font-label-xs text-label-xs">IG 45K</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Autenticidad</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-on-surface">95.0%</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Bots 5.0%</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Engagement Rate</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-md text-title-md text-secondary">11.2%</span>
+<span class="font-label-xs text-label-xs text-primary font-medium">Hyper Local</span>
+</div>
+</div>
+</div>
+<!-- Métricas Financieras y de Atribución -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Fee Contratado</span>
+<span class="font-title-md text-body-md text-on-surface mt-1">S/ 1,500</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">1 Reseña + 2 Stories</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">EMV Generado</span>
+<span class="font-title-md text-body-md text-secondary mt-1">S/ 7,450</span>
+<span class="font-label-xs text-label-xs text-secondary-fixed mt-0.5">Retorno: 4.9x</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Ventas Atribuidas</span>
+<span class="font-title-md text-body-md text-primary mt-1">S/ 5,800</span>
+<span class="font-label-xs text-label-xs text-primary mt-0.5">92 pedidos</span>
+</div>
+</div>
+<!-- UTM Box -->
+<div class="p-2 rounded bg-surface-container-highest flex items-center justify-between text-on-surface font-label-xs text-label-xs">
+<div class="flex items-center gap-1 truncate">
+<span class="text-secondary font-mono">UTM:</span>
+<span class="font-mono text-on-surface-variant truncate">?utm_source=rodrigo_citas</span>
+</div>
+<span class="text-on-surface-variant font-medium shrink-0 ml-2">Combo Sorpresa Cita</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Última auditoría: 18 Mar 04:00 PM</span>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver Análisis Profundo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- PANEL DE TRAZABILIDAD UTM & AUDITORÍA ANTIFRAUDE EN TIEMPO REAL (RF-4.3) -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Tabla de Enlaces UTM Activos (8 cols) -->
+<div class="xl:col-span-8 rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">qr_code_2</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Trazabilidad de Enlaces UTM Activos</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Atribución de conversión directa de pasarela (Last-Click Model Perú)</span>
+</div>
+</div>
+<button class="px-space-md py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Exportar CSV</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-lowest/60">
+<th class="py-2.5 px-3">Código UTM &amp; Producto</th>
+<th class="py-2.5 px-3">Creador</th>
+<th class="py-2.5 px-3">Clics Únicos</th>
+<th class="py-2.5 px-3">Conv. %</th>
+<th class="py-2.5 px-3">Ticket Prom.</th>
+<th class="py-2.5 px-3">Revenue (PEN)</th>
+<th class="py-2.5 px-3">Estado</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- Fila 1 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-mono text-secondary text-label-xs font-semibold truncate max-w-[200px]">?utm_source=valeria_marzo21</span>
+<span class="text-on-surface-variant text-label-xs">Ramo Flores Amarillas Pro</span>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">@valeria.lifestyle</td>
+<td class="py-3 px-3 text-on-surface">12,420</td>
+<td class="py-3 px-3 text-primary font-semibold">3.88%</td>
+<td class="py-3 px-3 text-on-surface-variant">S/ 72.20</td>
+<td class="py-3 px-3 text-secondary font-bold font-title-md">S/ 34,800</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-xs text-label-xs font-medium">Activo</span>
+</td>
+</tr>
+<!-- Fila 2 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-mono text-secondary text-label-xs font-semibold truncate max-w-[200px]">?utm_source=diegotrends_express</span>
+<span class="text-on-surface-variant text-label-xs">Delivery Express Primavera</span>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">@diego_lima_trends</td>
+<td class="py-3 px-3 text-on-surface">9,180</td>
+<td class="py-3 px-3 text-primary font-semibold">3.37%</td>
+<td class="py-3 px-3 text-on-surface-variant">S/ 69.30</td>
+<td class="py-3 px-3 text-secondary font-bold font-title-md">S/ 21,500</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-xs text-label-xs font-medium">Activo</span>
+</td>
+</tr>
+<!-- Fila 3 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-mono text-secondary text-label-xs font-semibold truncate max-w-[200px]">?utm_source=deco_peru_shop</span>
+<span class="text-on-surface-variant text-label-xs">Centro de Mesa Especial</span>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">@deco_peru</td>
+<td class="py-3 px-3 text-on-surface">5,410</td>
+<td class="py-3 px-3 text-primary font-semibold">4.06%</td>
+<td class="py-3 px-3 text-on-surface-variant">S/ 76.36</td>
+<td class="py-3 px-3 text-secondary font-bold font-title-md">S/ 16,800</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-xs text-label-xs font-medium">Activo</span>
+</td>
+</tr>
+<!-- Fila 4 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-mono text-secondary text-label-xs font-semibold truncate max-w-[200px]">?utm_source=rodrigo_citas</span>
+<span class="text-on-surface-variant text-label-xs">Combo Dulce Parejas</span>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">@rodrigo_foodie_pe</td>
+<td class="py-3 px-3 text-on-surface">2,850</td>
+<td class="py-3 px-3 text-primary font-semibold">3.22%</td>
+<td class="py-3 px-3 text-on-surface-variant">S/ 63.04</td>
+<td class="py-3 px-3 text-secondary font-bold font-title-md">S/ 5,800</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-xs text-label-xs font-medium">Revisión</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Módulo de Auditoría Antifraude y Demografía Perú (4 cols) -->
+<div class="xl:col-span-4 rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">shield</span>
+<h3 class="font-title-md text-title-md text-on-surface">Auditoría Antifraude Perú</h3>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Detección en tiempo real de granjas de bots, tráfico spoofing y compras sospechosas de seguidores.
+        </p>
+<!-- Distribución Demográfica -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Demografía Nacional Verificada</span>
+<!-- Lima -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-on-surface">Lima Metropolitana</span>
+<span class="text-primary font-semibold">65.0%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<!-- Arequipa -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-on-surface">Arequipa &amp; Sur</span>
+<span class="text-secondary font-semibold">15.0%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<!-- Trujillo -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-on-surface">La Libertad (Trujillo)</span>
+<span class="text-secondary-fixed font-semibold">10.0%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full rounded-full" style="width: 10%"></div>
+</div>
+</div>
+<!-- Otros -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-on-surface">Otras Regiones Perú</span>
+<span class="text-on-surface-variant font-semibold">10.0%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-surface-container-highest h-full rounded-full" style="width: 10%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Alertas de Integridad -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-base">verified_user</span>
+<span>Red 100% Certificada Segura</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          0 perfiles sancionados por compra de engagement inusual. Score de confianza global: <strong class="text-secondary">97.8/100</strong>.
+        </p>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function updateSim() {
+    const reach = parseFloat(document.querySelector('input[oninput*="val-reach"]').value) || 450000;
+    const er = parseFloat(document.querySelector('input[oninput*="val-er"]').value) || 7.2;
+    const fee = parseFloat(document.querySelector('input[oninput*="val-fee"]').value) || 3500;
+    const cvr = parseFloat(document.querySelector('input[oninput*="val-cvr"]').value) || 2.4;
+
+    // Fórmula estándar retail de EMV estimada para campañas en Perú
+    // EMV = (Reach * (ER / 100) * 0.40 PEN) + (Reach * 0.003 * CVR * 35 PEN)
+    const emv = Math.round((reach * (er / 100) * 0.38) + ((reach * 0.02) * (cvr / 100) * 68));
+    const net = emv - fee;
+    const roi = Math.round((net / fee) * 100);
+
+    const elEmv = document.getElementById('sim-emv');
+    const elNet = document.getElementById('sim-net');
+    const elRoi = document.getElementById('sim-roi');
+
+    if (elEmv) elEmv.innerText = 'S/ ' + emv.toLocaleString('es-PE') + ' PEN';
+    if (elNet) elNet.innerText = (net >= 0 ? '+S/ ' : '-S/ ') + Math.abs(net).toLocaleString('es-PE');
+    if (elRoi) elRoi.innerText = roi + '%';
+  }
+</script></main></div></body></html>

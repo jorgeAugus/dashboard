@@ -1,0 +1,143 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile managing roles and preferences in Kajel Bloom Suite",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Unique user ID matching Firebase Auth UID"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name of the user"
+        },
+        "role": {
+          "type": "string",
+          "description": "Role of the user in team (e.g. Brand Manager, Community Lead, Content Creator, Operations Supervisor)"
+        },
+        "region": {
+          "type": "string",
+          "description": "Active operational region (e.g. Perú Retail)"
+        },
+        "assignedCampaign": {
+          "type": "string",
+          "description": "Currently active retail campaign"
+        },
+        "avatarUrl": {
+          "type": "string",
+          "description": "Profile picture URL"
+        },
+        "notificationsEnabled": {
+          "type": "boolean",
+          "description": "Whether real-time crisis alerts are pushed"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp of last profile update"
+        }
+      },
+      "required": ["userId", "email", "role"]
+    },
+    "CalendarPost": {
+      "title": "CalendarPost",
+      "description": "Multi-platform scheduled social post",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "hook": { "type": "string" },
+        "platform": { "type": "string" },
+        "format": { "type": "string" },
+        "scheduledTime": { "type": "string" },
+        "day": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "status": { "type": "string" },
+        "author": { "type": "string" },
+        "aspectRatio": { "type": "string" },
+        "tags": { "type": "string" },
+        "copy": { "type": "string" },
+        "thumbnail": { "type": "string" }
+      },
+      "required": ["title", "platform", "status"]
+    },
+    "SupportTicket": {
+      "title": "SupportTicket",
+      "description": "Universal inbox helpdesk ticket",
+      "type": "object",
+      "properties": {
+        "clientHandle": { "type": "string" },
+        "clientName": { "type": "string" },
+        "platform": { "type": "string" },
+        "status": { "type": "string" },
+        "slaMinutes": { "type": "number" },
+        "title": { "type": "string" },
+        "lastMessage": { "type": "string" },
+        "sentiment": { "type": "string" },
+        "riskPercent": { "type": "number" },
+        "orderId": { "type": "string" },
+        "assignedAgent": { "type": "string" }
+      },
+      "required": ["clientHandle", "platform", "status"]
+    },
+    "CrisisAlert": {
+      "title": "CrisisAlert",
+      "description": "Sentinel social listening alert",
+      "type": "object",
+      "properties": {
+        "level": { "type": "string" },
+        "title": { "type": "string" },
+        "campaign": { "type": "string" },
+        "channels": { "type": "string" },
+        "status": { "type": "string" },
+        "percentageIncrease": { "type": "string" }
+      },
+      "required": ["level", "title", "status"]
+    },
+    "Creator": {
+      "title": "Creator",
+      "description": "Influencer and creator attribution entity",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "handle": { "type": "string" },
+        "niche": { "type": "string" },
+        "platforms": { "type": "string" },
+        "authenticityScore": { "type": "number" },
+        "erRate": { "type": "number" },
+        "contractedFee": { "type": "number" },
+        "emvGenerated": { "type": "number" },
+        "attributedSales": { "type": "number" },
+        "ordersCount": { "type": "number" },
+        "utmCode": { "type": "string" }
+      },
+      "required": ["name", "handle"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Private profile of the authenticated user"
+    },
+    "/calendar_posts/{postId}": {
+      "schema": { "$ref": "#/entities/CalendarPost" },
+      "description": "Multi-platform scheduled content"
+    },
+    "/support_tickets/{ticketId}": {
+      "schema": { "$ref": "#/entities/SupportTicket" },
+      "description": "Customer support and community inbox tickets"
+    },
+    "/crisis_alerts/{alertId}": {
+      "schema": { "$ref": "#/entities/CrisisAlert" },
+      "description": "Real-time listening alerts from Sentinel"
+    },
+    "/creators/{creatorId}": {
+      "schema": { "$ref": "#/entities/Creator" },
+      "description": "Influencer directory with calculated EMV metrics"
+    }
+  }
+}

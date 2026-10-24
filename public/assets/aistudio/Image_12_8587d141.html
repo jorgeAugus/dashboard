@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#93000a", "on-secondary-container": "#5a4100", "tertiary-fixed": "#ffdcc3", "secondary": "#ffc640", "surface-container-highest": "#2d3449", "secondary-fixed": "#ffdf9f", "on-tertiary-container": "#6a3700", "on-tertiary-fixed-variant": "#6e3900", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary-fixed": "#2a1700", "on-secondary-fixed-variant": "#5c4300", "on-primary-fixed-variant": "#653e00", "on-primary": "#472a00", "primary-fixed-dim": "#ffb95f", "surface-container-low": "#131b2e", "surface-container-high": "#222a3d", "outline": "#a08e7a", "secondary-fixed-dim": "#f9bd22", "outline-variant": "#534434", "surface-container": "#171f33", "surface": "#0b1326", "surface-dim": "#0b1326", "on-background": "#dae2fd", "on-secondary-fixed": "#261a00", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "secondary-container": "#e3aa00", "on-surface": "#dae2fd", "on-tertiary": "#4d2600", "on-secondary": "#402d00", "surface-tint": "#ffb95f", "tertiary-fixed-dim": "#ffb77d", "tertiary-container": "#ff9837", "background": "#0b1326", "surface-bright": "#31394d", "error": "#ffb4ab", "inverse-on-surface": "#283044", "on-tertiary-fixed": "#2f1500", "primary": "#ffc174", "surface-variant": "#2d3449", "primary-container": "#f59e0b", "inverse-primary": "#855300", "tertiary": "#ffc08e", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "body-md": ["Inter"], "headline-md": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "metric-num": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"], "display-lg": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "metric-num": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="Kajel Bloom Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTd0jSXqnGHLaU8hSBnNWuuXbrRJ2pjykpawMAPzNsQapl0SrvAWoCZQ5CQojiZy2bcs50Uwq5MqobIiXMengpzsfAkgmej-JQOrUQneO2njxLIJpKQCT61smwSbXmZ-75BWRRoB5jMhrBNyH9bhqWBeasjAbIEgoiw1YV0mo74CECuwuEh8THmPri4NGMyDtXXN9POeQTe7zvl74vgofhuah5z6ma7xm0UovqyMxpTISEZCzdpoH5wt4"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Kajel Bloom</span></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs">v2.4 Pro</span></div><div class="px-space-lg py-space-sm"><div class="px-space-sm py-1 bg-surface-container rounded-lg flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Región Activa</span><span class="font-label-xs text-label-xs text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Perú Retail</span></div></div><nav class="flex flex-col gap-1 px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tablero-analitico" href="#"><span>Tablero Analítico</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calendario-contenido" href="#"><span>Calendario Contenido</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="social-listening" href="#"><span>Social Listening</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="directorio-de-influencers" href="#"><span>Directorio Influencers</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inbox-comunitario" href="#"><span>Inbox Comunitario</span><span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs font-semibold shadow-[0_2px_10px_-2px_rgba(245,158,11,0.25)]">14</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-apis" href="#"><span>Configuración &amp; APIs</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">APIs Conectadas</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><div class="flex items-center justify-between py-0.5"><span>TikTok Marketing API</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Meta Graph API v19</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Pinterest Ads API v5</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div></div><div class="pt-space-xs"><div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant mb-1"><span>Cuota Data Mensual</span><span>84%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-1.5 rounded-full" style="width: 84%"></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-base text-primary">storefront</span><span class="font-title-md text-body-sm text-on-surface">Kajel Perú - Campaña Primavera / Flores Amarillas</span><span class="material-symbols-outlined text-base text-on-surface-variant">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-base text-secondary">date_range</span><span>Últimos 30 días - Mar 2026</span></div></div><div class="flex-1 max-w-md hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar métricas, creadores o hashtags..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs flex items-center gap-1 shadow-[0_4px_20px_-2px_rgba(245,158,11,0.18)]">2</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXpUnsIRItTquH23ywd23_xs9kdclB_-IjEuD48aFcHp0PqhorJkHLBY7XNHnnfKoq2YmAzJrRzDCW8AS-Z2zzdva7Nlilld_R9YDHe_8QFlA8bbApQ1QCKvhhFzyEVkEXiWEwNDkWzGPbBc4_q6cyMLPrR2i5Voxso9KRTIUfvV9Bme-O3tvM6u5sxBEfFRFKd7n4mGa13Sn4ahwHO_AofIKRhfCLWLpQLzUaC7dyzWvMCWRAcNv9MQ"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface">Brand Manager</span><span class="font-label-xs text-label-xs text-on-surface-variant">retail@kajel.pe</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Sub-header / Technical Governance Hero Breadcrumb Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-xs text-label-xs uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-sm text-primary">security</span>
+          Sección Técnica &amp; Gobernanza • Arquitectura de Integraciones v2.4
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-label-xs text-label-xs flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Sistema Operativo: 100% Sincronizado
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-mono">
+          TLS 1.3 / mTLS Enforced
+        </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">
+        Conexión de APIs Oficiales &amp; Gobernanza de Credenciales
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Gestión centralizada de credenciales OAuth 2.0 PKCE, tokens cifrados AES-256-GCM en PostgreSQL Vault, suscripción de Webhooks en tiempo real y cuotas de consumo por plataforma para Retail Perú 2026.
+      </p>
+</div>
+<!-- Quick Action Toolbar -->
+<div class="flex flex-wrap items-center gap-space-sm self-start xl:self-center">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-sm" id="btnPingWebhooks">
+<span class="material-symbols-outlined text-base text-primary">cell_tower</span>
+<span>Probar Salud (Ping)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-sm" id="btnRotateSecrets">
+<span class="material-symbols-outlined text-base text-secondary">sync_lock</span>
+<span>Regenerar Secret Keys</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-secondary transition-all shadow-[0_4px_20px_-2px_rgba(245,158,11,0.25)]">
+<span class="material-symbols-outlined text-base font-bold">add_link</span>
+<span>+ Conectar Nueva Red</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Row: Global API Gateway & Rate Limits -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Cuota Mensual Consumida</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-xs text-label-xs">Global Gateway</span>
+</div>
+<div class="flex items-baseline gap-2 my-1">
+<span class="font-metric-num text-metric-num text-on-surface">84.2%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">1.68M / 2.00M req</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full transition-all duration-500" style="width: 84.2%"></div>
+</div>
+<div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Reserva seg.: 316,000 req</span>
+<span class="text-secondary font-medium">Reinicio en 12d</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Latencia Media Webhooks</span>
+<span class="flex items-center gap-1 text-secondary font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Óptimo
+        </span>
+</div>
+<div class="flex items-baseline gap-2 my-1">
+<span class="font-metric-num text-metric-num text-on-surface">312<span class="font-title-md text-title-md text-on-surface-variant ml-1 font-normal">ms</span></span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">-14ms vs ayer</span>
+</div>
+<!-- Mini Sparkline inline SVG -->
+<div class="flex items-center justify-between pt-1">
+<svg class="w-32 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 100 24">
+<path d="M0 16 L15 14 L30 18 L45 8 L60 12 L75 6 L90 10 L100 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="font-label-xs text-label-xs text-on-surface-variant">SLA estricto &lt; 800ms</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Tokens Activos Cifrados</span>
+<span class="material-symbols-outlined text-base text-primary">verified_user</span>
+</div>
+<div class="flex items-baseline gap-2 my-1">
+<span class="font-metric-num text-metric-num text-on-surface">6 <span class="font-title-md text-title-md text-on-surface-variant font-normal">Cuentas</span></span>
+<span class="font-body-sm text-body-sm text-primary font-mono">0 revocados</span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant pt-2">
+<span class="flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          AES-256-GCM Vault
+        </span>
+<span class="font-mono text-on-surface">KMS Activo</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Worker Pool BullMQ</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-xs text-label-xs font-mono">Redis Clúster</span>
+</div>
+<div class="flex items-baseline gap-2 my-1">
+<span class="font-metric-num text-metric-num text-on-surface">12 <span class="font-title-md text-title-md text-on-surface-variant font-normal">Workers</span></span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">0 Fallos / 100%</span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant pt-2">
+<span class="font-mono">Throughput: 840 ops/s</span>
+<span class="font-mono text-secondary">0 en cola</span>
+</div>
+</div>
+</div>
+<!-- Main Section: APIs Oficiales Grid -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">hub</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Conectores de Redes &amp; Pasarelas Activas</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs">4 Canales Sincronizados</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">autorenew</span>
+<span>Polling de estado cada 30 segundos</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- API Card 1: TikTok Content & Creator API -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-low rounded-xl shadow-md transition-all">
+<div class="flex flex-col gap-space-md">
+<!-- Card Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shadow-inner">
+<svg class="w-6 h-6 text-on-surface" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.98a6.38 6.38 0 0 0-.79-.05A6.34 6.34 0 0 0 3 16.27a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.58a7.28 7.28 0 0 0 3.91 1.15v-3.04z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface">TikTok for Business &amp; Creator API</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-xs text-label-xs font-mono">v1.3 Display</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Client ID: tk_prod_peru_retail_99182</span>
+</div>
+</div>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              Conectado &amp; Sincronizado
+            </span>
+</div>
+<!-- Metadata & Scopes -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Protocolo &amp; Vencimiento</span>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-sm text-primary">key</span>
+<span>OAuth 2.0 PKCE • Expira en 48d</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">Auto-refresh configurado vía cron diario</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Tasa de Consumo (Rate Limit)</span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface font-mono">
+<span>42,500 / 60,000 req/h</span>
+<span class="text-primary font-semibold">70.8%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1 overflow-hidden mt-1">
+<div class="bg-primary h-1 rounded-full" style="width: 70.8%"></div>
+</div>
+</div>
+</div>
+<!-- Scopes list -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Permisos &amp; Scopes Otorgados</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">video.upload</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">user.info.stats</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">comment.list</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">comment.reply</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-mono">+1 analytics.read</span>
+</div>
+</div>
+<!-- Webhook Endpoint Preview -->
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container font-mono text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">webhook</span>
+                Webhook Ingress (HMAC-SHA256)
+              </span>
+<span class="text-secondary">3 eventos suscritos</span>
+</div>
+<span class="text-on-surface truncate text-xs select-all">https://api.kajelbloom.pe/v1/webhooks/tiktok-events</span>
+</div>
+</div>
+<!-- Action bar -->
+<div class="flex items-center justify-between pt-space-md mt-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+              Configurar Scopes
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">network_ping</span>
+              Test Webhook
+            </button>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg text-error hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">link_off</span>
+            Desconectar
+          </button>
+</div>
+</div>
+<!-- API Card 2: Meta Graph API (Instagram & Facebook) -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-low rounded-xl shadow-md transition-all">
+<div class="flex flex-col gap-space-md">
+<!-- Card Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shadow-inner">
+<svg class="w-6 h-6 text-secondary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface">Instagram Graph API v20.0</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-xs text-label-xs font-mono">Meta Verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Cuenta: @kajelbloom_pe • Business ID: 4920199201</span>
+</div>
+</div>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              Conectado &amp; Verificado
+            </span>
+</div>
+<!-- Metadata & Scopes -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Tipo de Token</span>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-sm text-primary">shield_person</span>
+<span>Long-Lived System User Token</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Sin expiración fija (Rotación semestral)</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Latencia Media de Entrega</span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface font-mono">
+<span>Webhook Ack: 280 ms</span>
+<span class="text-secondary font-semibold">Excelente</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1 overflow-hidden mt-1">
+<div class="bg-secondary h-1 rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</div>
+<!-- Scopes list -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Permisos de Graph API</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">instagram_basic</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">instagram_content_publish</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">instagram_manage_comments</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">instagram_manage_messages</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">pages_read_engagement</span>
+</div>
+</div>
+<!-- Webhook Endpoint Preview -->
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container font-mono text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">webhook</span>
+                Meta Graph Webhook (SHA1 Signature Validated)
+              </span>
+<span class="text-secondary">Mentions, DMs, Comments</span>
+</div>
+<span class="text-on-surface truncate text-xs select-all">https://api.kajelbloom.pe/v1/webhooks/meta-graph</span>
+</div>
+</div>
+<!-- Action bar -->
+<div class="flex items-center justify-between pt-space-md mt-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+              Auditar Permisos
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">history</span>
+              Logs de Tráfico
+            </button>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">refresh</span>
+            Re-autenticar
+          </button>
+</div>
+</div>
+<!-- API Card 3: Pinterest Business API v5 -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-low rounded-xl shadow-md transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-primary text-2xl">push_pin</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface">Pinterest Business API v5</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-xs text-label-xs font-mono">Catálogo &amp; Pins</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Tienda: Kajel Bloom Flores • Merchant: PE-CAT-89201</span>
+</div>
+</div>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Conectado
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Sync de Catálogo Flores</span>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-sm text-primary">sync</span>
+<span>Automático c/ 6 horas</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">248 productos sincronizados</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Tableros Vinculados</span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface font-mono">
+<span>Flores Amarillas Mar 2026</span>
+<span class="text-primary font-semibold">14 Boards</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Idea Pins con Rich Tagging</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Scopes Otorgados</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">boards:read</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">pins:read</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">pins:write</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">catalogs:read</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">user_accounts:read</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container font-mono text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span>Endpoint Ingesta de Feed XML / JSON</span>
+<span class="text-primary">Estatus 200 OK</span>
+</div>
+<span class="text-on-surface truncate text-xs select-all">https://api.kajelbloom.pe/v1/feeds/pinterest-merchant.xml</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">cached</span>
+              Forzar Sync Catálogo
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+              Gestionar Boards
+            </button>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-mono">Último sync: Hace 42m</span>
+</div>
+</div>
+<!-- API Card 4: E-commerce & Pasarelas Locales Perú -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-low rounded-xl shadow-md transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-secondary text-2xl">shopping_cart_checkout</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface">Shopify Perú + Niubiz / Yape Gateway</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-xs text-label-xs font-mono">Conversiones UTM</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Store: kajel-bloom.myshopify.com • Webhook v2026-01</span>
+</div>
+</div>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              Activo &amp; Despachando
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Atribución de Creadores</span>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-sm text-primary">sell</span>
+<span>Pixel &amp; Server-Side CAPI</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">Campaña: Flores Amarillas</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Eventos de Pago Sincronizados</span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface font-mono">
+<span>Niubiz • Yape QR • POS</span>
+<span class="text-secondary font-semibold">1,248 pedidos/sem</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Atribución en tiempo real vía Webhooks</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Webhooks Activos de Pedidos</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">orders/create</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">orders/paid</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">checkouts/update</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-mono">inventory_levels/connect</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container font-mono text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span>Webhook Signature (HMAC-SHA256 Header)</span>
+<span class="text-secondary">Verificación 100% Ok</span>
+</div>
+<span class="text-on-surface truncate text-xs select-all">https://api.kajelbloom.pe/v1/webhooks/shopify-orders</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+              Probar Simulación de Compra
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">
+              Mapeo de UTMs
+            </button>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-mono">Latencia Gateway: 95ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Security Vault & Secrets Management Panel -->
+<div class="flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">vpn_key</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Bóveda Criptográfica de Credenciales &amp; Secretos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Almacenamiento cifrado en hardware HSM con clave maestra rotada cada 90 días. Todos los accesos se auditan en log inmutable.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5" id="btnToggleAllSecrets">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>Revelar Todo (5 seg)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-secondary transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm font-bold">add_moderator</span>
+<span>+ Agregar Nueva Llave</span>
+</button>
+</div>
+</div>
+<!-- Credentials Table -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface-variant uppercase font-label-xs text-label-xs tracking-wider">
+<tr>
+<th class="py-3 px-space-md">Identificador de Llave / Secreto</th>
+<th class="py-3 px-space-md">Tipo &amp; Protocolo</th>
+<th class="py-3 px-space-md">Esquema Criptográfico</th>
+<th class="py-3 px-space-md">Última Rotación</th>
+<th class="py-3 px-space-md">Valor del Secreto (Enmascarado)</th>
+<th class="py-3 px-space-md text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface font-mono">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">lock</span>
+              TIKTOK_CLIENT_SECRET_PROD
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-sans">OAuth Client Secret</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-xs">AES-256-GCM (HMAC)</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">14 Mar 2026, 04:12 PET</td>
+<td class="py-3.5 px-space-md">
+<span class="secret-val" data-secret="tk_sec_ live_9038af81e7d9c0b24e">••••••••••••••••3F9A</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1 font-sans">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" onclick="copySecret(this, 'tk_sec_ live_9038af81e7d9c0b24e')" title="Copiar secreto cifrado">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Rotar Llave">
+<span class="material-symbols-outlined text-sm">published_with_changes</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">lock</span>
+              META_APP_SECRET_AES
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-sans">App Proof Signature Secret</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-xs">AES-256-GCM (HMAC)</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">01 Mar 2026, 00:00 PET</td>
+<td class="py-3.5 px-space-md">
+<span class="secret-val" data-secret="meta_app_sec_48a1290bb34e819cd">••••••••••••••••88B1</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1 font-sans">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" onclick="copySecret(this, 'meta_app_sec_48a1290bb34e819cd')" title="Copiar secreto cifrado">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Rotar Llave">
+<span class="material-symbols-outlined text-sm">published_with_changes</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">lock</span>
+              REDIS_CACHE_AUTH_KEY
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-sans">Internal Redis Cluster Auth</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-xs">Argon2id Hash</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">10 Feb 2026, 12:30 PET</td>
+<td class="py-3.5 px-space-md">
+<span class="secret-val" data-secret="red_auth_77a98210feeb3120aa">••••••••••••••••91C0</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1 font-sans">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" onclick="copySecret(this, 'red_auth_77a98210feeb3120aa')" title="Copiar secreto cifrado">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Rotar Llave">
+<span class="material-symbols-outlined text-sm">published_with_changes</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">lock</span>
+              OPENAI_NLP_WORKER_KEY
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-sans">Bearer Token (Sentiment IA)</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-xs">AES-256-GCM (HMAC)</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">18 Mar 2026, 09:15 PET</td>
+<td class="py-3.5 px-space-md">
+<span class="secret-val" data-secret="sk-live-kajel-nlp-worker-99321">••••••••••••••••7F22</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1 font-sans">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" onclick="copySecret(this, 'sk-live-kajel-nlp-worker-99321')" title="Copiar secreto cifrado">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Rotar Llave">
+<span class="material-symbols-outlined text-sm">published_with_changes</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Real-Time Telemetry Terminal & Live Inbound Webhook Logs -->
+<div class="flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Telemetría de Webhooks &amp; Registro de Peticiones en Vivo</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Consola de streaming directo de sockets de eventos entrantes y respuestas del API Gateway.</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-label-md text-label-md">
+<!-- Status Filter -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-semibold">Todos</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface">2xx OK</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface">4xx / 5xx</button>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" id="btnPauseStream">
+<span class="material-symbols-outlined text-sm text-secondary">pause</span>
+<span>Pausar Stream</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">file_download</span>
+<span>Descargar JSON</span>
+</button>
+</div>
+</div>
+<!-- Terminal Window -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg font-mono text-xs text-on-surface leading-relaxed shadow-inner overflow-x-auto border-none">
+<div class="flex items-center justify-between pb-2 mb-2 text-on-surface-variant font-label-xs text-label-xs border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="ml-2">kajel-api-gateway@node-peru-prod-01:~$ tail -f /var/log/webhooks/ingress.log</span>
+</div>
+<span class="flex items-center gap-1 text-secondary font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+          STREAMING ACTIVO
+        </span>
+</div>
+<div class="flex flex-col gap-1.5" id="terminalFeed">
+<div class="flex flex-wrap items-center gap-2 text-secondary">
+<span class="px-1.5 py-0.2 rounded bg-secondary/15 font-bold">[200 OK]</span>
+<span class="text-on-surface-variant">14:32:01.402</span>
+<span class="text-primary font-bold">POST</span>
+<span class="text-on-surface">/webhooks/meta-graph</span>
+<span class="text-on-surface-variant">-</span>
+<span class="text-on-surface">Event: instagram_comment_create (User: @mariana_flores_pe)</span>
+<span class="text-primary font-bold ml-auto font-mono">180ms [ACK]</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 text-secondary">
+<span class="px-1.5 py-0.2 rounded bg-secondary/15 font-bold">[200 OK]</span>
+<span class="text-on-surface-variant">14:31:45.110</span>
+<span class="text-primary font-bold">POST</span>
+<span class="text-on-surface">/webhooks/tiktok</span>
+<span class="text-on-surface-variant">-</span>
+<span class="text-on-surface">Event: video_transcode_ready (Post: #KB-2026-03-JUE19)</span>
+<span class="text-primary font-bold ml-auto font-mono">410ms [ACK]</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 text-secondary">
+<span class="px-1.5 py-0.2 rounded bg-secondary/15 font-bold">[200 OK]</span>
+<span class="text-on-surface-variant">14:30:10.892</span>
+<span class="text-secondary font-bold">GET</span>
+<span class="text-on-surface">/api/v5/pinterest/catalogs/sync</span>
+<span class="text-on-surface-variant">-</span>
+<span class="text-on-surface">248 items actualizados en Feed (Merchant: PE-CAT-89201)</span>
+<span class="text-primary font-bold ml-auto font-mono">520ms [DONE]</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 text-secondary">
+<span class="px-1.5 py-0.2 rounded bg-secondary/15 font-bold">[200 OK]</span>
+<span class="text-on-surface-variant">14:28:55.004</span>
+<span class="text-primary font-bold">POST</span>
+<span class="text-on-surface">/webhooks/shopify</span>
+<span class="text-on-surface-variant">-</span>
+<span class="text-on-surface">Order #KB-8821 paid S/ 185.00 via Niubiz Yape QR (Flores Amarillas)</span>
+<span class="text-primary font-bold ml-auto font-mono">95ms [SYNC]</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 text-on-surface-variant opacity-85">
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-bold text-on-surface">[200 OK]</span>
+<span class="text-on-surface-variant">14:27:12.190</span>
+<span class="text-primary font-bold">POST</span>
+<span class="text-on-surface">/webhooks/meta-graph</span>
+<span class="text-on-surface-variant">-</span>
+<span class="text-on-surface">Event: instagram_story_insights (Story ID: 1802910283)</span>
+<span class="text-primary font-bold ml-auto font-mono">220ms [ACK]</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Engineering Architectural Footer Status & Compliance -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        BullMQ Worker Pool: 100% Saludable
+      </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">speed</span>
+        Clúster Redis: 12ms Latencia
+      </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+        OAuth Token Server: RS256 Seguro
+      </span>
+</div>
+<div class="flex items-center gap-space-sm mt-2 sm:mt-0 font-label-xs text-label-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">ISO/IEC 27001 Certified</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary">Ley N° 29733 (Perú Protec. Datos)</span>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Behaviors -->
+<script>
+  // Ensure the sidebar navigation highlighting for 'Configuración & APIs' is cleanly active
+  (function initActiveNavigation() {
+    try {
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        const path = link.getAttribute('data-path');
+        if (path === 'configuracion-apis') {
+          link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+          link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-[0_2px_10px_-2px_rgba(245,158,11,0.3)]');
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+          link.classList.add('text-on-surface-variant');
+        }
+      });
+    } catch(e) {
+      console.warn("Sidebar activation sync warning:", e);
+    }
+  })();
+
+  // Toggle revealed secrets in vault table
+  let allRevealed = false;
+  const btnToggleAll = document.getElementById('btnToggleAllSecrets');
+  if (btnToggleAll) {
+    btnToggleAll.addEventListener('click', () => {
+      const secretNodes = document.querySelectorAll('.secret-val');
+      allRevealed = !allRevealed;
+      secretNodes.forEach(node => {
+        if (allRevealed) {
+          node.textContent = node.getAttribute('data-secret');
+          node.classList.add('text-secondary', 'font-bold');
+        } else {
+          node.textContent = '••••••••••••••••' + (node.getAttribute('data-secret').slice(-4) || 'ABCD');
+          node.classList.remove('text-secondary', 'font-bold');
+        }
+      });
+      btnToggleAll.querySelector('span:last-child').textContent = allRevealed ? 'Ocultar Secretos' : 'Revelar Todo (5 seg)';
+      
+      if (allRevealed) {
+        setTimeout(() => {
+          if (allRevealed) {
+            btnToggleAll.click();
+          }
+        }, 5000);
+      }
+    });
+  }
+
+  // Copy secret with visual micro-feedback
+  function copySecret(btn, secretText) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(secretText);
+    }
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const originalText = icon.textContent;
+    icon.textContent = 'check';
+    btn.classList.add('text-secondary');
+    setTimeout(() => {
+      icon.textContent = originalText;
+      btn.classList.remove('text-secondary');
+    }, 1500);
+  }
+
+  // Ping Webhooks Simulator
+  const btnPing = document.getElementById('btnPingWebhooks');
+  if (btnPing) {
+    btnPing.addEventListener('click', () => {
+      btnPing.classList.add('animate-pulse');
+      const icon = btnPing.querySelector('.material-symbols-outlined');
+      icon.textContent = 'hourglass_top';
+      setTimeout(() => {
+        btnPing.classList.remove('animate-pulse');
+        icon.textContent = 'task_alt';
+        setTimeout(() => {
+          icon.textContent = 'cell_tower';
+        }, 2000);
+      }, 700);
+    });
+  }
+
+  // Pause / Resume Stream Simulator
+  const btnPause = document.getElementById('btnPauseStream');
+  let streamPaused = false;
+  if (btnPause) {
+    btnPause.addEventListener('click', () => {
+      streamPaused = !streamPaused;
+      const textSpan = btnPause.querySelector('span:last-child');
+      const iconSpan = btnPause.querySelector('.material-symbols-outlined');
+      if (streamPaused) {
+        textSpan.textContent = 'Reanudar Stream';
+        iconSpan.textContent = 'play_arrow';
+      } else {
+        textSpan.textContent = 'Pausar Stream';
+        iconSpan.textContent = 'pause';
+      }
+    });
+  }
+</script></main></div></body></html>

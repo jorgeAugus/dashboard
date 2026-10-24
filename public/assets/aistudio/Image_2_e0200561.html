@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#93000a", "on-secondary-container": "#5a4100", "tertiary-fixed": "#ffdcc3", "secondary": "#ffc640", "surface-container-highest": "#2d3449", "secondary-fixed": "#ffdf9f", "on-tertiary-container": "#6a3700", "on-tertiary-fixed-variant": "#6e3900", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary-fixed": "#2a1700", "on-secondary-fixed-variant": "#5c4300", "on-primary-fixed-variant": "#653e00", "on-primary": "#472a00", "primary-fixed-dim": "#ffb95f", "surface-container-low": "#131b2e", "surface-container-high": "#222a3d", "outline": "#a08e7a", "secondary-fixed-dim": "#f9bd22", "outline-variant": "#534434", "surface-container": "#171f33", "surface": "#0b1326", "surface-dim": "#0b1326", "on-background": "#dae2fd", "on-secondary-fixed": "#261a00", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "secondary-container": "#e3aa00", "on-surface": "#dae2fd", "on-tertiary": "#4d2600", "on-secondary": "#402d00", "surface-tint": "#ffb95f", "tertiary-fixed-dim": "#ffb77d", "tertiary-container": "#ff9837", "background": "#0b1326", "surface-bright": "#31394d", "error": "#ffb4ab", "inverse-on-surface": "#283044", "on-tertiary-fixed": "#2f1500", "primary": "#ffc174", "surface-variant": "#2d3449", "primary-container": "#f59e0b", "inverse-primary": "#855300", "tertiary": "#ffc08e", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "body-md": ["Inter"], "headline-md": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "metric-num": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"], "display-lg": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "metric-num": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="Kajel Bloom Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTd0jSXqnGHLaU8hSBnNWuuXbrRJ2pjykpawMAPzNsQapl0SrvAWoCZQ5CQojiZy2bcs50Uwq5MqobIiXMengpzsfAkgmej-JQOrUQneO2njxLIJpKQCT61smwSbXmZ-75BWRRoB5jMhrBNyH9bhqWBeasjAbIEgoiw1YV0mo74CECuwuEh8THmPri4NGMyDtXXN9POeQTe7zvl74vgofhuah5z6ma7xm0UovqyMxpTISEZCzdpoH5wt4"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Kajel Bloom</span></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs">v2.4 Pro</span></div><div class="px-space-lg py-space-sm"><div class="px-space-sm py-1 bg-surface-container rounded-lg flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Región Activa</span><span class="font-label-xs text-label-xs text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Perú Retail</span></div></div><nav class="flex flex-col gap-1 px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tablero-analitico" href="#"><span class="material-symbols-outlined text-lg">analytics</span><span>Tablero Analítico</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calendario-de-contenido" href="#"><span class="material-symbols-outlined text-lg">calendar_month</span><span>Calendario Contenido</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="social-listening-sentinel" href="#"><span class="material-symbols-outlined text-lg">radar</span><span>Social Listening</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="directorio-de-influencers" href="#"><span class="material-symbols-outlined text-lg">group</span><span>Directorio Influencers</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inbox-comunitario" href="#"><span class="material-symbols-outlined text-lg">forum</span><span>Inbox Comunitario</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-apis" href="#"><span class="material-symbols-outlined text-lg">tune</span><span>Configuración & APIs</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">APIs Conectadas</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><div class="flex items-center justify-between py-0.5"><span>TikTok Marketing API</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Meta Graph API v19</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Pinterest Ads API v5</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div></div><div class="pt-space-xs"><div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant mb-1"><span>Cuota Data Mensual</span><span>84%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-1.5 rounded-full" style="width: 84%"></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-base text-primary">storefront</span><span class="font-title-md text-body-sm text-on-surface">Kajel Perú - Campaña Primavera / Flores Amarillas</span><span class="material-symbols-outlined text-base text-on-surface-variant">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-base text-secondary">date_range</span><span>Últimos 30 días - Mar 2026</span></div></div><div class="flex-1 max-w-md hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar métricas, creadores o hashtags..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs flex items-center gap-1 shadow-[0_4px_20px_-2px_rgba(245,158,11,0.18)]">2</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXpUnsIRItTquH23ywd23_xs9kdclB_-IjEuD48aFcHp0PqhorJkHLBY7XNHnnfKoq2YmAzJrRzDCW8AS-Z2zzdva7Nlilld_R9YDHe_8QFlA8bbApQ1QCKvhhFzyEVkEXiWEwNDkWzGPbBc4_q6cyMLPrR2i5Voxso9KRTIUfvV9Bme-O3tvM6u5sxBEfFRFKd7n4mGa13Sn4ahwHO_AofIKRhfCLWLpQLzUaC7dyzWvMCWRAcNv9MQ"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface">Brand Manager</span><span class="font-label-xs text-label-xs text-on-surface-variant">retail@kajel.pe</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP CONTEXT & DASHBOARD HEADER -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Tablero Analítico Ejecutivo</h1>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">En Vivo (Sincronización Webhook 418ms)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span>Consolidado Omnicanal: TikTok Creator API</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span>Meta Graph v20+</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span>Pinterest API v5</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-primary font-medium">Mercado: Perú Retail</span>
+</p>
+</div>
+<!-- Quick Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface transition-all duration-200 shadow-sm" id="btn-export-report" type="button">
+<span class="material-symbols-outlined text-lg text-primary">download</span>
+<span class="font-label-md text-label-md">Descargar Reporte (PDF/CSV)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface transition-all duration-200 shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">pie_chart</span>
+<span class="font-label-md text-label-md">Share of Voice</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-title-md text-body-md shadow-[0_4px_20px_-2px_rgba(245,158,11,0.28)] transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-lg">bolt</span>
+<span>Programar Post Optimizado</span>
+</button>
+</div>
+</div>
+<!-- Platform Filter Chips Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex flex-wrap items-center gap-2" id="channel-filter-group">
+<button class="channel-pill active px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md transition-all shadow-sm" data-filter="all" type="button">
+          Todos los Canales
+        </button>
+<button class="channel-pill px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" data-filter="tiktok" type="button">
+<span class="inline-flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            TikTok (Viral)
+          </span>
+</button>
+<button class="channel-pill px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" data-filter="instagram" type="button">
+<span class="inline-flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-pink-500"></span>
+            Instagram (Comunidad)
+          </span>
+</button>
+<button class="channel-pill px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" data-filter="pinterest" type="button">
+<span class="inline-flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-rose-400"></span>
+            Pinterest (Catálogo & Conversión)
+          </span>
+</button>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-sm text-secondary">tune</span>
+<span>Atribución: Modelo Multi-Touch (Data-Driven)</span>
+</div>
+</div>
+</section>
+<!-- TOP 4 KPI HERO TILES -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- KPI 1 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Alcance Omnicanal</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-num text-metric-num text-on-surface">4,842,910</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-xs text-label-xs font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span>+32.4%
+        </span>
+</div>
+<!-- Sparkline Visual -->
+<div class="my-3 w-full h-12 flex items-end">
+<svg class="w-full h-full overflow-visible text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 200 45">
+<path d="M0,35 Q20,38 40,28 T80,30 T120,18 T160,22 T200,4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0,35 Q20,38 40,28 T80,30 T120,18 T160,22 T200,4 L200,45 L0,45 Z" fill="url(#sparkline-grad)" opacity="0.25"></path>
+<defs>
+<lineargradient id="sparkline-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F59E0B"></stop>
+<stop offset="100%" stop-color="#F59E0B" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span class="text-on-surface font-medium">TikTok 2.4M (50%)</span>
+<span>IG 1.8M (37%)</span>
+<span>Pin 642K (13%)</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Engagement Rate Ponderado</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-num text-metric-num text-primary">6.84%</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-label-xs text-label-xs font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Óptimo
+        </span>
+</div>
+<div class="my-3 flex flex-col gap-2">
+<div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Meta Trimestral Retail Perú (4.9%)</span>
+<span class="text-on-surface font-semibold">85% completado</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 85%;"></div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span class="text-emerald-400 font-semibold">+1.9% vs Promedio Retail</span>
+<span>Benchmark: Falabella / Ripley</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Valor Publicitario (EMV / ROI)</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-num text-metric-num text-on-surface">S/ 148,650</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">PEN</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-xs text-label-xs font-semibold">
+          +41.8% MoM
+        </span>
+</div>
+<div class="my-3 flex flex-col gap-1.5 p-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex justify-between items-center text-on-surface">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">link</span>UTM Influencers
+          </span>
+<span class="font-semibold text-primary">S/ 89,400</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-tertiary">shopping_bag</span>Catálogo Pinterest
+          </span>
+<span class="font-semibold text-tertiary">S/ 59,250</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Cálculo IAB Perú Estándar</span>
+<span class="text-secondary font-medium">ROAS 4.6x</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sentinel Social SLA</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-num text-metric-num text-on-surface">5.2 min</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-label-xs text-label-xs font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span>Meta <10m
+        </span>
+</div>
+<div class="my-3 p-2 rounded-lg bg-surface-container-low flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface font-semibold">0 Alertas de Crisis Activas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14 menciones resueltas hoy</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Tasa de Contención AI: 94%</span>
+<span class="text-emerald-400 font-medium">Escudos Activos</span>
+</div>
+</div>
+</section>
+<!-- MAIN CHARTS & VISUAL ANALYTICS (7:5 Split) -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Left Column (7/12) - Evolución Temporal y Tendencia Viral -->
+<div class="xl:col-span-7 flex flex-col rounded-xl bg-surface-container p-space-lg shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md text-on-surface">Evolución de Tráfico y Conversiones</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs">Marzo 2026</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Campaña "Flores Amarillas" • TikTok & Meta Omnichannel</span>
+</div>
+<!-- Metric Tab Switcher -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container-low" id="traffic-tab-switcher">
+<button class="chart-tab active px-3 py-1 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-semibold" data-view="reach" type="button">
+            Alcance Bruto
+          </button>
+<button class="chart-tab px-3 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-xs text-label-xs" data-view="interactions" type="button">
+            Interacciones
+          </button>
+<button class="chart-tab px-3 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-xs text-label-xs" data-view="clicks" type="button">
+            Clics E-commerce
+          </button>
+</div>
+</div>
+<!-- Rich Visual Chart Area with Floating Annotation -->
+<div class="relative w-full h-72 rounded-lg bg-surface-container-lowest p-space-md flex flex-col justify-between overflow-hidden shadow-inner">
+<!-- Peak Viral Highlight Badge -->
+<div class="absolute top-4 left-1/2 -translate-x-1/4 z-10 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high/90 backdrop-blur shadow-lg">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-secondary font-bold">21 Mar: Pico Floral (+284%)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Efecto "Flores Amarillas" TikTok Viral Lima</span>
+</div>
+</div>
+<!-- Inline SVG Area and Bar Chart -->
+<div class="w-full h-full pt-8">
+<svg class="w-full h-48 overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 700 180">
+<!-- Grid Lines -->
+<line stroke="#222A3D" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="700" y1="30" y2="30"></line>
+<line stroke="#222A3D" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="700" y1="80" y2="80"></line>
+<line stroke="#222A3D" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="700" y1="130" y2="130"></line>
+<!-- Area Gradient Fill -->
+<defs>
+<lineargradient id="area-gradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#FFC640" stop-opacity="0.35"></stop>
+<stop offset="60%" stop-color="#F59E0B" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#060E20" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- TikTok Main Curve -->
+<path d="M 0,140 Q 60,135 120,120 T 240,110 T 360,95 Q 420,15 470,20 T 560,85 T 640,90 T 700,75 L 700,180 L 0,180 Z" fill="url(#area-gradient)"></path>
+<path d="M 0,140 Q 60,135 120,120 T 240,110 T 360,95 Q 420,15 470,20 T 560,85 T 640,90 T 700,75" fill="none" stroke="#FFC640" stroke-linecap="round" stroke-width="3"></path>
+<!-- Meta / IG Secondary Curve -->
+<path d="M 0,155 Q 80,145 160,130 T 320,120 T 470,60 T 580,110 T 700,105" fill="none" stroke="#22D3EE" stroke-dasharray="2 2" stroke-linecap="round" stroke-width="2"></path>
+<!-- Pinterest Catalog Direct Line -->
+<path d="M 0,170 Q 100,165 200,155 T 400,140 T 470,115 T 600,130 T 700,125" fill="none" stroke="#F87171" stroke-linecap="round" stroke-width="2"></path>
+<!-- Highlight Hotspot Circle on 21 Mar -->
+<circle cx="470" cy="20" fill="#F59E0B" r="6" stroke="#060E20" stroke-width="3"></circle>
+<circle cx="470" cy="20" r="10" stroke="#FFC640" stroke-opacity="0.6" stroke-width="1.5"></circle>
+</svg>
+</div>
+<!-- Axis Dates -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs pt-2">
+<span>01 Mar</span>
+<span>06 Mar</span>
+<span>11 Mar</span>
+<span>16 Mar</span>
+<span class="text-secondary font-bold">21 Mar (Pico)</span>
+<span>26 Mar</span>
+<span>31 Mar</span>
+</div>
+</div>
+<!-- Quick Legend & Metric Breakdown -->
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>TikTok Live & UGC</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">2,410,200</span>
+<span class="text-secondary font-label-xs text-label-xs">+58% en interacción de video</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+<span>Instagram Stories & Reels</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">1,790,450</span>
+<span class="text-primary font-label-xs text-label-xs">14,210 DMs automáticos vía Bot</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+<span>Pinterest Ideas & Shopping</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">642,260</span>
+<span class="text-tertiary font-label-xs text-label-xs">8.2% CTR a pasarela Niubiz/Yape</span>
+</div>
+</div>
+</div>
+<!-- Right Column (5/12) - Distribución y Atribución por Plataforma -->
+<div class="xl:col-span-5 flex flex-col rounded-xl bg-surface-container p-space-lg shadow-md justify-between">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-title-md text-title-md text-on-surface">Distribución & Atribución</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Impacto en ventas y tráfico multicanal</span>
+</div>
+<button class="p-1 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-base">info</span>
+</button>
+</div>
+<!-- Donut Chart Component with Embedded Legend -->
+<div class="my-space-md flex flex-col sm:flex-row items-center justify-center gap-space-lg">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<!-- Background Ring -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#222A3D" stroke-width="12"></circle>
+<!-- TikTok: 49% = 238.76 circumference -> 117 dash -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#F59E0B" stroke-dasharray="117 238.7" stroke-dashoffset="0" stroke-width="12"></circle>
+<!-- IG: 36% = 86 dash -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#22D3EE" stroke-dasharray="86 238.7" stroke-dashoffset="-117" stroke-width="12"></circle>
+<!-- Pinterest: 15% = 35.8 dash -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#F87171" stroke-dasharray="35.8 238.7" stroke-dashoffset="-203" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-label-xs text-[10px] text-on-surface-variant uppercase tracking-widest">Share Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">100%</span>
+<span class="font-label-xs text-[10px] text-secondary">S/ 148.6K</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm w-full sm:w-auto">
+<div class="flex items-center gap-2 p-1.5 rounded-lg bg-surface-container-low">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface font-semibold">TikTok (49%)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Descubrimiento Viral & Live Shopping</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded-lg bg-surface-container-low">
+<span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface font-semibold">Instagram (36%)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Stories, Canales & Venta Consultiva</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded-lg bg-surface-container-low">
+<span class="w-3 h-3 rounded-full bg-rose-400"></span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface font-semibold">Pinterest (15%)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Tableros de Tendencia & Checkout</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Performance Metrics Micro-Table -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs px-2">
+<span>CANAL</span>
+<span>CPA PROMEDIO</span>
+<span>TASA GUARDADOS</span>
+<span>CLICS SALIENTES</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="font-semibold text-secondary">TikTok Ads / Spark</span>
+<span class="text-on-surface">S/ 1.42</span>
+<span class="text-on-surface">9.4%</span>
+<span class="text-on-surface font-medium">48.2K</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="font-semibold text-cyan-400">Instagram Reels</span>
+<span class="text-on-surface">S/ 2.10</span>
+<span class="text-on-surface">14.8%</span>
+<span class="text-on-surface font-medium">32.6K</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="font-semibold text-rose-400">Pinterest Shopping</span>
+<span class="text-on-surface">S/ 0.88</span>
+<span class="text-on-surface">22.4%</span>
+<span class="text-on-surface font-medium">19.1K</span>
+</div>
+</div>
+</div>
+</section>
+<!-- AI FORECASTER & SENTIMENT INTELLIGENCE (3-Column Row) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Widget 1: AI Timing & Format Forecaster -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="p-1.5 rounded-lg bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined text-base">psychology</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">AI Timing & Forecaster</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-xs text-label-xs">RF-3.3 Motor Activo</span>
+</div>
+<div class="my-space-md p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span>Ventana de Oportunidad Detectada</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+          Recomendación para hoy <strong class="text-primary font-semibold">Jueves</strong>: Publicar video en formato <span class="underline decoration-secondary">Reel / TikTok a las 7:45 PM (Hora Lima)</span> con audio viral en tendencia de flores amarillas.
+        </p>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container font-label-xs text-label-xs text-on-surface-variant">
+<span>Proyección de Alcance:</span>
+<span class="text-emerald-400 font-bold">+26% sobre la media habitual</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-title-md text-body-md shadow-[0_4px_16px_rgba(245,158,11,0.2)] transition-all" type="button">
+<span class="material-symbols-outlined text-base">calendar_add_on</span>
+<span>Auto-programar en Calendario</span>
+</button>
+</div>
+<!-- Widget 2: Sentinel Social NLP Peru -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="p-1.5 rounded-lg bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-base">radar</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Monitor de Sentimiento Sentinel</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-label-xs text-label-xs font-semibold">Seguro / 0 Crisis</span>
+</div>
+<div class="my-space-md flex flex-col gap-space-sm">
+<!-- Sentiment Bar Component -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-emerald-400 font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>92% Positivo
+            </span>
+<span class="text-on-surface-variant">Alegría, obsequios florales, amor de pareja</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-emerald-400 h-2 rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>6% Neutral
+            </span>
+<span class="text-on-surface-variant">Preguntas de precios, envíos a distritos y stock</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 6%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-rose-400 font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-rose-400"></span>2% Negativo
+            </span>
+<span class="text-on-surface-variant">Demoras en courier express en Arequipa y Trujillo</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-rose-500 h-2 rounded-full" style="width: 2%;"></div>
+</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between font-label-xs text-label-xs">
+<span class="text-on-surface-variant">Diccionario NLP: Slangs Lima / Provincias activo</span>
+<button class="text-secondary hover:underline font-semibold flex items-center gap-1" type="button">
+<span>Ver 14 Casos</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Widget 3: Top Influencer Attribution -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="p-1.5 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-base">stars</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Top Creadores Perú</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs">ROI Semanal</span>
+</div>
+<!-- Ranking List -->
+<div class="my-space-md flex flex-col gap-2">
+<!-- Influencer 1 -->
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait of an elegant Peruvian fashion influencer with soft warm lighting and yellow floral background studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVLyf1iSoqI5CQmJP-tq0cbrrDamsP_Kvr9Nme8LJ1Zx5g87QuUywKkNa-FXDOYngyh2zh2M1MSug0890vf_rmJWFcRYNSZlxomI0PcxA35Gx1NqnScSd_oEinBwFdLeexkxxAFNkeI9ey9daJuewFynVtAJtk2TRGvmrwOVFNGK8_sMiuDNoya4b8voMP8RIS7-znZLn_-3sPyqC9e7cEu7O5pLXTIPUAqt3NlFuoHY4je2ZvRp8PhQ"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary text-surface-container-lowest font-bold text-[9px] flex items-center justify-center">1</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">@valeria.lifestyle</span>
+<span class="font-body-sm text-[11px] text-cyan-400">Instagram & TikTok</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-md text-body-md text-primary font-bold">S/ 38,200 EMV</span>
+<span class="font-label-xs text-[10px] text-emerald-400">8.4% ER • 1.2K ventas</span>
+</div>
+</div>
+<!-- Influencer 2 -->
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait of a young male Peruvian lifestyle content creator smiling in an urban Miraflores Lima background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBclQifSvSd1CYS9vlOY-5AN2X5NpuXO8ChqcvAjcoTZ8d4sX3-ZJtb7dXd7if7PN5Yl8N4dfN1gZFz7eVReVdmb_XOmq4EkEruZRIlt0W4IvCix8z3h0945_JP7bKB0uN_dvuaTW4Q8RdUGF124zKEzp41t0mpgU4YwEmrav_NYHytw4kHwHtd2ehdnvQtkQpr_B7pEPFwErrRhfuWs8vkvy4hBv-6TTDQ2g0Ytp27kGeWeTRAS-EdrA"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-highest text-on-surface font-bold text-[9px] flex items-center justify-center">2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">@diego_lima_trends</span>
+<span class="font-body-sm text-[11px] text-secondary">TikTok Creator Viral</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-md text-body-md text-on-surface font-bold">S/ 24,100 EMV</span>
+<span class="font-label-xs text-[10px] text-emerald-400">7.1% ER • 840 ventas</span>
+</div>
+</div>
+<!-- Influencer 3 -->
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Aesthetic aesthetic home decor and floral designer Peruvian woman styling flowers and retail items" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArdt65xno3KGbPPbbb1dRX-a9cOD34IODANEIMLUXXEFvVT02ljGpU_mUaB671gxOjVMTCBR21odzrYAlDagQUHAq-bpoCRA8LtgZYSDp31tsd3yXpvp-oC9FGrKf5VjBrtKNEXaH-hScpT_lrYI-gjMVBO8PsE3jym-0gr7PMSFqAn8taK1MGsJ4IKUlwGb3z9jX8ks6unKjyFusqyLuzxhbbZ1A6ARMKHiK7BSEhFuZAidigCplCrQ"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-highest text-on-surface font-bold text-[9px] flex items-center justify-center">3</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">@deco_peru</span>
+<span class="font-body-sm text-[11px] text-rose-400">Pinterest Curador</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-md text-body-md text-on-surface font-bold">12.8K clics</span>
+<span class="font-label-xs text-[10px] text-tertiary">S/ 18,900 Catálogo</span>
+</div>
+</div>
+</div>
+<a class="flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors" data-path="directorio-de-influencers" href="#">
+<span>Gestionar Directorio Completo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- TABLA DE TOP ASSETS VIRALES (High Density) -->
+<section class="rounded-xl bg-surface-container p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Publicaciones con Mayor Impacto del Mes</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ordenado por atribución algorítmica de conversiones y engagement verificado</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Filtrar por:</span>
+<select class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Mayor Retorno (ROI)</option>
+<option>Mayor Alcance Viral</option>
+<option>Tasa de Guardados</option>
+</select>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-low">
+<th class="py-3 px-space-md rounded-l-lg">Contenido & Título</th>
+<th class="py-3 px-space-md">Plataforma / Formato</th>
+<th class="py-3 px-space-md">Alcance Total</th>
+<th class="py-3 px-space-md">Interacción (ER)</th>
+<th class="py-3 px-space-md">Conversiones / Ventas</th>
+<th class="py-3 px-space-md">Estado Sentinel</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Acción Rápida</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Vibrant aesthetic bouquet of yellow sunflowers and roses held in hands outdoors in Lima during springtime" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9kkLiWPMPegOCsIE_2wqJWE4lziSlCr7coC_MMfUwhsBgzyPvOE60ctO64Oe04O4VVVxtB_fPifCvrwexRwzwO4_bDXE2Rut29skkcoGSeka--CJWctDAPaDom7-8HjMMtu_p3UEThJW08mifjqdYvQ2TwgLLQAqU9GitvLzRJGOZlM9BP-9tUSy3aG3pOtlbjcOhAyipWPU6UqMd9Qh75iVIfkJgT7jbjcKCOI_nGem_awkYmZiNzQ"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">"El verdadero significado de regalar flores amarillas este 21"</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: #TK-FLOR-882 • Tag: #FloresAmarillasPeru</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs bg-cyan-500/15 text-cyan-400 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>TikTok Viral Video
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-on-surface">1,420,800</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1 text-emerald-400 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>9.62%
+              </div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">S/ 48,150</span>
+<span class="block text-[11px] text-on-surface-variant">720 órdenes web</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-label-xs text-[10px] font-semibold">
+                98% Positivo
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Inspeccionar NLP" type="button">
+<span class="material-symbols-outlined text-base">forum</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-xs text-label-xs font-semibold hover:bg-secondary transition-colors" type="button">
+                  Amplificar
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High fashion yellow and pastel spring apparel collection flatlay with retail jewelry and floral elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC43ZdQhZva_99x7XSlUKY0V4MRLrunlLJLsvjmzMjpnQB-JyriEhjtYB-Pi8jIhJqf6FXxWfQfp9vXc4vQCcx4sV2ABugk9danQ43rkRYR7MxOOVGQGQzMVamNu3nLrKb1ukKO8XzEYnfYtsJh7kfpUGd1V14T4EWDUi3qFbfePqJCA3fJeOKyu5W4GbTClhyjWO0tVWhbEj1mdabBCGrs8Qd2y7AD1dne_y6zN_A8XCQgimEJ951nGg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Colección Primavera Bloom: Outfits Amarillos para Oficina</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: #IG-OUTFIT-104 • Colab @valeria.lifestyle</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs bg-pink-500/15 text-pink-400 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>Instagram Reel
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-on-surface">980,400</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1 text-emerald-400 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>7.45%
+              </div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">S/ 32,800</span>
+<span class="block text-[11px] text-on-surface-variant">410 carritos pagados</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-label-xs text-[10px] font-semibold">
+                94% Positivo
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Inspeccionar NLP" type="button">
+<span class="material-symbols-outlined text-base">forum</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-xs text-label-xs font-semibold hover:bg-secondary transition-colors" type="button">
+                  Amplificar
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Pinterest collection graphic showing home decor dining table with yellow floral table runners and vases" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtSc0lSalC8Gtun0xwj5xpGWAXN-4zqtkB7oSJBRUlMkkvJ1gyY89fjFjRBD6z-GHr1Wovr7BDDxKFbVIQMggnnU-uYdZQiG9B0GslCg6R6xCEFViRP0htC3cCdD1fT1Vi23KTByadkjdCJ8N47vUO4qP1GnE5e255zLwBRT_2vacFSLR5-ro86xel2r7qYxQgPIta8RoSnMByNq3Ac8bJLCOdHS5WklcFijkY2OeKPpnpHfvSLirOcA"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Moodboard: Inspiración Floral & Mesa de Estación Perú</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: #PIN-CAT-309 • Enlace Directo Catálogo Shopify</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs bg-rose-500/15 text-rose-400 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>Pin de Catálogo
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-on-surface">512,100</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-sm text-secondary">bookmark</span>18.2% Guardados
+              </div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-tertiary">S/ 29,400</span>
+<span class="block text-[11px] text-on-surface-variant">285 compras directas</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-xs text-[10px] font-semibold">
+                Neutral / Consultas
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Inspeccionar NLP" type="button">
+<span class="material-symbols-outlined text-base">forum</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-xs text-label-xs font-semibold hover:bg-surface-bright transition-colors" type="button">
+                  Optimizar Pin
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Excited delivery recipient receiving luxury yellow flower package box at front door in Lima Peru" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGaffwMehl1_UiKw038AguYpY010K89-AC_5KUTQelIRSII-fsW_3K6i8nDtUfCv_qCnEdwU5RqziCARGVWikZmAlUCCQId7RQf53vTCgxy4rWTyQ8d17B8rJLIboZy2Mfxuj5Yf6n3GsMZ2Jy9fk_x7XaUljBkC0PBeTK8svChfDlvqU2jOolVm9KbLZJo4HHfAwFcD52LCrbRBgCrlM-QxKuiZMO7TMKmVWleZRFdYTJ2wPGxfg5eQ"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">POV: Te llega el arreglo sorpresa antes de las 12 PM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: #TK-UGC-012 • Formato Reacción Orgánica</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs bg-cyan-500/15 text-cyan-400 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>TikTok Duet / UGC
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-on-surface">845,900</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1 text-emerald-400 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>8.90%
+              </div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">S/ 22,300</span>
+<span class="block text-[11px] text-on-surface-variant">310 envíos express</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-label-xs text-[10px] font-semibold">
+                99% Positivo
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Inspeccionar NLP" type="button">
+<span class="material-symbols-outlined text-base">forum</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-xs text-label-xs font-semibold hover:bg-secondary transition-colors" type="button">
+                  Amplificar
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Telemetry Sync Metadata -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Atribución certificada por Webhooks Niubiz, Shopify y Mercado Pago</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-xs text-label-xs">Mostrando 4 de 28 posts activos</span>
+<button class="text-primary hover:underline font-semibold font-label-md text-label-md flex items-center gap-1" type="button">
+<span>Ver catálogo completo de métricas</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interaction for Platform Filter Chips
+  const filterPills = document.querySelectorAll('#channel-filter-group .channel-pill');
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+        p.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      pill.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+    });
+  });
+
+  // Tab switcher in Evolution Chart
+  const chartTabs = document.querySelectorAll('#traffic-tab-switcher .chart-tab');
+  chartTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      chartTabs.forEach(t => {
+        t.classList.remove('bg-surface-container-high', 'text-on-surface', 'font-semibold');
+        t.classList.add('text-on-surface-variant');
+      });
+      tab.classList.remove('text-on-surface-variant');
+      tab.classList.add('bg-surface-container-high', 'text-on-surface', 'font-semibold');
+    });
+  });
+
+  // Micro feedback for export button
+  const exportBtn = document.getElementById('btn-export-report');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const origText = exportBtn.innerHTML;
+      exportBtn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin text-secondary">sync</span><span class="font-label-md text-label-md">Compilando PDF/CSV...</span>';
+      setTimeout(() => {
+        exportBtn.innerHTML = '<span class="material-symbols-outlined text-lg text-emerald-400">check_circle</span><span class="font-label-md text-label-md text-emerald-400">Descarga Lista</span>';
+        setTimeout(() => {
+          exportBtn.innerHTML = origText;
+        }, 2500);
+      }, 1200);
+    });
+  }
+</script></main></div></body></html>

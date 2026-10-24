@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#93000a", "on-secondary-container": "#5a4100", "tertiary-fixed": "#ffdcc3", "secondary": "#ffc640", "surface-container-highest": "#2d3449", "secondary-fixed": "#ffdf9f", "on-tertiary-container": "#6a3700", "on-tertiary-fixed-variant": "#6e3900", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary-fixed": "#2a1700", "on-secondary-fixed-variant": "#5c4300", "on-primary-fixed-variant": "#653e00", "on-primary": "#472a00", "primary-fixed-dim": "#ffb95f", "surface-container-low": "#131b2e", "surface-container-high": "#222a3d", "outline": "#a08e7a", "secondary-fixed-dim": "#f9bd22", "outline-variant": "#534434", "surface-container": "#171f33", "surface": "#0b1326", "surface-dim": "#0b1326", "on-background": "#dae2fd", "on-secondary-fixed": "#261a00", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "secondary-container": "#e3aa00", "on-surface": "#dae2fd", "on-tertiary": "#4d2600", "on-secondary": "#402d00", "surface-tint": "#ffb95f", "tertiary-fixed-dim": "#ffb77d", "tertiary-container": "#ff9837", "background": "#0b1326", "surface-bright": "#31394d", "error": "#ffb4ab", "inverse-on-surface": "#283044", "on-tertiary-fixed": "#2f1500", "primary": "#ffc174", "surface-variant": "#2d3449", "primary-container": "#f59e0b", "inverse-primary": "#855300", "tertiary": "#ffc08e", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "body-md": ["Inter"], "headline-md": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "metric-num": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"], "display-lg": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "metric-num": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="Kajel Bloom Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTd0jSXqnGHLaU8hSBnNWuuXbrRJ2pjykpawMAPzNsQapl0SrvAWoCZQ5CQojiZy2bcs50Uwq5MqobIiXMengpzsfAkgmej-JQOrUQneO2njxLIJpKQCT61smwSbXmZ-75BWRRoB5jMhrBNyH9bhqWBeasjAbIEgoiw1YV0mo74CECuwuEh8THmPri4NGMyDtXXN9POeQTe7zvl74vgofhuah5z6ma7xm0UovqyMxpTISEZCzdpoH5wt4"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Kajel Bloom</span></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs">v2.4 Pro</span></div><div class="px-space-lg py-space-sm"><div class="px-space-sm py-1 bg-surface-container rounded-lg flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Región Activa</span><span class="font-label-xs text-label-xs text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Perú Retail</span></div></div><nav class="flex flex-col gap-1 px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tablero-analitico" href="#"><span>Tablero Analítico</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calendario-contenido" href="#"><span>Calendario Contenido</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="social-listening" href="#"><span>Social Listening</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="directorio-de-influencers" href="#"><span>Directorio Influencers</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="inbox-comunitario" href="#"><span>Inbox Comunitario</span><span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs font-semibold shadow-[0_2px_10px_-2px_rgba(245,158,11,0.25)]">14</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-apis" href="#"><span>Configuración &amp; APIs</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">APIs Conectadas</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><div class="flex items-center justify-between py-0.5"><span>TikTok Marketing API</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Meta Graph API v19</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center justify-between py-0.5"><span>Pinterest Ads API v5</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div></div><div class="pt-space-xs"><div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant mb-1"><span>Cuota Data Mensual</span><span>84%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-1.5 rounded-full" style="width: 84%"></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-base text-primary">storefront</span><span class="font-title-md text-body-sm text-on-surface">Kajel Perú - Campaña Primavera / Flores Amarillas</span><span class="material-symbols-outlined text-base text-on-surface-variant">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-base text-secondary">date_range</span><span>Últimos 30 días - Mar 2026</span></div></div><div class="flex-1 max-w-md hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar métricas, creadores o hashtags..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-xs text-label-xs flex items-center gap-1 shadow-[0_4px_20px_-2px_rgba(245,158,11,0.18)]">2</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXpUnsIRItTquH23ywd23_xs9kdclB_-IjEuD48aFcHp0PqhorJkHLBY7XNHnnfKoq2YmAzJrRzDCW8AS-Z2zzdva7Nlilld_R9YDHe_8QFlA8bbApQ1QCKvhhFzyEVkEXiWEwNDkWzGPbBc4_q6cyMLPrR2i5Voxso9KRTIUfvV9Bme-O3tvM6u5sxBEfFRFKd7n4mGa13Sn4ahwHO_AofIKRhfCLWLpQLzUaC7dyzWvMCWRAcNv9MQ"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface">Brand Manager</span><span class="font-label-xs text-label-xs text-on-surface-variant">retail@kajel.pe</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg text-on-surface">
+<!-- ==================== HEADER DEL MÓDULO & TELEMETRÍA ==================== -->
+<header class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md p-space-lg rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-xs text-label-xs tracking-wider uppercase font-semibold">
+          MÓDULO 05 • OMNI-SUPPORT
+        </span>
+<span class="flex items-center gap-1.5 font-label-xs text-label-xs text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          LIVE WEBSOCKET SYNC 420ms
+        </span>
+<span class="text-on-surface-variant font-label-xs text-label-xs hidden md:inline">|</span>
+<span class="text-on-surface-variant font-label-xs text-label-xs">COLA MULTICANAL TIKTOK, IG &amp; PINTEREST</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+        Smart Universal Inbox &amp; Helpdesk Comunitario
+      </h1>
+<!-- Telemetría en Vivo (BullMQ, FRT, CSAT, Agentes) -->
+<div class="flex items-center gap-space-md flex-wrap pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-sm text-secondary">database</span>
+<span>BullMQ Worker: <strong class="text-on-surface font-title-md text-body-sm">Activa (0 pérdidas)</strong></span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-sm text-primary">timer</span>
+<span>FRT Hoy: <strong class="text-on-surface font-title-md text-body-sm">4.2 min</strong> <span class="text-on-surface-variant text-label-xs">(Meta &lt; 7m)</span></span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-sm text-secondary">sentiment_very_satisfied</span>
+<span>CSAT: <strong class="text-secondary font-title-md text-body-sm">94.6%</strong> (1,120 tickets)</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">support_agent</span>
+<span>Agentes: <strong class="text-on-surface font-title-md text-body-sm">4 activos</strong> (2 bot IA / 2 humanos)</span>
+</div>
+</div>
+</div>
+<!-- Acciones en Cabecera -->
+<div class="flex items-center gap-space-sm w-full xl:w-auto flex-wrap sm:flex-nowrap">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-on-surface-variant">tune</span>
+<span>Macros &amp; Políticas</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-on-surface-variant">bolt</span>
+<span>Simulador de Carga</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-secondary font-label-md text-label-md shadow-md transition-all" type="button">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-semibold">Modo Triage Asistido IA</span>
+</button>
+</div>
+</header>
+<!-- ==================== FILTROS Y BÚSQUEDA OMNICANAL (RF-5.1) ==================== -->
+<section class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<!-- Omnisearch con atajo de teclado -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-lg">search</span>
+<input class="w-full pl-10 pr-24 py-2 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container shadow-inner" placeholder="Buscar por usuario, ID ticket, pedido Niubiz/Shopify o palabra clave (ej. demora, flores, indecopi)..." type="text"/>
+<span class="absolute right-3 top-2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs">
+          Ctrl + K
+        </span>
+</div>
+<!-- Selectores de Plataforma y Prioridad SLA -->
+<div class="flex items-center gap-space-sm flex-wrap sm:flex-nowrap">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-sm text-secondary">hub</span>
+<select aria-label="Filtrar por canal social" class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer">
+<option class="bg-surface-container-low text-on-surface" value="all">Todas las Redes (TikTok, IG, Pin)</option>
+<option class="bg-surface-container-low text-on-surface" value="tiktok">TikTok (Comentarios en Video &amp; Live)</option>
+<option class="bg-surface-container-low text-on-surface" value="ig">Instagram (DMs &amp; Comentarios Reels)</option>
+<option class="bg-surface-container-low text-on-surface" value="pin">Pinterest (Pins de Catálogo)</option>
+</select>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-sm text-error">priority_high</span>
+<select aria-label="Filtrar por prioridad de SLA" class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer">
+<option class="bg-surface-container-low text-on-surface" value="all">SLA: Todos los niveles</option>
+<option class="bg-surface-container-low text-on-surface" selected="" value="critica">Crítica (&lt; 10 min restantes)</option>
+<option class="bg-surface-container-low text-on-surface" value="alta">Alta (&lt; 30 min)</option>
+<option class="bg-surface-container-low text-on-surface" value="normal">Normal (Estándar SLA 2h)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Status Pills de Navegación -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-1">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap" type="button">
+<span>Todos</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs">38</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold whitespace-nowrap shadow-sm" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container animate-ping"></span>
+<span>Nuevos / Sin Asignar</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary-container text-primary font-label-xs text-label-xs">12</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+<span>En Proceso</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs">18</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-xs">warning</span>
+<span>Escalados a Operaciones</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-error-container text-error-container font-label-xs text-label-xs font-bold">5</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+<span>Resueltos Hoy</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs">84</span>
+</button>
+</div>
+</section>
+<!-- ==================== LAYOUT DE 3 COLUMNAS DE ALTA PRODUCTIVIDAD ==================== -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start w-full">
+<!-- ========== COLUMNA 1: COLA UNIFICADA (340px / 3 cols) ========== -->
+<div class="lg:col-span-3 flex flex-col gap-space-sm bg-surface-container-low p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-secondary">inbox</span>
+<span class="font-title-md text-body-sm text-on-surface">Bandeja Unificada</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Orden: SLA Urgente</span>
+</div>
+<!-- Tarjeta 1 (ACTIVA / Escalado Crítico) -->
+<article class="p-space-sm rounded-lg bg-surface-container-high shadow-md flex flex-col gap-2 cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-1">
+<div class="flex items-center gap-2">
+<div class="relative">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Retrato de cliente mujer joven peruana Mariana Flores sonriendo sutilmente con vestimenta casual moderna con iluminación suave de estudio y paleta de tonos cálidos y ámbar de Kajel Bloom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtfcPoh6_iI3XYsIqUPvyszC63LafU5xZ4vuFTnO645GS2H4wgZ3HijBApYl9NkLebg0xVwQrk3tmQYD46Emq5-OAkBvrjiYSdspDsf813znZ-CA1AUl5Ee7C7iy6p5NyK8_adVvdYrunKuwnyPwKXIoKeSV_l7aZVU_flYU4Na1chPID6IglaG8JdFQj_Ew5GtCMiu-niJ-hyJjPR8_DVNdlMNBmwJMkdUY4OQsPotydRkhoBMW7hwQ"/>
+<span class="absolute -bottom-1 -right-1 px-1 rounded-full bg-surface-container-lowest text-[10px] text-[#F43F5E] font-bold">
+                IG
+              </span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-sm text-on-surface truncate">@mariana_flores_pe</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant truncate">Instagram DM</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-xs text-label-xs font-bold animate-pulse">
+            2m SLA
+          </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-body-sm text-primary line-clamp-1">
+            Flores Amarillas llegaron tarde a Miraflores
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            "Hola! Pedí el ramo premium para las 11am y recién me avisan del courier..."
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-2 py-0.5 rounded bg-error-container/60 text-error font-label-xs text-label-xs">
+            Riesgo Queja / Frustración 88%
+          </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Hace 6m</span>
+</div>
+</article>
+<!-- Tarjeta 2 (TikTok / Intención Compra) -->
+<article class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex flex-col gap-2 cursor-pointer">
+<div class="flex items-start justify-between gap-1">
+<div class="flex items-center gap-2">
+<div class="relative">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Avatar de usuario de TikTok joven varón peruano Carlos en entorno urbano con iluminación nocturna en tonos ámbar y azul pizarra oscuro." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_DhNco_LH_FKzyHVSr8R001DWBKUk29hhI4XTcU0WdTAcYuqlW3yAm-zLN4JP-GrXt388BwwELWwTwtHTB-lliyzlIXN5BtF94CHjg3y4gvETzBNXFO0JJFhqlIstS6f-GTZTuiQ5zyIhHuyTB6ZBMLXUf96Vi2AkmZ2ArqJj8EXz9cj-vxel8A985QmdqvU8pfN2ffOJQrs7XXNfmzueqUCbuQRcJyzZa9hU4VU9pL8WwEoMhU3e4Q"/>
+<span class="absolute -bottom-1 -right-1 px-1 rounded-full bg-surface-container-lowest text-[10px] text-[#22D3EE] font-bold">
+                TT
+              </span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-sm text-on-surface truncate">@carlos_peru_21</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant truncate">Comentario TikTok</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-label-xs text-label-xs font-semibold">
+            8m SLA
+          </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-body-sm text-on-surface line-clamp-1">
+            ¿Tienen stock para enviar hoy a San Borja?
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            "Broder, vi el video del ramo gigante, me confirman si llega hoy a las 5pm?"
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-xs text-label-xs">
+            Intención Compra 95%
+          </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Hace 14m</span>
+</div>
+</article>
+<!-- Tarjeta 3 (Pinterest / B2B) -->
+<article class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex flex-col gap-2 cursor-pointer">
+<div class="flex items-start justify-between gap-1">
+<div class="flex items-center gap-2">
+<div class="relative">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Fotografía de perfil de Andrea empresaria de eventos corporativos con fondo minimalista de diseño de interiores estilo nórdico cálido." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDMgTsuIkTALx2lNA14r5Qwu2A-ZTjD2ViF25nmaZo539R4Yi-VK1AmxFBqElNzzg7UzOyQ1k5cB-iidIvEkrMuYtmkhMQ35ISRVaN9d3TCfYHszTMW1QERaAGNvTqPoVAjv5Xu583cfaOaAu2hifiFKlY6LzZs_fzXKuoJCr9z_grrP51y9G4wRqkB_jU4Xgf_FYy1Jfbu-woQXBoyBCcsXanJjK-yNxsVCkcaT2sQhSYZWG0N96qzg"/>
+<span class="absolute -bottom-1 -right-1 px-1 rounded-full bg-surface-container-lowest text-[10px] text-[#F87171] font-bold">
+                PIN
+              </span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-sm text-on-surface truncate">@andrea_decoraciones</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant truncate">Pin Catálogo</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs">
+            25m SLA
+          </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-body-sm text-on-surface line-clamp-1">
+            Consulta sobre catálogo mayorista corporativo
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            "Buenas tardes, requerimos 45 centros de mesa amarillos para corporativo en San Isidro..."
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary-fixed font-label-xs text-label-xs">
+            Lead B2B Cualificado
+          </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Hace 22m</span>
+</div>
+</article>
+<!-- Tarjeta 4 (Resuelto con Macro IA) -->
+<article class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors flex flex-col gap-2 cursor-pointer opacity-75">
+<div class="flex items-start justify-between gap-1">
+<div class="flex items-center gap-2">
+<div class="relative">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Avatar joven de Lucas perfil urbano lifestyle en Lima con iluminación dorada cálida al atardecer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTG2xrzTHP8EeUGBDUP-FsPOhkfjYZmbDrtFjxL-AKC7b6SopvlqoXI0eENoXW8l4DRYmG6OWB1DPp90-OBhUXuxG8PVaSL5gelaqTesrOHSo41RiNGakGzIDWNzxTqnrHuy0wGagG30ZzhccwiholmrJl-j7NkPTYjebLK01yFOfdJBsFsPMz9gPGgr9WbXOfQTaAV2cpne3b5-IUIw0jhFMaPkKmLL5cbzRbzKYBeWu4oVIkl_3a8w"/>
+<span class="absolute -bottom-1 -right-1 px-1 rounded-full bg-surface-container-lowest text-[10px] text-[#22D3EE] font-bold">
+                TT
+              </span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-sm text-on-surface truncate">@lucas_urbano_lim</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant truncate">TikTok Comentario</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs">
+            Resuelto
+          </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-body-sm text-on-surface-variant line-clamp-1">
+            El código de descuento de Valeria no me aplica
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+            Macro automática #DESCUENTO-INFLUENCER aplicada con éxito.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs">
+            Macro IA Ejecutada
+          </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Hace 35m</span>
+</div>
+</article>
+</div>
+<!-- ========== COLUMNA 2: VISOR DE CONVERSACIÓN & COPILOTO IA (6 cols) ========== -->
+<div class="lg:col-span-6 flex flex-col gap-space-md bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<!-- Header del Chat Activo -->
+<div class="flex flex-col gap-space-sm pb-space-sm bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Foto en primer plano de Mariana Rivas cliente premium en Miraflores con expresión atenta y ambiente estético elegante con luz natural matutina." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-LkZUUun3B4ti8WV_A0x6FS9kd8atPPwkX1nEiO1fMioX7jW3vyg31vAsx0-ZNvTW-844dJ76vqMrgtf70_FZmSzbHYfCQW_Oo6s64m_vtpgOHDRHLwE1I4OU3VYVOJMS3a_Cwd5wm_ZSLbVqkxSfzpvaQ4HvW_t-j8vEHZ6q2UPxRBrbsvYMTeSVGwY4hG4hRqBbxMJiH63HuvXowYjKmmOQGSq7VqJ59X5gWvIPI7qnKDAYLit75g"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Mariana Rivas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(@mariana_flores_pe)</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-xs text-label-xs font-semibold">Cliente Gold</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">
+                Instagram DM vinculado al Reel: "Ramo Gigante Flores Amarillas 21 de Marzo"
+              </span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2 py-1 rounded bg-error-container text-on-error-container font-label-xs text-label-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">alarm</span>
+              #TICK-8941
+            </span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs">
+              Asesor: Diego V. (Ops)
+            </span>
+</div>
+</div>
+<!-- Botones de Acción Rápida del Ticket -->
+<div class="flex items-center gap-space-xs pt-1 flex-wrap">
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">forward</span>
+<span>Transferir Ticket</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-sm text-secondary">pause_circle</span>
+<span>Pausar SLA (Espera Courier)</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-primary-container text-on-primary-container hover:bg-secondary font-label-md text-label-md font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>Marcar Resuelto</span>
+</button>
+</div>
+</div>
+<!-- Área de Hilo de Mensajes -->
+<div class="flex flex-col gap-space-md py-space-xs max-h-[360px] overflow-y-auto pr-1">
+<!-- Mensaje 1: Cliente -->
+<div class="flex flex-col items-start gap-1 max-w-[85%]">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-body-sm text-on-surface">Mariana Rivas</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">11:42 AM</span>
+</div>
+<div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container-high text-on-surface font-body-md text-body-md shadow-sm">
+            Hola chicos, hice el pedido #KB-8821 a las 8am para que llegue al mediodía a Miraflores por el 21 de marzo. Mi flaca sale a la 1pm de su oficina. ¿Me confirman si el motorizado ya está cerca?
+          </div>
+</div>
+<!-- Mensaje 2: Bot IA / Sistema -->
+<div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
+<div class="flex items-center gap-2">
+<span class="font-label-xs text-label-xs text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">smart_toy</span>
+              Bot Kajel Dispatch
+            </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">11:43 AM</span>
+</div>
+<div class="p-space-sm rounded-xl rounded-tr-none bg-surface-container text-on-surface font-body-md text-body-md shadow-sm">
+            Hola Mariana 🌼 Consultando con el tracking de Chazki/Urbano Express... El courier reporta tráfico denso en Av. Javier Prado, pero tu ruta continúa activa con prioridad de entrega.
+          </div>
+</div>
+<!-- Mensaje 3: Cliente Frustrado -->
+<div class="flex flex-col items-start gap-1 max-w-[85%]">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-body-sm text-error">Mariana Rivas</span>
+<span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-xs text-label-xs font-semibold">Tono: Frustrado</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">11:51 AM</span>
+</div>
+<div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container-high text-on-surface font-body-md text-body-md shadow-sm">
+            Pucha qué palta, si no llega antes de la 1pm ya no sirve porque ella se va a almorzar afuera. ¿Me pueden dar solución urgente? 😔
+          </div>
+</div>
+<!-- Mensaje 4: Nota Privada Interna del Equipo -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-on-tertiary-container/30 text-tertiary font-body-sm text-body-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-body-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+              Nota Privada Interna (Diego V. - Lead Ops)
+            </span>
+<span class="font-label-xs text-label-xs text-tertiary-fixed-dim">11:53 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Contacté al supervisor de despacho. El motorizado Edwin está a 4 cuadras (Av. José Pardo). Si pasa de la 1:00pm aplicamos el cupón de compensación S/ 30 según protocolo "Flores Perdón".
+          </p>
+</div>
+</div>
+<!-- Panel Co-Piloto de IA (RF-5.3: Amber Intelligence) -->
+<section class="flex flex-col gap-space-sm p-space-sm rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="font-title-md text-body-sm text-secondary">Copiloto IA Bloom • Sugerencia Contextual</span>
+</div>
+<!-- Tono Selector -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-xs text-label-xs font-semibold" type="button">
+              Empático Retail PE
+            </button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-xs text-label-xs" type="button">
+              Corporativo Formal
+            </button>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm leading-relaxed">
+          ¡Hola Mariana! Te entendemos al 100%, sabemos lo especial que es esta fecha de flores amarillas. Acabamos de comunicarnos directamente con el motorizado y está a solo 4 cuadras de la oficina en Miraflores (Av. José Pardo). Llegará antes de las 12:45 PM garantizado. Para compensar la angustia, te activamos un cupón de cortesía para tu próxima compra 💛🚚
+        </div>
+<div class="flex items-center justify-between flex-wrap gap-2 pt-0.5">
+<div class="flex items-center gap-1">
+<button class="px- space-sm py-1 rounded bg-primary-container text-on-primary-container hover:bg-secondary font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 px-3" type="button">
+<span class="material-symbols-outlined text-sm">send</span>
+<span>Insertar y Enviar</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors" type="button">
+              Editar texto
+            </button>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-label-xs text-label-xs" type="button">
+<span class="material-symbols-outlined text-xs">autorenew</span>
+<span>Regenerar Variación</span>
+</button>
+</div>
+</section>
+<!-- Input de Respuesta Manual con Toolbar y Modos -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-sm rounded-xl">
+<div class="flex items-center justify-between pb-1">
+<!-- Toggle Respuesta Pública vs Nota Interna -->
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-xs text-label-xs font-semibold" type="button">
+              Respuesta Pública DM
+            </button>
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-xs text-label-xs" type="button">
+              Nota Interna del Equipo
+            </button>
+</div>
+<!-- Atajos de macros -->
+<div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
+<span>Atajos:</span>
+<span class="px-1 bg-surface-container-lowest rounded text-primary">/faq</span>
+<span class="px-1 bg-surface-container-lowest rounded text-primary">/envios</span>
+<span class="px-1 bg-surface-container-lowest rounded text-primary">/cupones</span>
+</div>
+</div>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-low resize-none" placeholder="Escribe tu mensaje a Mariana o usa una macro... (Ctrl + Enter para enviar)" rows="3"></textarea>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button aria-label="Adjuntar archivo o comprobante" class="p-1 hover:text-on-surface rounded hover:bg-surface-container-lowest" type="button">
+<span class="material-symbols-outlined text-base">attach_file</span>
+</button>
+<button aria-label="Insertar imagen de producto" class="p-1 hover:text-on-surface rounded hover:bg-surface-container-lowest" type="button">
+<span class="material-symbols-outlined text-base">image</span>
+</button>
+<button aria-label="Seleccionar emoji" class="p-1 hover:text-on-surface rounded hover:bg-surface-container-lowest" type="button">
+<span class="material-symbols-outlined text-base">mood</span>
+</button>
+<button aria-label="Ver respuestas guardadas" class="p-1 hover:text-on-surface rounded hover:bg-surface-container-lowest" type="button">
+<span class="material-symbols-outlined text-base">quickreply</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-secondary font-label-md text-label-md font-semibold shadow-md transition-all" type="button">
+<span>Enviar Respuesta</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========== COLUMNA 3: CLIENTE 360° & CONTEXTO DE NEGOCIO (320px / 3 cols) ========== -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Ficha de Perfil 360° -->
+<section class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-semibold">
+            Perfil del Cliente 360°
+          </span>
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Retrato fotográfico de Mariana Rivas cliente VIP con peinado pulcro y ropa de oficina moderna en Lima Perú." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmpQ92gCtuGKYjKJGRS1q2mz5N8eUynJelhRaf0DVIKgAShuq18YTvJfm9WZP7x7r5HOuTT3XHAMULnubmrfEtOnrVH1idQAsipMN3WlimYjLBT98O5VMJ6ZF1s9jU-wZBvxsWGDbvpaPQTO9yJZyjZ8hBYcr5CeDfo0z5MSypQ195gtdAeF9Y6r2eSn1tD62t8F5C56vWzw4WKQi6VRfc2TZN2p1I2uSgR0Izf6EAfbezVPcAsq8eMw"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Mariana Rivas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Miraflores, Lima • Perú</span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">Tier: Gold Flower Member</span>
+</div>
+</div>
+<!-- Métricas Rápidas del Cliente -->
+<div class="grid grid-cols-3 gap-1 pt-space-xs text-center">
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Gasto Total</span>
+<span class="font-title-md text-body-sm text-primary font-bold">S/ 840</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Pedidos</span>
+<span class="font-title-md text-body-sm text-on-surface font-bold">3 ord.</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Quejas</span>
+<span class="font-title-md text-body-sm text-error font-bold">1ra vez</span>
+</div>
+</div>
+</section>
+<!-- Pedido Activo Shopify / Niubiz -->
+<section class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-semibold">
+            Pedido Activo Shopify
+          </span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-xs text-label-xs font-semibold">
+            #KB-8821
+          </span>
+</div>
+<div class="flex flex-col gap-1 pt-1 font-body-sm text-body-sm">
+<div class="flex justify-between text-on-surface">
+<span>Ramo Premium 36 Flores Amarillas</span>
+<span class="font-semibold text-primary">S/ 185.00</span>
+</div>
+<span class="text-on-surface-variant font-label-xs text-label-xs">+ Dedicatoria personalizada impresa</span>
+<div class="flex items-center gap-1 font-label-xs text-label-xs text-secondary">
+<span class="material-symbols-outlined text-xs">check</span>
+<span>Pagado vía Niubiz / Yape (Comprobante verificado)</span>
+</div>
+</div>
+<div class="mt-2 p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Motorizado en Ruta:</span>
+<span class="text-on-surface font-semibold">Edwin T. (Placa 4810-7B)</span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Distancia a destino:</span>
+<span class="text-secondary font-semibold">4 cuadras (~7 mins)</span>
+</div>
+<button class="mt-1 w-full py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-xs text-label-xs flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-xs text-secondary">location_on</span>
+<span>Ver Tracking en Vivo GPS Chazki</span>
+</button>
+</div>
+</section>
+<!-- Detección de Riesgo Sentinel NLP -->
+<section class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-error uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">radar</span>
+            Sentinel NLP Riesgo
+          </span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-xs text-label-xs font-bold">
+            Alto 82%
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Probabilidad alta de escrache en TikTok/IG si excede las 1:00 PM.
+        </p>
+<div class="flex items-center gap-1 flex-wrap pt-1 font-label-xs text-label-xs text-on-surface-variant">
+<span>Jerga detectada:</span>
+<span class="px-1 rounded bg-error-container/40 text-error font-medium">'palta'</span>
+<span class="px-1 rounded bg-error-container/40 text-error font-medium">'urgente'</span>
+</div>
+</section>
+<!-- Historial de Tickets y Acciones de Compensación -->
+<section class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-semibold">
+            Historial de Soporte
+          </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">2 resueltos</span>
+</div>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between py-1 bg-surface-container px-2 rounded">
+<span>#TICK-2025-104 (Colores)</span>
+<span class="text-secondary font-label-xs text-label-xs">Resuelto 4m</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-2 rounded">
+<span>#TICK-2024-812 (Envío)</span>
+<span class="text-secondary font-label-xs text-label-xs">Resuelto 6m</span>
+</div>
+</div>
+<!-- Acciones Rápidas de Compensación -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<button class="w-full py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-surface-variant font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">confirmation_number</span>
+<span>Emitir Cupón S/ 30 ("Flores Perdón")</span>
+</button>
+<button class="w-full py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm text-secondary">chat</span>
+<span>Reenviar Notificación WhatsApp</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+<!-- ==================== BARRA INFERIOR DE MÉTRICAS OPERATIVAS (STATUS BAR) ==================== -->
+<footer class="flex items-center justify-between flex-wrap gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs shadow-inner">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>WebSocket: Conectado (latencia 12ms)</span>
+</div>
+<span>|</span>
+<span>SLA Cumplimiento 24h: <strong class="text-on-surface">96.8%</strong></span>
+<span>|</span>
+<span>Tiempo Primera Respuesta (FRT): <strong class="text-primary">4.2 min</strong></span>
+<span>|</span>
+<span>Tickets Resueltos Hoy: <strong class="text-on-surface">142</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant">Kajel Bloom Helpdesk v2.4 Pro</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-semibold">Cluster Lima-PE</span>
+</div>
+</footer>
+</div>
+<script>
+  // Micro-interacción: Atajo Ctrl + K para foco rápido en buscador omnicanal
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      const searchInput = document.querySelector('input[type="text"]');
+      if (searchInput) searchInput.focus();
+    }
+  });
+</script></main></div></body></html>

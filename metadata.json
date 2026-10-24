@@ -1,0 +1,6 @@
+{
+  "name": "Kajel Bloom Suite - Social Intelligence & Community Ops",
+  "description": "Suite omnicanal de inteligencia social, programación multi-red, detección de crisis Sentinel, auditoría de creadores con cálculo de EMV y helpdesk comunitario con autenticación Firebase para retail en Perú.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

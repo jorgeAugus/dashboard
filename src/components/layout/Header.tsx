@@ -1,0 +1,222 @@
+import React, { useState } from 'react';
+import { useApp } from '../../context/AppContext';
+import { useAuth } from '../../context/AuthContext';
+
+interface HeaderProps {
+  onToggleMobile: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
+  const { 
+    searchQuery, 
+    setSearchQuery, 
+    notificationsCount, 
+    clearNotifications,
+    activeCampaign,
+    setActiveCampaign,
+    setCurrentModule,
+    showToast
+  } = useApp();
+  const { profile, openAuthModal, user } = useAuth();
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [showCampaignPicker, setShowCampaignPicker] = useState(false);
+
+  const campaigns = [
+    'Kajel Perú - Campaña Primavera / Flores Amarillas',
+    'Kajel Perú - San Valentín Bloom Retrospective',
+    'Kajel Corporativo - Flores para Oficinas San Isidro',
+    'Kajel Expansión - Arequipa & Trujillo Express'
+  ];
+
+  const notifications = [
+    {
+      id: 'notif-1',
+      title: 'Alerta Nivel 2: Demoras en Lima Norte',
+      desc: '+34% quejas en Surco y San Miguel detectadas por Sentinel NLP.',
+      time: 'Hace 4 min',
+      type: 'crisis',
+      action: () => setCurrentModule('social-listening')
+    },
+    {
+      id: 'notif-2',
+      title: 'Ticket Urgente SLA < 2 min',
+      desc: '@mariana_flores_pe consulta por despacho a Miraflores.',
+      time: 'Hace 6 min',
+      type: 'ticket',
+      action: () => setCurrentModule('inbox-comunitario')
+    }
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 lg:left-72 right-0 h-16 bg-[#0b1326]/85 backdrop-blur-xl z-40 border-b border-[#222a3d]/50 shadow-[0_1px_8px_rgba(0,0,0,0.1)]">
+      <div className="w-full h-full px-4 lg:px-6 flex items-center justify-between gap-3">
+        {/* Left side: Hamburger on mobile + Store/Campaign Selector */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={onToggleMobile}
+            className="p-2 rounded-lg text-[#d8c3ad] hover:text-[#dae2fd] hover:bg-[#222a3d] lg:hidden transition-colors"
+            title="Abrir menú"
+          >
+            <span className="material-symbols-outlined text-2xl">menu</span>
+          </button>
+
+          {/* Campaign Selector Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setShowCampaignPicker(!showCampaignPicker)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#131b2e] hover:bg-[#171f33] border border-[#222a3d]/60 text-[#dae2fd] text-xs font-medium transition-colors"
+            >
+              <span className="material-symbols-outlined text-base text-[#ffc174]">storefront</span>
+              <span className="font-semibold text-xs text-[#dae2fd] max-w-[220px] sm:max-w-xs md:max-w-sm truncate text-left">
+                {activeCampaign}
+              </span>
+              <span className="material-symbols-outlined text-sm text-[#d8c3ad]">unfold_more</span>
+            </button>
+
+            {showCampaignPicker && (
+              <div className="absolute left-0 top-full mt-1.5 w-80 bg-[#171f33] border border-[#222a3d] rounded-xl shadow-2xl py-1 z-50 animate-in fade-in zoom-in-95">
+                <div className="px-3 py-1.5 text-[11px] font-semibold text-[#d8c3ad] uppercase tracking-wider border-b border-[#222a3d]/60">
+                  Seleccionar Campaña Activa
+                </div>
+                {campaigns.map((camp) => (
+                  <button
+                    key={camp}
+                    onClick={() => {
+                      setActiveCampaign(camp);
+                      setShowCampaignPicker(false);
+                      showToast(`Campaña cambiada a: ${camp}`);
+                    }}
+                    className={`w-full text-left px-3 py-2 text-xs transition-colors flex items-center justify-between ${
+                      activeCampaign === camp
+                        ? 'bg-[#f59e0b]/20 text-[#ffc640] font-semibold'
+                        : 'text-[#dae2fd] hover:bg-[#222a3d]'
+                    }`}
+                  >
+                    <span className="truncate">{camp}</span>
+                    {activeCampaign === camp && (
+                      <span className="material-symbols-outlined text-sm text-[#ffc640]">check</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Date range chip */}
+          <div className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#171f33] text-[#d8c3ad] text-xs font-medium border border-[#222a3d]/60">
+            <span className="material-symbols-outlined text-base text-[#ffc640]">date_range</span>
+            <span>Últimos 30 días - Mar 2026</span>
+          </div>
+        </div>
+
+        {/* Center: Search input */}
+        <div className="flex-1 max-w-md hidden md:block">
+          <div className="relative flex items-center w-full">
+            <span className="material-symbols-outlined absolute left-3 text-[#d8c3ad] text-base">search</span>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Buscar métricas, creadores o hashtags..."
+              className="w-full pl-9 pr-8 py-1.5 rounded-lg bg-[#131b2e] border border-[#222a3d]/70 text-[#dae2fd] placeholder:text-[#d8c3ad]/70 text-xs focus:outline-none focus:ring-1 focus:ring-[#f59e0b] focus:border-[#f59e0b] transition-all"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-2.5 text-[#d8c3ad] hover:text-[#dae2fd]"
+              >
+                <span className="material-symbols-outlined text-sm">close</span>
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Right side: Notifications & User Profile */}
+        <div className="flex items-center gap-3">
+          {/* Notifications button and dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setShowNotifications(!showNotifications)}
+              className="relative p-2 rounded-lg text-[#d8c3ad] hover:text-[#dae2fd] hover:bg-[#222a3d] transition-colors"
+              title="Notificaciones"
+            >
+              <span className="material-symbols-outlined text-xl">notifications</span>
+              {notificationsCount > 0 && (
+                <span className="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full bg-[#f59e0b] text-[#0b1326] text-[10px] font-bold shadow-md shadow-[#f59e0b]/30">
+                  {notificationsCount}
+                </span>
+              )}
+            </button>
+
+            {showNotifications && (
+              <div className="absolute right-0 top-full mt-2 w-80 sm:w-96 bg-[#171f33] border border-[#222a3d] rounded-xl shadow-2xl py-2 z-50">
+                <div className="px-4 py-2 flex items-center justify-between border-b border-[#222a3d]">
+                  <span className="font-semibold text-xs text-[#dae2fd]">Centro de Alertas Sentinel</span>
+                  <button
+                    onClick={() => {
+                      clearNotifications();
+                      showToast('Todas las alertas marcadas como leídas');
+                    }}
+                    className="text-[11px] text-[#ffc174] hover:underline"
+                  >
+                    Marcar leídas
+                  </button>
+                </div>
+                <div className="divide-y divide-[#222a3d]/60">
+                  {notifications.map((n) => (
+                    <div
+                      key={n.id}
+                      onClick={() => {
+                        n.action();
+                        setShowNotifications(false);
+                      }}
+                      className="p-3 hover:bg-[#222a3d] transition-colors cursor-pointer flex items-start gap-2.5"
+                    >
+                      <span className="material-symbols-outlined text-lg text-[#ffb4ab] mt-0.5">
+                        {n.type === 'crisis' ? 'warning' : 'inbox'}
+                      </span>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-semibold text-[#dae2fd]">{n.title}</span>
+                          <span className="text-[10px] text-[#d8c3ad]">{n.time}</span>
+                        </div>
+                        <p className="text-[11px] text-[#d8c3ad] mt-0.5">{n.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Profile Trigger */}
+          <button
+            onClick={openAuthModal}
+            className="flex items-center gap-2 pl-2 p-1 rounded-lg hover:bg-[#222a3d] transition-colors group text-left"
+            title="Gestionar Perfil y Autenticación Firebase"
+          >
+            <div className="relative">
+              <img
+                src={profile.avatarUrl}
+                alt="Profile Avatar"
+                className="w-8 h-8 rounded-full object-cover ring-1 ring-[#f59e0b]/40 group-hover:ring-[#f59e0b]"
+              />
+              <span
+                className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-[#0b1326] ${
+                  user ? 'bg-emerald-400' : 'bg-[#ffc640]'
+                }`}
+                title={user ? 'Conectado a Firebase' : 'Sesión Local Activa'}
+              ></span>
+            </div>
+            <div className="hidden xl:flex flex-col text-left">
+              <span className="text-xs font-semibold text-[#dae2fd] group-hover:text-[#ffc174] transition-colors">
+                {profile.displayName || profile.role}
+              </span>
+              <span className="text-[10px] text-[#d8c3ad] font-mono">{profile.email}</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};

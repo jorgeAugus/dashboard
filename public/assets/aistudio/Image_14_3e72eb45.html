@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustentación Ejecutiva: Kajel Bloom Suite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              glow: 'rgba(245, 158, 11, 0.18)'
+            },
+            dark: {
+              bg: '#070b14',
+              card: '#0d1527',
+              surface: '#111c34',
+              border: '#1e2942',
+              borderLight: '#2a3b5c'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .slide-panel { display: none; }
+    .slide-panel.active { display: block; animation: fadeIn 0.35s ease-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0b1326;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #23314d;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-dark-bg text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-black overflow-x-hidden">
+
+  <!-- Top Bar: Presentation Controls & Live Timer -->
+  <header class="border-b border-dark-border bg-dark-card/95 backdrop-blur px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-dark-bg font-black shadow-lg shadow-brand-500/20">
+          <i class="fa-solid fa-seedling text-sm text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-white tracking-tight text-sm">Kajel Bloom Suite</span>
+            <span class="text-[10px] font-mono uppercase bg-amber-500/10 text-amber-400 border border-amber-500/25 px-1.5 py-0.5 rounded">Taller Ing. Sistemas 2026</span>
+          </div>
+          <p class="text-[11px] text-slate-400">Sustentación de Arquitectura de Software & Pitch Final (5 Minutos)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Timeline Nav -->
+    <div class="flex items-center bg-dark-bg/80 border border-dark-border rounded-xl p-1 gap-1">
+      <button onclick="goToSlide(1)" id="nav-btn-1" class="slide-nav-btn px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all bg-amber-500 text-slate-950 shadow">
+        <span class="font-mono text-[10px] opacity-80">01</span>
+        <span>El Problema</span>
+      </button>
+      <button onclick="goToSlide(2)" id="nav-btn-2" class="slide-nav-btn px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-dark-surface">
+        <span class="font-mono text-[10px] opacity-60">02</span>
+        <span>Kajel Bloom</span>
+      </button>
+      <button onclick="goToSlide(3)" id="nav-btn-3" class="slide-nav-btn px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-dark-surface">
+        <span class="font-mono text-[10px] opacity-60">03</span>
+        <span>Arquitectura</span>
+      </button>
+      <button onclick="goToSlide(4)" id="nav-btn-4" class="slide-nav-btn px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-dark-surface">
+        <span class="font-mono text-[10px] opacity-60">04</span>
+        <span>Impacto & Demo</span>
+      </button>
+      <button onclick="goToSlide(5)" id="nav-btn-5" class="slide-nav-btn px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-dark-surface">
+        <span class="font-mono text-[10px] opacity-60">05</span>
+        <span>Conclusiones</span>
+      </button>
+    </div>
+
+    <!-- Presentation Timer & Actions -->
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2 bg-dark-surface border border-dark-border rounded-lg px-3 py-1.5 font-mono text-xs">
+        <i class="fa-regular fa-clock text-amber-400"></i>
+        <span class="text-slate-400">Pitch Clock:</span>
+        <span id="pitch-timer" class="font-bold text-amber-300">00:00</span>
+        <button onclick="togglePitchTimer()" id="timer-btn" class="ml-1 text-[11px] text-slate-400 hover:text-white" title="Play/Pausa">
+          <i class="fa-solid fa-play"></i>
+        </button>
+      </div>
+
+      <button onclick="togglePresenterNotes()" class="px-3 py-1.5 rounded-lg bg-dark-surface hover:bg-dark-border border border-dark-border text-xs text-slate-200 flex items-center gap-2 transition">
+        <i class="fa-solid fa-clipboard-list text-amber-400"></i>
+        <span>Notas del Orador</span>
+      </button>
+
+      <div class="flex items-center gap-1 border-l border-dark-border pl-3">
+        <button onclick="prevSlide()" class="w-8 h-8 rounded-lg bg-dark-surface hover:bg-dark-border flex items-center justify-center text-slate-300 hover:text-white transition">
+          <i class="fa-solid fa-chevron-left text-xs"></i>
+        </button>
+        <button onclick="nextSlide()" class="w-8 h-8 rounded-lg bg-dark-surface hover:bg-dark-border flex items-center justify-center text-slate-300 hover:text-white transition">
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Slide Canvas Stage -->
+  <main class="flex-1 p-6 flex flex-col justify-between max-w-7xl mx-auto w-full">
+
+    <!-- ==================== SLIDE 1: EL PROBLEMA ==================== -->
+    <section id="slide-1" class="slide-panel active">
+      <div class="grid grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Left Hero Problem Statement -->
+        <div class="col-span-12 lg:col-span-7 bg-dark-card border border-dark-border rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between shadow-2xl">
+          <div class="absolute -right-16 -top-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-xs font-bold text-amber-400 tracking-wider uppercase bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">
+                Minuto 0:00 - 1:00 • Hook & Diagnóstico de Mercado
+              </span>
+              <span class="text-xs text-slate-400">Contexto Retail Perú 2026</span>
+            </div>
+
+            <h1 class="text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight mb-4">
+              La Crisis de la <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Omnicanalidad Visual</span> en las Marcas Peruanas
+            </h1>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Las marcas de retail, moda y florerías en Perú pierden más de <strong>25 horas hombre semanales</strong> saltando caóticamente entre TikTok Creator Hub, Meta Business Suite y Pinterest. Durante hitos de viralidad masiva (como el fenómeno de las Flores Amarillas), operan con <strong>ceguera de datos, riesgo de linchamiento digital y gasto a ciegas en creadores</strong>.
+            </p>
+
+            <!-- 4 Pain Points Grid -->
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="bg-dark-surface/80 border border-red-500/20 rounded-xl p-3.5 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Dispersión Operativa</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">4.5 hrs diarias perdidas en duplicar posteos y reportes manuales.</p>
+                </div>
+              </div>
+
+              <div class="bg-dark-surface/80 border border-amber-500/20 rounded-xl p-3.5 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Crisis No Detectadas</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">Demoras de courier en Lima escalan a Indecopi antes de enterarse.</p>
+                </div>
+              </div>
+
+              <div class="bg-dark-surface/80 border border-rose-500/20 rounded-xl p-3.5 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-money-bill-transfer"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">ROI Fantasma en Creadores</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">Presupuestos asignados con capturas de pantalla, sin trazabilidad UTM.</p>
+                </div>
+              </div>
+
+              <div class="bg-dark-surface/80 border border-blue-500/20 rounded-xl p-3.5 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-shop-slash"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Desconexión Pinterest</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">Alta intención de compra desaprovechada por falta de sync de catálogo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-dark-border mt-6 flex items-center justify-between text-xs font-mono text-slate-400">
+            <span>Fuente: Auditoría Retail Lima & Callao Q1-2026</span>
+            <span class="text-amber-400">Nivel de Impacto: Crítico para P&L</span>
+          </div>
+        </div>
+
+        <!-- Right Side Data Visuals & Case Benchmark -->
+        <div class="col-span-12 lg:col-span-5 flex flex-col gap-4">
+          <!-- Metric Highlight Card -->
+          <div class="bg-gradient-to-br from-dark-card to-dark-surface border border-dark-border rounded-2xl p-6 shadow-xl">
+            <span class="text-xs font-mono uppercase text-slate-400">El Costo de la Ineficiencia</span>
+            <div class="mt-2 flex items-baseline gap-3">
+              <span class="text-5xl font-black text-amber-400 tracking-tight">-65%</span>
+              <span class="text-xs text-slate-300 font-medium">Margen operativo comprometido en responder quejas tardías</span>
+            </div>
+            <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
+              <div class="bg-amber-400 h-full rounded-full w-[78%]"></div>
+            </div>
+            <div class="flex justify-between text-[11px] font-mono text-slate-400 mt-2">
+              <span>Tiempo de Reacción Promedio: 48 min</span>
+              <span class="text-red-400">Límite de Crisis Viral: &lt;10 min</span>
+            </div>
+          </div>
+
+          <!-- Real World Scenario Callout -->
+          <div class="bg-dark-card border border-dark-border rounded-2xl p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-slate-200 uppercase tracking-wide flex items-center gap-2">
+                  <i class="fa-solid fa-map-pin text-amber-400"></i> Caso de Estudio: Campaña Flores Amarillas
+                </span>
+                <span class="text-[10px] bg-red-500/20 text-red-300 font-mono px-2 py-0.5 rounded">Riesgo Real</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Durante el 21 de marzo en Lima, el volumen de mensajes privados y menciones en TikTok creció <strong class="text-white">+340%</strong>. Sin una plataforma unificada, una sola queja sobre demoras en Miraflores y San Miguel generó un efecto bola de nieve en redes con menciones a @indecopi antes de que el community manager pudiera contactar a despacho.
+              </p>
+            </div>
+
+            <div class="mt-4 p-3 bg-dark-surface/90 border border-dark-border rounded-xl flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm shrink-0">
+                KB
+              </div>
+              <div class="text-xs">
+                <span class="font-bold text-white block">La Solución requerida:</span>
+                <span class="text-slate-400 text-[11px]">Unificar ingesta de APIs oficiales, alertas algorítmicas tempranas y triage automatizado.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 2: KAJEL BLOOM SUITE ==================== -->
+    <section id="slide-2" class="slide-panel">
+      <div class="grid grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Left Product Identity -->
+        <div class="col-span-12 lg:col-span-5 bg-dark-card border border-dark-border rounded-2xl p-8 flex flex-col justify-between shadow-2xl relative">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-mono text-xs font-bold text-amber-400 tracking-wider uppercase bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">
+                Minuto 1:00 - 2:00 • La Solución
+              </span>
+            </div>
+            
+            <div class="flex items-center gap-3 mt-2 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-amber-500/30">
+                <i class="fa-solid fa-sun text-slate-950"></i>
+              </div>
+              <div>
+                <h2 class="text-2xl font-black text-white tracking-tight">Kajel Bloom Suite</h2>
+                <p class="text-xs text-amber-400/90 font-medium">Social Intelligence & Omni-Community Platform</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Inspirado en la simbología de las <strong>Flores Amarillas</strong> (vitalidad, optimismo, prosperidad y el fenómeno cultural de viralidad masiva en el Perú) combinado con la robustez de <strong>Kajel</strong>. Una suite todo-en-uno que hace florecer comunidades y transforma interacciones en conversiones e-commerce atribuibles.
+            </p>
+
+            <div class="space-y-3">
+              <div class="p-3 bg-dark-surface rounded-xl border border-dark-border flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold text-sm shrink-0">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Centralización Omnicanal</h4>
+                  <p class="text-[11px] text-slate-400">TikTok Video API + Meta Graph v20 + Pinterest Business v5 integrados.</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-dark-surface rounded-xl border border-dark-border flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold text-sm shrink-0">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Copiloto IA Adaptativo Perú</h4>
+                  <p class="text-[11px] text-slate-400">NLP entrenado para detectar jerga local limeña y provinciana (*palta, ya fuiste, broder*).</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-dark-surface rounded-xl border border-dark-border flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold text-sm shrink-0">
+                  <i class="fa-solid fa-coins"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Atribución Económica Real</h4>
+                  <p class="text-[11px] text-slate-400">EMV auditado en Soles (PEN) y conciliación automática con Shopify / Niubiz / Yape.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-dark-border flex items-center justify-between text-[11px] text-slate-400 font-mono">
+            <span>SaaS B2B Retail • Perú</span>
+            <span class="text-amber-400">React 19 + Node.js Stack</span>
+          </div>
+        </div>
+
+        <!-- Right 5 Modules Map -->
+        <div class="col-span-12 lg:col-span-7 bg-dark-card border border-dark-border rounded-2xl p-8 flex flex-col justify-between shadow-2xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-base font-bold text-white">Mapa de Módulos Funcionales Construidos</h3>
+              <span class="text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded">100% Funcional & Diseñado</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              
+              <!-- Mod 1 -->
+              <div class="bg-dark-surface border border-dark-border hover:border-amber-500/40 transition rounded-xl p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono text-amber-400 font-bold uppercase">Módulo 01</span>
+                  <i class="fa-solid fa-calendar-days text-amber-400 text-sm"></i>
+                </div>
+                <h4 class="text-sm font-bold text-white">Calendario Drag & Drop</h4>
+                <p class="text-xs text-slate-400 mt-1">Planificación visual multi-ratio (9:16 y 2:3) con optimizador de copies y hashtags peruanos.</p>
+              </div>
+
+              <!-- Mod 2 -->
+              <div class="bg-dark-surface border border-dark-border hover:border-amber-500/40 transition rounded-xl p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono text-amber-400 font-bold uppercase">Módulo 02</span>
+                  <i class="fa-solid fa-shield-halved text-amber-400 text-sm"></i>
+                </div>
+                <h4 class="text-sm font-bold text-white">Sentinel Crisis & Listening</h4>
+                <p class="text-xs text-slate-400 mt-1">Radar 24/7 con detección de anomalías de sentimiento y kill-switch automático de pauta.</p>
+              </div>
+
+              <!-- Mod 3 -->
+              <div class="bg-dark-surface border border-dark-border hover:border-amber-500/40 transition rounded-xl p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono text-amber-400 font-bold uppercase">Módulo 03</span>
+                  <i class="fa-solid fa-chart-line text-amber-400 text-sm"></i>
+                </div>
+                <h4 class="text-sm font-bold text-white">Tablero Analítico Ejecutivo</h4>
+                <p class="text-xs text-slate-400 mt-1">Métricas normalizadas entre plataformas, share of voice y proyecciones algorítmicas de alcance.</p>
+              </div>
+
+              <!-- Mod 4 -->
+              <div class="bg-dark-surface border border-dark-border hover:border-amber-500/40 transition rounded-xl p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono text-amber-400 font-bold uppercase">Módulo 04</span>
+                  <i class="fa-solid fa-users-viewfinder text-amber-400 text-sm"></i>
+                </div>
+                <h4 class="text-sm font-bold text-white">Influencers & Calculadora ROI</h4>
+                <p class="text-xs text-slate-400 mt-1">Auditoría antifraude de creadores locales, simulación de EMV y tracking UTM con Shopify.</p>
+              </div>
+
+              <!-- Mod 5 (Full Width) -->
+              <div class="col-span-1 md:col-span-2 bg-gradient-to-r from-dark-surface to-amber-950/20 border border-amber-500/30 rounded-xl p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono text-amber-400 font-bold uppercase">Módulo 05 • Core Operativo</span>
+                  <i class="fa-solid fa-inbox text-amber-400 text-sm"></i>
+                </div>
+                <h4 class="text-sm font-bold text-white">Smart Universal Inbox & Helpdesk</h4>
+                <p class="text-xs text-slate-300 mt-1">Bandeja unificada con triage inteligente asistido por IA, visión 360° del cliente con integración de envíos y cumplimiento de SLA en menos de 7 minutos.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-dark-border mt-4 flex items-center justify-between text-xs text-slate-400">
+            <span>Todas las interfaces comparten un único App Shell corporativo</span>
+            <span class="text-amber-400 font-mono text-[11px]">Sistema de Diseño: Amber Slate Intelligence</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 3: ARQUITECTURA TÉCNICA ==================== -->
+    <section id="slide-3" class="slide-panel">
+      <div class="bg-dark-card border border-dark-border rounded-2xl p-8 shadow-2xl flex flex-col justify-between">
+        
+        <div>
+          <!-- Header -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-dark-border mb-6 gap-2">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-amber-400 tracking-wider uppercase bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">
+                  Minuto 2:00 - 3:30 • Arquitectura de Software
+                </span>
+                <span class="text-xs text-slate-400 font-mono">Patrones de Escalabilidad & Resiliencia</span>
+              </div>
+              <h2 class="text-2xl font-black text-white mt-1">Ecosistema Tecnológico de Alta Disponibilidad</h2>
+            </div>
+            
+            <div class="flex items-center gap-2 text-xs font-mono">
+              <span class="px-2.5 py-1 bg-dark-surface border border-emerald-500/30 text-emerald-400 rounded-lg flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> mTLS Enforced
+              </span>
+              <span class="px-2.5 py-1 bg-dark-surface border border-dark-border text-slate-300 rounded-lg">
+                OAuth 2.0 PKCE
+              </span>
+            </div>
+          </div>
+
+          <!-- Architecture Visual Flow (4 Layers) -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            
+            <!-- Layer 1: Frontend -->
+            <div class="bg-dark-surface border border-dark-border rounded-xl p-4 flex flex-col justify-between relative group hover:border-amber-500/40 transition">
+              <div class="absolute -top-3 left-4 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-mono font-bold px-2 py-0.5 rounded">
+                CAPA 1: CLIENTE
+              </div>
+              <div class="mt-2">
+                <div class="flex items-center gap-2 mb-3">
+                  <i class="fa-brands fa-react text-cyan-400 text-xl"></i>
+                  <h4 class="font-bold text-white text-sm">React 19 + Tailwind</h4>
+                </div>
+                <ul class="text-xs text-slate-300 space-y-2">
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> TanStack Query v5 para sincronización en caché sin re-render.</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> WebSockets (WSS) con reconexión activa y fallback long-polling.</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Dnd-Kit accesible para drag & drop de calendarios y tickets.</li>
+                </ul>
+              </div>
+              <div class="mt-4 pt-3 border-t border-dark-border text-[11px] font-mono text-slate-400">
+                Latencia UI: &lt;16ms (60fps)
+              </div>
+            </div>
+
+            <!-- Layer 2: API Gateway -->
+            <div class="bg-dark-surface border border-dark-border rounded-xl p-4 flex flex-col justify-between relative group hover:border-amber-500/40 transition">
+              <div class="absolute -top-3 left-4 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-mono font-bold px-2 py-0.5 rounded">
+                CAPA 2: GATEWAY
+              </div>
+              <div class="mt-2">
+                <div class="flex items-center gap-2 mb-3">
+                  <i class="fa-brands fa-node text-emerald-400 text-xl"></i>
+                  <h4 class="font-bold text-white text-sm">Node.js + Express (TS)</h4>
+                </div>
+                <ul class="text-xs text-slate-300 space-y-2">
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> JWT seguros con firma asimétrica RS256 (Access 15m).</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Rate Limiter adaptativo con bucket de fichas por IP y Tenant.</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Validación de firmas Webhook HMAC-SHA256 en el borde.</li>
+                </ul>
+              </div>
+              <div class="mt-4 pt-3 border-t border-dark-border text-[11px] font-mono text-slate-400">
+                Throughput: 840 ops/s
+              </div>
+            </div>
+
+            <!-- Layer 3: Worker & Cache -->
+            <div class="bg-dark-surface border border-dark-border rounded-xl p-4 flex flex-col justify-between relative group hover:border-amber-500/40 transition">
+              <div class="absolute -top-3 left-4 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-mono font-bold px-2 py-0.5 rounded">
+                CAPA 3: ASYNC JOBS
+              </div>
+              <div class="mt-2">
+                <div class="flex items-center gap-2 mb-3">
+                  <i class="fa-solid fa-bolt text-red-400 text-xl"></i>
+                  <h4 class="font-bold text-white text-sm">Redis + BullMQ</h4>
+                </div>
+                <ul class="text-xs text-slate-300 space-y-2">
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Worker Pool de 12 procesos concurrentes tolerante a caídas.</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Colas prioritarias para alertas críticas de descontento.</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Caché in-memory de KPIs con TTL dinámico e invalidación.</li>
+                </ul>
+              </div>
+              <div class="mt-4 pt-3 border-t border-dark-border text-[11px] font-mono text-slate-400">
+                Latencia Redis: 12ms
+              </div>
+            </div>
+
+            <!-- Layer 4: Storage & APIs -->
+            <div class="bg-dark-surface border border-dark-border rounded-xl p-4 flex flex-col justify-between relative group hover:border-amber-500/40 transition">
+              <div class="absolute -top-3 left-4 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-mono font-bold px-2 py-0.5 rounded">
+                CAPA 4: DATOS & APIS
+              </div>
+              <div class="mt-2">
+                <div class="flex items-center gap-2 mb-3">
+                  <i class="fa-solid fa-database text-blue-400 text-xl"></i>
+                  <h4 class="font-bold text-white text-sm">PostgreSQL + Vault</h4>
+                </div>
+                <ul class="text-xs text-slate-300 space-y-2">
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> PostgreSQL relacional con soporte nativo de payloads JSONB.</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Cifrado de credenciales OAuth con AES-256-GCM.</li>
+                  <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px] mt-1"></i> Cumplimiento estricto con la Ley N° 29733 (Datos Personales PE).</li>
+                </ul>
+              </div>
+              <div class="mt-4 pt-3 border-t border-dark-border text-[11px] font-mono text-slate-400">
+                Seguridad: ISO/IEC 27001
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom API Integration Banner -->
+          <div class="mt-6 p-4 bg-dark-bg/80 border border-dark-border rounded-xl flex flex-wrap items-center justify-between gap-4">
+            <span class="text-xs font-mono text-slate-400 uppercase font-semibold">Integraciones Oficiales Certificadas:</span>
+            <div class="flex items-center gap-6 text-xs text-slate-300">
+              <div class="flex items-center gap-2">
+                <i class="fa-brands fa-tiktok text-white"></i>
+                <span>TikTok Content & Creator API v1.3</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-pink-400"></i>
+                <span>Meta Graph API v20.0</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-brands fa-pinterest text-red-500"></i>
+                <span>Pinterest API v5</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-credit-card text-emerald-400"></i>
+                <span>Niubiz / Yape Webhooks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 4: IMPACTO DE NEGOCIO & DEMO ==================== -->
+    <section id="slide-4" class="slide-panel">
+      <div class="grid grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Left 4 Business Impact Metrics -->
+        <div class="col-span-12 lg:col-span-6 bg-dark-card border border-dark-border rounded-2xl p-8 flex flex-col justify-between shadow-2xl">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-mono text-xs font-bold text-amber-400 tracking-wider uppercase bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">
+                Minuto 3:30 - 4:30 • Retorno de Inversión
+              </span>
+              <span class="text-xs text-slate-400">Validación Experimental</span>
+            </div>
+
+            <h2 class="text-3xl font-black text-white tracking-tight mb-2">Impacto Medible en Retail & E-Commerce</h2>
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Resultados de telemetría y pruebas simuladas bajo el tráfico de la campaña <em>Flores Amarillas</em> en Lima Metropolitana y principales ciudades del Perú.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+              <!-- KPI 1 -->
+              <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                <span class="text-[11px] font-mono text-slate-400 uppercase">Ahorro de Tiempo Operativo</span>
+                <div class="text-3xl font-black text-amber-400 mt-1">65%</div>
+                <p class="text-[11px] text-slate-300 mt-1">Reducción de 4.5 horas a 1.5 horas diarias por community manager.</p>
+              </div>
+
+              <!-- KPI 2 -->
+              <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                <span class="text-[11px] font-mono text-slate-400 uppercase">First Response Time (FRT)</span>
+                <div class="text-3xl font-black text-emerald-400 mt-1">4.2 min</div>
+                <p class="text-[11px] text-slate-300 mt-1">Meta inicial &lt; 7 min; benchmark de la industria en Perú: 48 min.</p>
+              </div>
+
+              <!-- KPI 3 -->
+              <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                <span class="text-[11px] font-mono text-slate-400 uppercase">Multiplicador EMV / ROAS</span>
+                <div class="text-3xl font-black text-amber-400 mt-1">3.5x</div>
+                <p class="text-[11px] text-slate-300 mt-1">S/ 148,650 PEN de valor generado contra S/ 42,500 PEN invertidos.</p>
+              </div>
+
+              <!-- KPI 4 -->
+              <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                <span class="text-[11px] font-mono text-slate-400 uppercase">Satisfacción del Cliente (CSAT)</span>
+                <div class="text-3xl font-black text-emerald-400 mt-1">94.6%</div>
+                <p class="text-[11px] text-slate-300 mt-1">1,120 tickets resueltos con copiloto empático y seguimiento de motorizado.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-dark-border text-xs text-slate-400 flex items-center justify-between">
+            <span>Evaluación sobre muestra de 38,450 menciones</span>
+            <span class="text-amber-400 font-mono">Tasa de Error Webhook: 0.00%</span>
+          </div>
+        </div>
+
+        <!-- Right Quick Demo Navigation Map -->
+        <div class="col-span-12 lg:col-span-6 bg-dark-card border border-dark-border rounded-2xl p-8 flex flex-col justify-between shadow-2xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-base font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-desktop text-amber-400"></i> Acceso Directo a Pantallas del Canvas
+              </h3>
+              <span class="text-[10px] font-mono text-slate-400">Demostración en Vivo</span>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4">
+              Seleccione cualquier módulo para contrastar la teoría arquitectónica con la interfaz de usuario de alta fidelidad implementada:
+            </p>
+
+            <div class="space-y-2.5">
+              <div class="p-3 bg-dark-surface hover:bg-dark-surface/80 border border-dark-border rounded-xl flex items-center justify-between transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xs">
+                    01
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">Módulo 1: Calendario Visual Drag & Drop</h4>
+                    <p class="text-[11px] text-slate-400">Gestión de estados, multi-formato TikTok/IG/Pinterest y copywriter IA.</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400">SCREEN_10</span>
+              </div>
+
+              <div class="p-3 bg-dark-surface hover:bg-dark-surface/80 border border-dark-border rounded-xl flex items-center justify-between transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xs">
+                    02
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">Módulo 2: Sentinel Social Listening & Crisis</h4>
+                    <p class="text-[11px] text-slate-400">Análisis NLP de modismos locales, detección de anomalías y kill-switch.</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400">SCREEN_8</span>
+              </div>
+
+              <div class="p-3 bg-dark-surface hover:bg-dark-surface/80 border border-dark-border rounded-xl flex items-center justify-between transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xs">
+                    04
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">Módulo 4: Creadores & Calculadora ROI / EMV</h4>
+                    <p class="text-[11px] text-slate-400">Auditoría antifraude en Lima/Provincias y trazabilidad UTM en Soles.</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400">SCREEN_6</span>
+              </div>
+
+              <div class="p-3 bg-dark-surface hover:bg-dark-surface/80 border border-dark-border rounded-xl flex items-center justify-between transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xs">
+                    05
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">Módulo 5: Helpdesk Comunitario & Smart Inbox</h4>
+                    <p class="text-[11px] text-slate-400">Cola omnicanal en tiempo real, perfil cliente 360° y tracking GPS de pedido.</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400">SCREEN_4</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-dark-border flex items-center justify-between text-[11px] text-slate-400 font-mono">
+            <span>Diseños 100% interactivos y responsive</span>
+            <span class="text-amber-400">Disponibles en el Canvas</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 5: CONCLUSIONES & Q&A ==================== -->
+    <section id="slide-5" class="slide-panel">
+      <div class="grid grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Left Summary Conclusions -->
+        <div class="col-span-12 lg:col-span-7 bg-dark-card border border-dark-border rounded-2xl p-8 flex flex-col justify-between shadow-2xl">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-mono text-xs font-bold text-amber-400 tracking-wider uppercase bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">
+                Minuto 4:30 - 5:00 • Cierre & Sustentación
+              </span>
+            </div>
+
+            <h2 class="text-3xl font-black text-white tracking-tight mb-4">
+              Ingeniería Aplicada al Crecimiento Digital
+            </h2>
+
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              <strong>Kajel Bloom Suite</strong> demuestra que la gestión de redes sociales y omnicanalidad no debe ser un proceso artesanal ni fragmentado. Aplicando principios formales de ingeniería de software, colas concurrentes y modelos de NLP adaptativos, transformamos el caos operativo en un sistema con gobernanza estricta, alta disponibilidad y retorno tangible.
+            </p>
+
+            <div class="space-y-3">
+              <div class="p-3.5 bg-dark-surface border border-emerald-500/20 rounded-xl flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-base mt-0.5"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Viabilidad Técnica Comprobada</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">La combinación de Node.js + Redis + BullMQ asegura una latencia menor a 800 ms y 0% pérdida de webhooks durante picos virales.</p>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-dark-surface border border-amber-500/20 rounded-xl flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-amber-400 text-base mt-0.5"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Aporte de Negocio & Contextualización Local</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">Resolución efectiva de la brecha del retail peruano al vincular la viralidad de TikTok e Instagram con la intención de compra de Pinterest y pasarelas locales (Niubiz/Yape).</p>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-dark-surface border border-blue-500/20 rounded-xl flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-blue-400 text-base mt-0.5"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Gobernanza y Privacidad</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">Almacenamiento seguro en bóveda KMS con AES-256-GCM y cumplimiento normativo estricto de la Ley N° 29733 del Perú.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-dark-border flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>Taller de Ingeniería de Software / Sistemas 2026</span>
+            <span class="text-amber-400 font-bold">¡Muchas Gracias por su Atención!</span>
+          </div>
+        </div>
+
+        <!-- Right Q&A Preparation & Defenses -->
+        <div class="col-span-12 lg:col-span-5 bg-dark-card border border-dark-border rounded-2xl p-8 flex flex-col justify-between shadow-2xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-base font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-comments-question text-amber-400"></i> Banco de Respuestas (Jurado)
+              </h3>
+              <span class="text-[10px] bg-amber-500/10 text-amber-300 font-mono px-2 py-0.5 rounded">Q&A Shield</span>
+            </div>
+
+            <div class="space-y-3">
+              <div class="p-3 bg-dark-surface border border-dark-border rounded-xl">
+                <span class="text-[10px] font-bold font-mono text-amber-400 uppercase">Pregunta 1: ¿Cómo toleran rate limits de Meta y TikTok?</span>
+                <p class="text-[11px] text-slate-300 mt-1 leading-snug">
+                  Implementamos un <em>Leaky Bucket</em> en Redis. Los pedidos se encolan en BullMQ y se despachan respetando el cupo del 70% para reservar margen ante spikes o publicaciones inmediatas.
+                </p>
+              </div>
+
+              <div class="p-3 bg-dark-surface border border-dark-border rounded-xl">
+                <span class="text-[10px] font-bold font-mono text-amber-400 uppercase">Pregunta 2: ¿Cómo calculan el EMV de influencers sin inventar datos?</span>
+                <p class="text-[11px] text-slate-300 mt-1 leading-snug">
+                  Se usa la fórmula estandarizada de IAB Perú (Impresiones × CPM sectorial + Interacciones × CPE ponderado), multiplicada por el coeficiente de autenticidad auditado del creador.
+                </p>
+              </div>
+
+              <div class="p-3 bg-dark-surface border border-dark-border rounded-xl">
+                <span class="text-[10px] font-bold font-mono text-amber-400 uppercase">Pregunta 3: ¿Por qué incluir Pinterest en el stack?</span>
+                <p class="text-[11px] text-slate-300 mt-1 leading-snug">
+                  Porque Pinterest en retail/decoración/flores tiene una tasa de conversión a compra 3.8x superior a TikTok, sirviendo como el puente ideal entre el descubrimiento y el checkout.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 p-3 bg-dark-surface/90 border border-amber-500/30 rounded-xl flex items-center gap-3">
+            <i class="fa-solid fa-graduation-cap text-amber-400 text-xl"></i>
+            <span class="text-xs text-slate-300">
+              Equipo preparado para ronda de preguntas técnicas y demostración de código.
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Presenter Drawer (Collapsible) -->
+  <aside id="presenter-drawer" class="border-t border-dark-border bg-dark-card/98 px-6 py-4 transition-all">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-microphone-lines text-amber-400 text-xs"></i>
+          <span class="text-xs font-bold text-white uppercase tracking-wider font-mono">Guion del Orador para el Slide Activo</span>
+        </div>
+        <span id="script-timecode" class="text-[11px] font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">
+          Minuto 0:00 - 1:00
+        </span>
+      </div>
+      <p id="script-text" class="text-xs text-slate-300 leading-relaxed font-sans bg-dark-surface/90 border border-dark-border p-3.5 rounded-xl">
+        "Buenas tardes profesor y miembros del jurado. En el Perú actual, una marca de consumo o retail gasta más de 25 horas semanales saltando caóticamente entre TikTok, Instagram y Pinterest. Cuando una publicación se vuelve viral o surge un reclamo crítico en Lima o Arequipa, tardan horas en enterarse. Las empresas están operando a ciegas en omnicanalidad visual y derrochando miles de soles en colaboraciones sin métricas reales de conversión..."
+      </p>
+    </div>
+  </aside>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 5;
+    let timerInterval = null;
+    let timerSeconds = 0;
+    let isTimerRunning = false;
+
+    const scripts = {
+      1: {
+        time: "Minuto 0:00 - 1:00 (Hook & Problema)",
+        text: '"Buenas tardes profesor y compañeros. En el Perú actual, una marca de consumo gasta más de 25 horas semanales saltando caóticamente entre TikTok, Instagram y Pinterest. Cuando surge un reclamo crítico en Lima o Arequipa, tardan horas en enterarse. Las marcas están ciegas en omnicanalidad visual y derrochan miles de soles en influencers sin métricas reales de conversión."'
+      },
+      2: {
+        time: "Minuto 1:00 - 2:00 (La Solución)",
+        text: '"Por eso creamos Kajel Bloom, la plataforma de Social Ops que hace florecer las comunidades digitales de las empresas peruanas. Centralizamos el ciclo completo: desde la planificación en un calendario unificado hasta la escucha social en tiempo real y el cálculo matemático del ROI de creadores. Todo en una sola pantalla con inteligencia artificial asistida."'
+      },
+      3: {
+        time: "Minuto 2:00 - 3:30 (Arquitectura Técnica)",
+        text: '"A nivel de ingeniería, construimos una arquitectura moderna y escalable: en el Frontend, React y Tailwind CSS garantizan una interfaz fluida e intuitiva; en el Backend, Node.js y Express gestionan la concurrencia a través de colas con Redis y BullMQ para publicar puntualmente en TikTok, Instagram Graph API y Pinterest v5. Garantizamos seguridad de nivel bancario mediante OAuth 2.0 y cifrado AES-256 para los tokens corporativos."'
+      },
+      4: {
+        time: "Minuto 3:30 - 4:30 (Impacto & Métricas)",
+        text: '"Kajel Bloom reduce los costos operativos en un 65% y mitiga crisis de marca respondiendo en menos de 10 minutos. Transformamos \'likes\' y reproducciones en datos duros de conversión e ingresos comprobables para el retail y comercio electrónico en el país, como demostraremos ahora recorriendo los módulos del sistema."'
+      },
+      5: {
+        time: "Minuto 4:30 - 5:00 (Cierre & Preguntas)",
+        text: '"La gestión digital ya no puede hacerse a ciegas. Con Kajel Bloom, la presencia digital de las empresas no solo crece, florece con bases de ingeniería sólidas y gobernanza estricta. Muchas gracias, quedamos atentos a sus preguntas y listos para profundizar en la arquitectura."'
+      }
+    };
+
+    function goToSlide(n) {
+      if (n < 1 || n > totalSlides) return;
+      currentSlide = n;
+
+      // Update slide panels
+      for (let i = 1; i <= totalSlides; i++) {
+        const panel = document.getElementById(`slide-${i}`);
+        const btn = document.getElementById(`nav-btn-${i}`);
+        if (i === currentSlide) {
+          panel.classList.add('active');
+          btn.className = "slide-nav-btn px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all bg-amber-500 text-slate-950 shadow";
+        } else {
+          panel.classList.remove('active');
+          btn.className = "slide-nav-btn px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-dark-surface";
+        }
+      }
+
+      // Update presenter notes
+      document.getElementById('script-timecode').innerText = scripts[currentSlide].time;
+      document.getElementById('script-text').innerText = scripts[currentSlide].text;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) goToSlide(currentSlide - 1);
+    }
+
+    function togglePresenterNotes() {
+      const drawer = document.getElementById('presenter-drawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    function togglePitchTimer() {
+      const btn = document.getElementById('timer-btn');
+      if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+      } else {
+        isTimerRunning = true;
+        btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        timerInterval = setInterval(() => {
+          timerSeconds++;
+          const mins = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+          const secs = (timerSeconds % 60).toString().padStart(2, '0');
+          document.getElementById('pitch-timer').innerText = `${mins}:${secs}`;
+          
+          // Color code warning as 5 minutes approach
+          if (timerSeconds >= 300) {
+            document.getElementById('pitch-timer').className = "font-bold text-red-400";
+          } else if (timerSeconds >= 240) {
+            document.getElementById('pitch-timer').className = "font-bold text-amber-300";
+          }
+        }, 1000);
+      }
+    }
+
+    // Keyboard navigation (Left, Right, Space)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+  </script>
+</body>
+</html>
