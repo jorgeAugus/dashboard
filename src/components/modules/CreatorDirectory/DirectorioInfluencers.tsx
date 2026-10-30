@@ -4,10 +4,10 @@ import { useApp } from '../../../context/AppContext';
 export const DirectorioInfluencers: React.FC = () => {
   const { showToast, searchQuery } = useApp();
 
-  // Interactive Simulator State
-  const [simReach, setSimReach] = useState(450000);
+  // Interactive Simulator State - Escala Micro-Creadores Lima
+  const [simReach, setSimReach] = useState(8500);
   const [simER, setSimER] = useState(7.2);
-  const [simFee, setSimFee] = useState(3500);
+  const [simFee, setSimFee] = useState(90);
   const [simCVR, setSimCVR] = useState(2.4);
   const [simModel, setSimModel] = useState<'standard' | 'cpm' | 'cpa'>('standard');
 
@@ -34,21 +34,21 @@ export const DirectorioInfluencers: React.FC = () => {
       nicheText: 'Moda & Lifestyle • Lima',
       status: 'Campaña Activa',
       statusNote: 'Sobrecumplimiento',
-      platforms: [{ name: 'IG 420K', color: 'text-[#f43f5e]' }, { name: 'TT 680K', color: 'text-[#22d3ee]' }],
+      platforms: [{ name: 'IG 14K', color: 'text-[#f43f5e]' }, { name: 'TT 18K', color: 'text-[#22d3ee]' }],
       authenticity: 96.4,
       botsPercent: 3.6,
       er: 8.4,
       erBench: 'vs 4.1% cat.',
-      fee: 'S/ 6,500',
-      deliverables: '3 Reels + 4 TT + 5 Stories',
-      emv: 'S/ 38,200',
-      emvRaw: 38200,
-      returnMult: '5.8x',
-      attributedSales: 'S/ 34,800',
-      ordersCount: 482,
-      utmCode: '?utm_source=valeria_marzo21',
-      campaignProduct: 'Flores Amarillas Premium',
-      lastAudit: 'Hoy 08:30 AM'
+      fee: 'Canje Ramo + S/ 50',
+      deliverables: '1 Reel + 2 Stories',
+      emv: 'S/ 420',
+      emvRaw: 420,
+      returnMult: '4.8x',
+      attributedSales: 'S/ 380',
+      ordersCount: 4,
+      utmCode: '?utm_source=valeria_set21',
+      campaignProduct: 'Flores Amarillas Boutique',
+      lastAudit: '19 Set 10:30 AM'
     },
     {
       id: 'c-2',
@@ -58,24 +58,24 @@ export const DirectorioInfluencers: React.FC = () => {
       badgeIcon: '♪',
       badgeColor: 'bg-[#22d3ee] text-[#060e20]',
       niche: 'lifestyle',
-      nicheText: 'Humor & Tendencias • Lima Urbana',
+      nicheText: 'Humor & Tendencias • Lima',
       status: 'Campaña Activa',
-      statusNote: 'TikTok Spark Focus',
-      platforms: [{ name: 'TT 950K', color: 'text-[#22d3ee]' }, { name: 'IG 180K', color: 'text-[#f43f5e]' }],
-      authenticity: 92.8,
-      botsPercent: 7.2,
-      er: 7.1,
+      statusNote: 'TikTok Viral Focus',
+      platforms: [{ name: 'TT 12K', color: 'text-[#22d3ee]' }, { name: 'IG 4.5K', color: 'text-[#f43f5e]' }],
+      authenticity: 94.2,
+      botsPercent: 5.8,
+      er: 7.8,
       erBench: 'Picos 14%',
-      fee: 'S/ 4,800',
-      deliverables: '2 Spark Ads + 1 Story',
-      emv: 'S/ 24,100',
-      emvRaw: 24100,
-      returnMult: '5.0x',
-      attributedSales: 'S/ 21,500',
-      ordersCount: 310,
-      utmCode: '?utm_source=diegotrends_express',
-      campaignProduct: 'Promo Pack Viral',
-      lastAudit: 'Ayer 06:15 PM'
+      fee: 'Canje Ramo Premium',
+      deliverables: '1 TikTok Orgánico',
+      emv: 'S/ 290',
+      emvRaw: 290,
+      returnMult: '4.2x',
+      attributedSales: 'S/ 240',
+      ordersCount: 3,
+      utmCode: '?utm_source=diego_set21',
+      campaignProduct: 'Ramo Girasoles Viral',
+      lastAudit: '20 Set 06:15 PM'
     },
     {
       id: 'c-3',
@@ -85,51 +85,51 @@ export const DirectorioInfluencers: React.FC = () => {
       badgeIcon: '📌',
       badgeColor: 'bg-[#f87171] text-white',
       niche: 'lifestyle',
-      nicheText: 'Decoración, Flores & Mesas • Lima/AQP',
+      nicheText: 'Decoración, Flores & Mesas • Lima',
       status: 'Campaña Activa',
       statusNote: 'Aesthetic Focus',
-      platforms: [{ name: 'Pin 140K', color: 'text-[#f87171]' }, { name: 'IG 95K', color: 'text-[#f43f5e]' }],
+      platforms: [{ name: 'Pin 3.2K', color: 'text-[#f87171]' }, { name: 'IG 2.1K', color: 'text-[#f43f5e]' }],
       authenticity: 98.1,
       botsPercent: 1.9,
       er: 9.8,
       erBench: 'Alto Guardado',
-      fee: 'S/ 3,200',
-      deliverables: '4 Pins + 2 Carruseles',
-      emv: 'S/ 18,900',
-      emvRaw: 18900,
-      returnMult: '5.9x',
-      attributedSales: 'S/ 16,800',
-      ordersCount: 220,
-      utmCode: '?utm_source=deco_peru_shop',
-      campaignProduct: 'Arreglos Corporativos',
-      lastAudit: 'Hoy 10:00 AM'
+      fee: 'Canje Centro de Mesa',
+      deliverables: '2 Pins + 1 Story',
+      emv: 'S/ 180',
+      emvRaw: 180,
+      returnMult: '4.0x',
+      attributedSales: 'S/ 160',
+      ordersCount: 2,
+      utmCode: '?utm_source=deco_peru_set',
+      campaignProduct: 'Arreglo de Mesa Primavera',
+      lastAudit: '21 Set 09:00 AM'
     },
     {
       id: 'c-4',
       name: 'Rodrigo Paz',
-      handle: '@rodrigo_foodie_pe',
+      handle: '@rodrigo_citas_lima',
       avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0skp6MzjdQrhmsjVlsCn610PZ1D3PeTDAdEzHBlbwy6Y-M3Mx402rdLNwWINsApdeV2k7MY_dPiVjirEmkm7ad2muhHO2V1OCZDOXV37dPqp_94EF4tEyL5hQrr2xIaObN63JjltLFx_KywK6vXoTDby454kKTAiNdFZIqldEysnalY-YaM0xk8I6kcQw8IB771A10geQs8pHdl37FjFIYEMQ-RYbXcNm-G_pWizaYZ8fzXbxItljHw',
       badgeIcon: '⚡',
       badgeColor: 'bg-[#f59e0b] text-[#0b1326]',
       niche: 'foodie',
-      nicheText: 'Experiencias, Citas & Flores • Lima',
+      nicheText: 'Planes, Citas & Detalles • Lima',
       status: 'Micro-Influencer',
-      statusNote: 'Renovación Q2',
-      platforms: [{ name: 'TT 85K', color: 'text-[#22d3ee]' }, { name: 'IG 45K', color: 'text-[#f43f5e]' }],
+      statusNote: 'Canje Local',
+      platforms: [{ name: 'TT 4.8K', color: 'text-[#22d3ee]' }, { name: 'IG 1.8K', color: 'text-[#f43f5e]' }],
       authenticity: 95.0,
       botsPercent: 5.0,
       er: 11.2,
       erBench: 'Hyper Local',
-      fee: 'S/ 1,500',
-      deliverables: '1 Reseña + 2 Stories',
-      emv: 'S/ 7,450',
-      emvRaw: 7450,
-      returnMult: '4.9x',
-      attributedSales: 'S/ 5,800',
-      ordersCount: 92,
-      utmCode: '?utm_source=rodrigo_citas',
-      campaignProduct: 'Combo Sorpresa Cita',
-      lastAudit: '18 Mar 04:00 PM'
+      fee: 'Canje Combo Cita',
+      deliverables: '1 Reseña + 1 Story',
+      emv: 'S/ 110',
+      emvRaw: 110,
+      returnMult: '3.8x',
+      attributedSales: 'S/ 90',
+      ordersCount: 1,
+      utmCode: '?utm_source=rodrigo_set21',
+      campaignProduct: 'Combo Flores & Tarjeta',
+      lastAudit: '21 Set 11:00 AM'
     }
   ];
 
@@ -182,7 +182,7 @@ export const DirectorioInfluencers: React.FC = () => {
             <span>Auditar Nuevo Perfil</span>
           </button>
           <button
-            onClick={() => showToast('Generador UTM: Parámetros &utm_campaign=flores_marzo26 generados')}
+            onClick={() => showToast('Generador UTM: Parámetros &utm_campaign=flores_set21 generados')}
             className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#222a3d] text-[#dae2fd] text-xs font-semibold hover:bg-[#31394d] transition-colors border border-[#222a3d]"
           >
             <span className="material-symbols-outlined text-base text-[#ffc640]">link</span>
@@ -198,47 +198,47 @@ export const DirectorioInfluencers: React.FC = () => {
         </div>
       </section>
 
-      {/* FILA DE KPIS EJECUTIVOS */}
+      {/* FILA DE KPIS EJECUTIVOS - Escala Emprendimiento Kajel Bloom */}
       <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
         {/* KPI 1 */}
         <div className="p-4 rounded-xl bg-[#131b2e] border border-[#222a3d] flex flex-col justify-between shadow-sm">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-[#d8c3ad] uppercase tracking-wider">Inversión Activada</span>
+            <span className="text-xs font-semibold text-[#d8c3ad] uppercase tracking-wider">Inversión en Alianzas</span>
             <span className="text-[10px] px-2 py-0.5 rounded bg-[#171f33] text-[#ffc174] font-semibold border border-[#222a3d]">
-              +18.5% proyectado
+              Canje + Apoyo
             </span>
           </div>
           <div className="mt-2 flex flex-col">
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl lg:text-3xl font-extrabold text-[#dae2fd] font-metric">S/ 42,500</span>
+              <span className="text-2xl lg:text-3xl font-extrabold text-[#dae2fd] font-metric">S/ 150</span>
               <span className="text-xs text-[#d8c3ad] font-mono">PEN</span>
             </div>
             <div className="flex items-center justify-between text-[#d8c3ad] text-xs mt-1">
-              <span>14 creadores contratados</span>
-              <span className="text-[#ffc174] font-medium">92% cuota Q1</span>
+              <span>4 colaboraciones locales</span>
+              <span className="text-[#ffc174] font-medium">100% entregado</span>
             </div>
           </div>
           <div className="w-full bg-[#2d3449] h-1.5 rounded-full mt-3 overflow-hidden">
-            <div className="bg-[#f59e0b] h-full rounded-full" style={{ width: '82%' }}></div>
+            <div className="bg-[#f59e0b] h-full rounded-full" style={{ width: '85%' }}></div>
           </div>
         </div>
 
         {/* KPI 2 */}
         <div className="p-4 rounded-xl bg-[#131b2e] border border-[#222a3d] flex flex-col justify-between shadow-sm">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-[#d8c3ad] uppercase tracking-wider">Earned Media Value</span>
+            <span className="text-xs font-semibold text-[#d8c3ad] uppercase tracking-wider">Valor Estimado (EMV)</span>
             <span className="text-[10px] px-2 py-0.5 rounded bg-[#f59e0b]/20 text-[#ffc174] font-semibold">
-              IAB Perú Standard
+              Difusión Orgánica
             </span>
           </div>
           <div className="mt-2 flex flex-col">
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl lg:text-3xl font-extrabold text-[#ffc640] font-metric">S/ 148,650</span>
+              <span className="text-2xl lg:text-3xl font-extrabold text-[#ffc640] font-metric">S/ 980</span>
               <span className="text-xs text-[#d8c3ad] font-mono">PEN</span>
             </div>
             <div className="flex items-center justify-between text-[#d8c3ad] text-xs mt-1">
-              <span>Multiplicador Retorno</span>
-              <span className="text-[#ffc640] font-bold">3.5x EMV / ROAS</span>
+              <span>Multiplicador de Marca</span>
+              <span className="text-[#ffc640] font-bold">4.8x Retorno</span>
             </div>
           </div>
           <div className="w-full bg-[#2d3449] h-1.5 rounded-full mt-3 overflow-hidden">
@@ -249,19 +249,19 @@ export const DirectorioInfluencers: React.FC = () => {
         {/* KPI 3 */}
         <div className="p-4 rounded-xl bg-[#131b2e] border border-[#222a3d] flex flex-col justify-between shadow-sm">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-[#d8c3ad] uppercase tracking-wider">Ventas Atribuidas (UTM)</span>
+            <span className="text-xs font-semibold text-[#d8c3ad] uppercase tracking-wider">Ventas por Creadores</span>
             <span className="text-[10px] px-2 py-0.5 rounded bg-[#171f33] text-[#ffc640] font-semibold border border-[#222a3d]">
-              CPA Prom. S/ 33.10
+              Enlaces UTM
             </span>
           </div>
           <div className="mt-2 flex flex-col">
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl lg:text-3xl font-extrabold text-[#dae2fd] font-metric">S/ 89,400</span>
+              <span className="text-2xl lg:text-3xl font-extrabold text-[#dae2fd] font-metric">S/ 780</span>
               <span className="text-xs text-[#d8c3ad] font-mono">PEN</span>
             </div>
             <div className="flex items-center justify-between text-[#d8c3ad] text-xs mt-1">
-              <span>1,284 pedidos confirmados</span>
-              <span className="text-[#dae2fd] font-medium">Shopify + Niubiz</span>
+              <span>10 ramos comprados</span>
+              <span className="text-[#dae2fd] font-medium">Yape / Plin / Web</span>
             </div>
           </div>
           <div className="w-full bg-[#2d3449] h-1.5 rounded-full mt-3 overflow-hidden">
@@ -340,17 +340,17 @@ export const DirectorioInfluencers: React.FC = () => {
               </div>
               <input
                 type="range"
-                min="50000"
-                max="1500000"
-                step="25000"
+                min="1000"
+                max="50000"
+                step="500"
                 value={simReach}
                 onChange={(e) => setSimReach(Number(e.target.value))}
                 className="w-full accent-[#f59e0b] h-1.5 bg-[#2d3449] rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-[#d8c3ad] font-mono">
+                <span>1K</span>
+                <span>25K</span>
                 <span>50K</span>
-                <span>750K</span>
-                <span>1.5M</span>
               </div>
             </div>
 
@@ -384,17 +384,17 @@ export const DirectorioInfluencers: React.FC = () => {
               </div>
               <input
                 type="range"
-                min="500"
-                max="15000"
-                step="250"
+                min="30"
+                max="500"
+                step="10"
                 value={simFee}
                 onChange={(e) => setSimFee(Number(e.target.value))}
                 className="w-full accent-[#f59e0b] h-1.5 bg-[#2d3449] rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-[#d8c3ad] font-mono">
+                <span>S/ 30</span>
+                <span>S/ 250</span>
                 <span>S/ 500</span>
-                <span>S/ 7,500</span>
-                <span>S/ 15,000</span>
               </div>
             </div>
 

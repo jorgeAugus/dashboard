@@ -140,7 +140,7 @@ export const SocialListeningSentinel: React.FC = () => {
           </div>
           <span className="text-[#a08e7a]">/</span>
           <span className="flex items-center gap-1">
-            <span className="material-symbols-outlined text-sm text-[#ffc640]">speed</span> 1,420 menciones/min
+            <span className="material-symbols-outlined text-sm text-[#ffc640]">speed</span> 18 menciones/hora
           </span>
           <span className="text-[#a08e7a]">/</span>
           <span className="flex items-center gap-1">
@@ -180,7 +180,7 @@ export const SocialListeningSentinel: React.FC = () => {
                   </span>
                 </div>
                 <p className="font-bold text-base text-white">
-                  Demoras en envíos express por 21 de Marzo en Lima Norte / San Miguel.
+                  Demoras en envíos express por 21 de Septiembre en Lima Norte / San Miguel.
                 </p>
                 <p className="text-xs text-[#d8c3ad] flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-sm text-[#ffc174]">forward_to_inbox</span>
@@ -241,7 +241,7 @@ export const SocialListeningSentinel: React.FC = () => {
             <span className="material-symbols-outlined text-[#ffc174] text-lg">forum</span>
           </div>
           <div className="flex items-baseline gap-1 mt-1">
-            <span className="text-3xl font-extrabold text-[#dae2fd] font-metric">38,450</span>
+            <span className="text-3xl font-extrabold text-[#dae2fd] font-metric">142</span>
             <span className="text-xs text-[#ffc174] font-bold">+112%</span>
           </div>
           <div className="flex items-center justify-between text-xs pt-1">

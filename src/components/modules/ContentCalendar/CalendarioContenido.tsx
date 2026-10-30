@@ -7,61 +7,9 @@ export const CalendarioContenido: React.FC = () => {
   const [activeView, setActiveView] = useState<'mes' | 'semana' | 'dia' | 'lista'>('semana');
   const [selectedNetwork, setSelectedNetwork] = useState<string>('todas');
   const [selectedStatus, setSelectedStatus] = useState<string>('todos');
-  const [selectedAspectRatio, setSelectedAspectRatio] = useState<'9:16' | '2:3'>('9:16');
-  const [copyTone, setCopyTone] = useState('casual');
-  const [copyText, setCopyText] = useState(
-    '¡Este 21 de marzo que no se te pase el detalle! 💛🌻 Llegamos a todo Lima y provincias con delivery express garantizado. Haz tu pedido al toque en el link de la bio antes que vuelen los ramos. 🛵✨'
-  );
-  const [isEnqueueing, setIsEnqueueing] = useState(false);
   const [showNewPostModal, setShowNewPostModal] = useState(false);
   const [newPostTitle, setNewPostTitle] = useState('');
   const [newPostPlatform, setNewPostPlatform] = useState('tiktok');
-
-  const copyVariations: Record<string, string[]> = {
-    casual: [
-      '¡Este 21 de marzo que no se te pase el detalle! 💛🌻 Llegamos a todo Lima y provincias con delivery express garantizado. Haz tu pedido al toque en el link de la bio antes que vuelen los ramos. 🛵✨',
-      '¿A ti ya te enviaron tus flores amarillas o todavía esperando? 🌻👀 Si no te llega nada, auto-regálate el mejor ramo premium con 20% off usando el link en bio. ¡Pilas que se agotan al toque! 💛'
-    ],
-    estetico: [
-      'La elegancia del amarillo en su máxima expresión botánica. Girasoles seleccionados a mano en los valles de Carabayllo con envoltura Kraft artesanal y lazo de seda. Disponible para Lima y provincias. 🌿✨',
-      'Luz, calidez y nuevos comienzos. Diseños florales curados para transformar tu espacio esta temporada de primavera. Enlace directo al catálogo en Pinterest y web oficial. 💛🥂'
-    ],
-    corporativo: [
-      'Potencie el clima laboral y el reconocimiento de su equipo con arreglos florales corporativos de estación. Facturación inmediata, crédito a 30 días y entregas programadas en San Isidro y Miraflores. 💼💐'
-    ]
-  };
-
-  const handleRegenerateCopy = () => {
-    const list = copyVariations[copyTone] || copyVariations.casual;
-    const nextCopy = list[Math.floor(Math.random() * list.length)];
-    setCopyText(nextCopy);
-    showToast('Copy optimizado con jerga y tono local peruano');
-  };
-
-  const handleAddHashtag = (tag: string) => {
-    if (!copyText.includes(tag)) {
-      setCopyText((prev) => `${prev} ${tag}`);
-      showToast(`Hashtag ${tag} añadido al copy`);
-    }
-  };
-
-  const handleAddAllHashtags = () => {
-    const tags = ['#FloresAmarillasPeru', '#LimaTrend', '#KajelBloom', '#RegalosPeru', '#SpringVibesLima'];
-    let updated = copyText;
-    tags.forEach((t) => {
-      if (!updated.includes(t)) updated += ` ${t}`;
-    });
-    setCopyText(updated);
-    showToast('Todos los hashtags de alta conversión añadidos');
-  };
-
-  const handleEnqueueBullMQ = () => {
-    setIsEnqueueing(true);
-    setTimeout(() => {
-      setIsEnqueueing(false);
-      showToast('Publicación #KB-2026-03-JUE19 encolada con éxito en BullMQ (Job ID #9821)');
-    }, 1000);
-  };
 
   return (
     <div className="flex flex-col w-full gap-6">
@@ -88,13 +36,13 @@ export const CalendarioContenido: React.FC = () => {
               <span>•</span>
               <div className="flex items-center gap-1 text-[#dae2fd]">
                 <span className="material-symbols-outlined text-sm text-[#ffc174]">event_available</span>
-                <span className="font-semibold">18 publicaciones programadas</span>
-                <span>para Marzo 2026</span>
+                <span className="font-semibold">14 publicaciones programadas</span>
+                <span>para Septiembre 2026</span>
               </div>
               <span>•</span>
               <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#e3aa00]/20 text-[#ffc640] text-[11px] font-bold">
                 <span className="material-symbols-outlined text-xs">local_fire_department</span>
-                <span>Semana Pico Flores Amarillas (21M)</span>
+                <span>Semana Pico Flores Amarillas (21 Set)</span>
               </div>
             </div>
           </div>
@@ -102,28 +50,28 @@ export const CalendarioContenido: React.FC = () => {
           {/* Main Action Buttons */}
           <div className="flex flex-wrap items-center gap-2">
             <button
-              onClick={() => showToast('3 publicaciones pendientes de aprobación del Lead de Marca')}
+              onClick={() => showToast('2 publicaciones pendientes de revisión')}
               className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#171f33] text-[#dae2fd] hover:bg-[#222a3d] transition-colors text-xs font-semibold border border-[#222a3d]"
             >
               <span className="material-symbols-outlined text-base text-[#ffc640]">verified_user</span>
               <span>Aprobaciones Pendientes</span>
               <span className="w-4 h-4 flex items-center justify-center rounded-full bg-[#2d3449] text-[#ffc174] text-[10px] font-bold">
-                3
+                2
               </span>
             </button>
             <button
-              onClick={handleRegenerateCopy}
+              onClick={() => showToast('Optimizador de copys: Tono y jerga local listos para campañas')}
               className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#171f33] text-[#dae2fd] hover:bg-[#222a3d] transition-colors text-xs font-semibold border border-[#222a3d]"
             >
               <span className="material-symbols-outlined text-base text-[#ffc174]">auto_awesome</span>
-              <span>Optimizador IA de Copys</span>
+              <span>Optimizador de Copys</span>
             </button>
             <button
               onClick={() => setShowNewPostModal(true)}
               className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#f59e0b] text-[#0b1326] hover:bg-[#ffc640] text-xs font-bold shadow-md transition-all"
             >
               <span className="material-symbols-outlined text-base font-bold">add_circle</span>
-              <span>Nueva Publicación Multi-Asset</span>
+              <span>Nueva Publicación</span>
             </button>
           </div>
         </div>
@@ -158,7 +106,7 @@ export const CalendarioContenido: React.FC = () => {
               </button>
               <div className="flex items-center gap-1.5 px-2 text-xs font-semibold text-[#dae2fd]">
                 <span className="material-symbols-outlined text-sm text-[#ffc640]">calendar_today</span>
-                <span>Semana del 16 al 22 de Marzo 2026</span>
+                <span>Semana del 21 al 27 de Septiembre 2026</span>
               </div>
               <button
                 onClick={() => showToast('Semana siguiente cargada')}
@@ -219,20 +167,18 @@ export const CalendarioContenido: React.FC = () => {
         </div>
       </section>
 
-      {/* 2-Column Master Layout (Grid 70% + Inspector/Copiloto 30%) */}
-      <section className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
-        {/* Left Column: Weekly Master Grid (approx 70%) */}
-        <div className="xl:col-span-8 flex flex-col gap-4">
+      {/* Weekly Master Grid */}
+      <section className="w-full flex flex-col gap-4">
           {/* Day Headers Bar */}
           <div className="grid grid-cols-7 gap-1.5 text-center">
             {[
-              { day: 'Lun', date: 16, peak: 'Pico 8:00 PM' },
-              { day: 'Mar', date: 17, peak: 'Pico 6:30 PM' },
-              { day: 'Mié', date: 18, peak: 'Pico 1:15 PM' },
-              { day: 'Jue', date: 19, peak: 'Pico 7:45 PM', isToday: true },
-              { day: 'Vie', date: 20, peak: 'Pico 6:30 PM', isHighlight: true },
-              { day: 'Sáb', date: 21, peak: 'Tráfico Extremo', isKeyDay: true },
-              { day: 'Dom', date: 22, peak: 'Pico 9:00 PM' }
+              { day: 'Lun', date: 21, peak: 'Pico Flores Amarillas', isKeyDay: true },
+              { day: 'Mar', date: 22, peak: 'Entregas Post-Pico' },
+              { day: 'Mié', date: 23, peak: 'Pico 1:15 PM' },
+              { day: 'Jue', date: 24, peak: 'Pico 7:15 PM', isToday: true },
+              { day: 'Vie', date: 25, peak: 'Pico 6:30 PM', isHighlight: true },
+              { day: 'Sáb', date: 26, peak: 'Ramos Fin de Semana' },
+              { day: 'Dom', date: 27, peak: 'Pico 8:00 PM' }
             ].map((d) => (
               <div
                 key={d.date}
@@ -607,221 +553,6 @@ export const CalendarioContenido: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Right Column: Dockable Quick Inspector & Copilot IA (approx 30%) */}
-        <div className="xl:col-span-4 flex flex-col gap-4">
-          <div className="p-5 rounded-xl bg-[#131b2e] border border-[#222a3d] flex flex-col gap-4 shadow-xl sticky top-20">
-            {/* Inspector Header */}
-            <div className="flex items-center justify-between pb-3 border-b border-[#222a3d]">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-[#f59e0b]/20 text-[#f59e0b] flex items-center justify-center">
-                  <span className="material-symbols-outlined text-lg">tune</span>
-                </span>
-                <div>
-                  <h3 className="font-bold text-sm text-[#dae2fd]">Inspector & Copiloto IA</h3>
-                  <p className="text-[11px] text-[#d8c3ad] font-mono">Post ID: #KB-2026-03-JUE19</p>
-                </div>
-              </div>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-[#f59e0b]/20 text-[#ffc640] font-mono font-bold">
-                JUE 19 • 7:45 PM
-              </span>
-            </div>
-
-            {/* Video Preview & Ratio Selector */}
-            <div className="flex flex-col gap-2 p-3 rounded-lg bg-[#060e20] border border-[#222a3d]">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-[10px] uppercase tracking-wider text-[#d8c3ad] font-semibold">
-                  Transcodificación Multi-Asset
-                </span>
-                <span className="text-[10px] text-[#ffc640] font-mono flex items-center gap-1">
-                  <span className="material-symbols-outlined text-xs">bolt</span> GPU Worker Ready
-                </span>
-              </div>
-
-              {/* Video Mockup Preview */}
-              <div className="relative w-full aspect-[9/10] rounded-lg overflow-hidden bg-[#171f33] border border-[#222a3d] flex items-center justify-center group">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoiDyXqzP4hkh_mkezDsXlkJ-PK8atuju4aNSfjggS_xqoSuX2Jk-zeMDsjsyHNP2F1cUe-f2QkrOxbi1S1j3ZNYLrV9Hq4St9BM7N8nOBMjqNEMv51YXSe_nmRMHgIMU9aN5eMT69kDTE02z8DSZ1pjAm64H3MQz32bw-jj8-wtkK2k7iPo7xRlwYVuBrvaYgfNig7hI_YNBvCImLm_4_a62ImAxfUBxPPGO5rOVmGTCQI5CItUxIvg"
-                  alt="Preview"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060e20]/90 via-transparent to-transparent"></div>
-                <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[#dae2fd]">
-                  <div className="flex items-center gap-1.5">
-                    <span className="px-2 py-0.5 rounded bg-[#060e20]/80 backdrop-blur text-[10px] font-mono">00:34s</span>
-                    <span className="px-2 py-0.5 rounded bg-[#060e20]/80 backdrop-blur text-[10px] text-[#ffc174] font-mono font-semibold">
-                      {selectedAspectRatio === '9:16' ? '1080x1920 (9:16)' : '1000x1500 (2:3)'}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => showToast('Reproduciendo render de video')}
-                    className="w-7 h-7 rounded-full bg-[#f59e0b] text-[#0b1326] flex items-center justify-center hover:bg-[#ffc640] transition-colors"
-                  >
-                    <span className="material-symbols-outlined text-base">play_arrow</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Aspect Ratio Toggle */}
-              <div className="grid grid-cols-2 gap-2 pt-1">
-                <button
-                  onClick={() => setSelectedAspectRatio('9:16')}
-                  className={`flex items-center justify-center gap-1 py-1 rounded text-xs font-semibold transition-all ${
-                    selectedAspectRatio === '9:16'
-                      ? 'bg-[#222a3d] text-[#ffc174] border border-[#ffc174]/40'
-                      : 'bg-[#171f33] text-[#d8c3ad] hover:text-[#dae2fd]'
-                  }`}
-                >
-                  <span className="material-symbols-outlined text-xs">smartphone</span>
-                  <span>9:16 (TikTok/Reel)</span>
-                </button>
-                <button
-                  onClick={() => setSelectedAspectRatio('2:3')}
-                  className={`flex items-center justify-center gap-1 py-1 rounded text-xs font-semibold transition-all ${
-                    selectedAspectRatio === '2:3'
-                      ? 'bg-[#222a3d] text-[#ffc174] border border-[#ffc174]/40'
-                      : 'bg-[#171f33] text-[#d8c3ad] hover:text-[#dae2fd]'
-                  }`}
-                >
-                  <span className="material-symbols-outlined text-xs">crop_portrait</span>
-                  <span>2:3 (Pinterest Pin)</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Copiloto Copywriting Peruano */}
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-wider text-[#d8c3ad] font-semibold">
-                  Copy & Asistente Cultural IA
-                </span>
-                <select
-                  value={copyTone}
-                  onChange={(e) => setCopyTone(e.target.value)}
-                  className="bg-[#060e20] border border-[#222a3d] text-[#dae2fd] text-[11px] px-2 py-0.5 rounded focus:outline-none focus:border-[#f59e0b]"
-                >
-                  <option value="casual">Casual / Jerga sutil (Pilas/Pata)</option>
-                  <option value="estetico">Estético Pinterest / Minimal</option>
-                  <option value="corporativo">Corporativo / Retail Niubiz</option>
-                </select>
-              </div>
-
-              <div className="p-2.5 rounded-lg bg-[#060e20] border border-[#222a3d] flex flex-col gap-2">
-                <div className="flex items-center justify-between text-[#d8c3ad] text-[11px]">
-                  <span className="flex items-center gap-1 text-[#ffc174]">
-                    <span className="material-symbols-outlined text-xs">auto_awesome</span> Sugerencia IA
-                  </span>
-                  <span className="font-mono">{copyText.length}/2200 car.</span>
-                </div>
-                <textarea
-                  value={copyText}
-                  onChange={(e) => setCopyText(e.target.value)}
-                  rows={4}
-                  className="w-full bg-transparent text-[#dae2fd] text-xs resize-none focus:outline-none leading-relaxed"
-                ></textarea>
-                <div className="flex justify-end gap-1">
-                  <button
-                    onClick={handleRegenerateCopy}
-                    className="px-2.5 py-1 rounded bg-[#171f33] hover:bg-[#222a3d] text-[#ffc174] text-[11px] font-semibold flex items-center gap-1 transition-colors"
-                  >
-                    <span className="material-symbols-outlined text-xs">refresh</span> Regenerar
-                  </button>
-                </div>
-              </div>
-
-              {/* Hashtag Cloud */}
-              <div className="flex flex-col gap-1.5 pt-1">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] text-[#d8c3ad] uppercase tracking-wider font-semibold">
-                    Hashtags de Alta Conversión PE
-                  </span>
-                  <button
-                    onClick={handleAddAllHashtags}
-                    className="text-[11px] text-[#ffc174] hover:underline font-semibold"
-                  >
-                    + Añadir todos
-                  </button>
-                </div>
-                <div className="flex flex-wrap gap-1">
-                  {[
-                    { tag: '#FloresAmarillasPeru', metric: '12.4M', isGold: true },
-                    { tag: '#LimaTrend', metric: '840K' },
-                    { tag: '#KajelBloom', metric: 'Oficial', isGold: true },
-                    { tag: '#RegalosPeru', metric: '320K' },
-                    { tag: '#SpringVibesLima', metric: '190K' }
-                  ].map((h) => (
-                    <button
-                      key={h.tag}
-                      onClick={() => handleAddHashtag(h.tag)}
-                      className="px-2.5 py-1 rounded-full bg-[#060e20] border border-[#222a3d] text-[#dae2fd] hover:bg-[#222a3d] text-[11px] flex items-center gap-1 transition-colors"
-                    >
-                      <span>{h.tag}</span>
-                      <span className={h.isGold ? 'text-[#ffc640] font-bold' : 'text-[#d8c3ad]'}>{h.metric}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Hierarchical Approval Flow */}
-            <div className="flex flex-col gap-2 pt-2 border-t border-[#222a3d]">
-              <span className="text-[10px] uppercase tracking-wider text-[#d8c3ad] font-semibold">
-                Flujo Jerárquico de Aprobación
-              </span>
-              <div className="flex flex-col gap-1.5 text-xs">
-                <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 rounded-full bg-[#ffc640]/20 text-[#ffc640] flex items-center justify-center text-[10px]">
-                    ✓
-                  </span>
-                  <div>
-                    <span className="font-semibold text-[#dae2fd] block">Creado por Camila R. (Diseñadora)</span>
-                    <span className="text-[10px] text-[#d8c3ad]">14 Mar, 10:20 AM • Asset exportado</span>
-                  </div>
-                </div>
-                <div className="w-0.5 h-2 bg-[#ffc640]/30 ml-2"></div>
-                <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 rounded-full bg-[#ffc640]/20 text-[#ffc640] flex items-center justify-center text-[10px]">
-                    ✓
-                  </span>
-                  <div>
-                    <span className="font-semibold text-[#dae2fd] block">Revisado por Redacción & Copy</span>
-                    <span className="text-[10px] text-[#d8c3ad]">15 Mar, 04:15 PM • Tono verificado</span>
-                  </div>
-                </div>
-                <div className="w-0.5 h-2 bg-[#ffc640]/30 ml-2"></div>
-                <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 rounded-full bg-[#f59e0b] text-[#0b1326] flex items-center justify-center text-[10px] font-bold">
-                    ✓
-                  </span>
-                  <div>
-                    <span className="font-semibold text-[#ffc174] block">Aprobado por Diego V. (Lead de Marca)</span>
-                    <span className="text-[10px] text-[#ffc640]">16 Mar, 09:30 AM • Listo para disparo</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2 pt-3">
-                <button
-                  onClick={() => showToast('Solicitud de cambio enviada al diseñador')}
-                  className="py-2 rounded-lg bg-[#171f33] border border-[#222a3d] hover:bg-[#222a3d] text-xs font-semibold text-[#dae2fd] transition-colors"
-                >
-                  Solicitar Cambios
-                </button>
-                <button
-                  onClick={handleEnqueueBullMQ}
-                  disabled={isEnqueueing}
-                  className="py-2 rounded-lg bg-[#f59e0b] hover:bg-[#ffc640] text-[#0b1326] text-xs font-bold transition-all shadow-md flex items-center justify-center gap-1.5"
-                >
-                  <span className={`material-symbols-outlined text-sm ${isEnqueueing ? 'animate-spin' : ''}`}>
-                    {isEnqueueing ? 'sync' : 'send'}
-                  </span>
-                  <span>{isEnqueueing ? 'Encolando...' : 'Encolar BullMQ'}</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* New Post Modal */}
@@ -843,7 +574,7 @@ export const CalendarioContenido: React.FC = () => {
                 type="text"
                 value={newPostTitle}
                 onChange={(e) => setNewPostTitle(e.target.value)}
-                placeholder="Ej. Oferta Flash Flores Amarillas 21 Marzo..."
+                placeholder="Ej. Oferta Flash Flores Amarillas 21 Septiembre..."
                 className="w-full px-3 py-2 rounded-lg bg-[#060e20] border border-[#222a3d] text-xs text-[#dae2fd] focus:outline-none focus:border-[#f59e0b]"
               />
             </div>

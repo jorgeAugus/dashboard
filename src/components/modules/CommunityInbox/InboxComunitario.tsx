@@ -100,7 +100,7 @@ export const InboxComunitario: React.FC = () => {
       id: 1,
       sender: 'Mariana Rivas',
       time: '11:42 AM',
-      text: 'Hola chicos, hice el pedido #KB-8821 a las 8am para que llegue al mediodía a Miraflores por el 21 de marzo. Mi flaca sale a la 1pm de su oficina. ¿Me confirman si el motorizado ya está cerca?',
+      text: 'Hola chicos, hice el pedido #KB-8821 a las 8am para que llegue al mediodía a Miraflores por el 21 de septiembre. Mi flaca sale a la 1pm de su oficina. ¿Me confirman si el motorizado ya está cerca?',
       isBot: false,
       isPrivate: false,
       isCustomer: true
@@ -157,7 +157,7 @@ export const InboxComunitario: React.FC = () => {
   };
 
   const handleIssueCoupon = () => {
-    showToast('Cupón "PERDON-30-MARZO" emitido y notificado por SMS/WhatsApp');
+    showToast('Cupón "PERDON-20-SET" emitido y notificado por SMS/WhatsApp');
   };
 
   const filteredTickets = tickets.filter((t) => {
@@ -202,11 +202,11 @@ export const InboxComunitario: React.FC = () => {
             </div>
             <div className="flex items-center gap-1.5 bg-[#171f33] border border-[#222a3d] px-2.5 py-1 rounded">
               <span className="material-symbols-outlined text-sm text-[#ffc640]">sentiment_very_satisfied</span>
-              <span>CSAT: <strong className="text-[#ffc640]">94.6%</strong> (1,120 tickets)</span>
+              <span>CSAT: <strong className="text-[#ffc640]">96.2%</strong> (38 consultas)</span>
             </div>
             <div className="flex items-center gap-1.5 bg-[#171f33] border border-[#222a3d] px-2.5 py-1 rounded">
               <span className="material-symbols-outlined text-sm text-[#d8c3ad]">support_agent</span>
-              <span>Agentes: <strong className="text-[#dae2fd]">4 activos</strong> (2 bot / 2 humanos)</span>
+              <span>Atención: <strong className="text-[#dae2fd]">2 activos</strong> (1 bot / 1 asesor)</span>
             </div>
           </div>
         </div>
@@ -403,7 +403,7 @@ export const InboxComunitario: React.FC = () => {
                     </span>
                   </div>
                   <span className="text-xs text-[#ffc640]">
-                    Instagram DM vinculado al Reel: "Ramo Gigante Flores Amarillas 21 de Marzo"
+                    Instagram DM vinculado al Reel: "Ramo Flores Amarillas 21 de Septiembre"
                   </span>
                 </div>
               </div>
@@ -584,7 +584,7 @@ export const InboxComunitario: React.FC = () => {
                   /envios
                 </button>
                 <button
-                  onClick={() => setReplyMessage((prev) => `${prev} Te hemos activado un cupón de S/ 30 código: PERDON-30-MARZO.`)}
+                  onClick={() => setReplyMessage((prev) => `${prev} Te hemos activado un cupón de S/ 20 código: PERDON-20-SET.`)}
                   className="px-1.5 py-0.5 bg-[#060e20] rounded hover:text-[#ffc174]"
                 >
                   /cupones

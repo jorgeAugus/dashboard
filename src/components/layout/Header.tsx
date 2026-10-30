@@ -12,8 +12,6 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
     setSearchQuery, 
     notificationsCount, 
     clearNotifications,
-    activeCampaign,
-    setActiveCampaign,
     setCurrentModule,
     showToast,
     isSidebarOpen,
@@ -23,14 +21,6 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
   } = useApp();
   const { profile, openAuthModal, user } = useAuth();
   const [showNotifications, setShowNotifications] = useState(false);
-  const [showCampaignPicker, setShowCampaignPicker] = useState(false);
-
-  const campaigns = [
-    'Kajel Perú - Campaña Primavera / Flores Amarillas',
-    'Kajel Perú - San Valentín Bloom Retrospective',
-    'Kajel Corporativo - Flores para Oficinas San Isidro',
-    'Kajel Expansión - Arequipa & Trujillo Express'
-  ];
 
   const notifications = [
     {
@@ -84,52 +74,10 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
             )}
           </button>
 
-          {/* Campaign Selector Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setShowCampaignPicker(!showCampaignPicker)}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#131b2e] hover:bg-[#171f33] border border-[#222a3d]/60 text-[#dae2fd] text-xs font-medium transition-colors"
-            >
-              <span className="material-symbols-outlined text-base text-[#ffc174]">storefront</span>
-              <span className="font-semibold text-xs text-[#dae2fd] max-w-[180px] sm:max-w-xs md:max-w-sm truncate text-left">
-                {activeCampaign}
-              </span>
-              <span className="material-symbols-outlined text-sm text-[#d8c3ad]">unfold_more</span>
-            </button>
-
-            {showCampaignPicker && (
-              <div className="absolute left-0 top-full mt-1.5 w-80 bg-[#171f33] border border-[#222a3d] rounded-xl shadow-2xl py-1 z-50 animate-in fade-in zoom-in-95">
-                <div className="px-3 py-1.5 text-[11px] font-semibold text-[#d8c3ad] uppercase tracking-wider border-b border-[#222a3d]/60">
-                  Seleccionar Campaña Activa
-                </div>
-                {campaigns.map((camp) => (
-                  <button
-                    key={camp}
-                    onClick={() => {
-                      setActiveCampaign(camp);
-                      setShowCampaignPicker(false);
-                      showToast(`Campaña cambiada a: ${camp}`);
-                    }}
-                    className={`w-full text-left px-3 py-2 text-xs transition-colors flex items-center justify-between ${
-                      activeCampaign === camp
-                        ? 'bg-[#f59e0b]/20 text-[#ffc640] font-semibold'
-                        : 'text-[#dae2fd] hover:bg-[#222a3d]'
-                    }`}
-                  >
-                    <span className="truncate">{camp}</span>
-                    {activeCampaign === camp && (
-                      <span className="material-symbols-outlined text-sm text-[#ffc640]">check</span>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
           {/* Date range chip */}
-          <div className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#171f33] text-[#d8c3ad] text-xs font-medium border border-[#222a3d]/60">
-            <span className="material-symbols-outlined text-base text-[#ffc640]">date_range</span>
-            <span>Flores Amarillas 2026</span>
+          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#171f33] text-[#d8c3ad] text-xs font-medium border border-[#222a3d]/60">
+            <span className="material-symbols-outlined text-base text-[#ffc640]">local_florist</span>
+            <span>Flores Amarillas · Primavera 2026</span>
           </div>
         </div>
 

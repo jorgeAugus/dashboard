@@ -32,7 +32,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeChannelFilter, setActiveChannelFilter] = useState<'all' | 'tiktok' | 'instagram' | 'pinterest'>('all');
   const [notificationsCount, setNotificationsCount] = useState(2);
   const [isPresentationOpen, setIsPresentationOpen] = useState(false);
-  const [activeCampaign, setActiveCampaign] = useState('Kajel Perú - Campaña Primavera / Flores Amarillas');
+  const [activeCampaign, setActiveCampaign] = useState('Kajel Perú - Campaña Flores Amarillas (21 de Septiembre)');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {

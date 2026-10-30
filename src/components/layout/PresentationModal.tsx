@@ -236,12 +236,12 @@ export const PresentationModal: React.FC = () => {
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-bold text-slate-200 uppercase tracking-wide flex items-center gap-2">
                       <span className="material-symbols-outlined text-sm text-amber-400">campaign</span>
-                      Caso Real: Flores Amarillas 21 Marzo
+                      Caso Real: Flores Amarillas 21 Septiembre
                     </span>
                     <span className="text-[10px] bg-red-500/20 text-red-300 font-mono px-2 py-0.5 rounded">Riesgo Real</span>
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
-                    Durante el 21 de marzo en Lima, el volumen de mensajes privados y menciones en TikTok creció <strong className="text-white">+340%</strong>. Sin una plataforma unificada, una sola queja sobre demoras en Miraflores y San Miguel generó un efecto bola de nieve en redes con menciones a @indecopi antes de que el equipo pudiera responder.
+                    Durante el 21 de septiembre en Lima, el volumen de mensajes privados y menciones en TikTok creció <strong className="text-white">+340%</strong>. Sin una plataforma unificada, una sola queja sobre demoras en Miraflores y San Miguel generó un efecto bola de nieve en redes con menciones a @indecopi antes de que el equipo pudiera responder.
                   </p>
                 </div>
                 <div className="mt-4 p-3 bg-[#111c34]/90 border border-[#1e2942] rounded-xl flex items-center gap-3">
@@ -411,13 +411,13 @@ export const PresentationModal: React.FC = () => {
                   </div>
                   <div className="bg-[#111c34] border border-[#1e2942] rounded-xl p-4">
                     <span className="text-[11px] font-mono text-slate-400 uppercase">Multiplicador EMV / ROAS</span>
-                    <div className="text-3xl font-black text-amber-400 mt-1">3.5x</div>
-                    <p className="text-[11px] text-slate-300 mt-1">S/ 148,650 PEN de valor generado contra S/ 42,500 invertidos.</p>
+                    <div className="text-3xl font-black text-amber-400 mt-1">4.8x</div>
+                    <p className="text-[11px] text-slate-300 mt-1">S/ 980 PEN de valor generado con S/ 150 invertidos en alianzas.</p>
                   </div>
                   <div className="bg-[#111c34] border border-[#1e2942] rounded-xl p-4">
                     <span className="text-[11px] font-mono text-slate-400 uppercase">Satisfacción (CSAT)</span>
-                    <div className="text-3xl font-black text-emerald-400 mt-1">94.6%</div>
-                    <p className="text-[11px] text-slate-300 mt-1">1,120 tickets resueltos con copiloto empático.</p>
+                    <div className="text-3xl font-black text-emerald-400 mt-1">96.2%</div>
+                    <p className="text-[11px] text-slate-300 mt-1">38 consultas atendidas con copiloto empático.</p>
                   </div>
                 </div>
               </div>
