@@ -48,7 +48,7 @@ export const PresentationModal: React.FC = () => {
   const scripts: Record<number, { time: string; text: string }> = {
     1: {
       time: 'Minuto 0:00 - 1:00 (Hook & Diagnóstico)',
-      text: '"Buenas tardes profesor y miembros del jurado. En el Perú actual, una marca de consumo o retail gasta más de 25 horas semanales saltando caóticamente entre TikTok, Instagram y Pinterest. Cuando una publicación se vuelve viral o surge un reclamo crítico en Lima o Arequipa, tardan horas en enterarse. Las marcas están ciegas en omnicanalidad visual y derrochan miles de soles en colaboraciones sin métricas reales de conversión."'
+      text: '"Buenas tardes profesor y miembros del jurado. En el Perú actual, una marca de consumo o retail gasta más de 25 horas semanales saltando caóticamente entre TikTok, Instagram y Facebook. Cuando una publicación se vuelve viral o surge un reclamo crítico en Lima o Arequipa, tardan horas en enterarse. Las marcas están ciegas en omnicanalidad visual y derrochan miles de soles en colaboraciones sin métricas reales de conversión."'
     },
     2: {
       time: 'Minuto 1:00 - 2:00 (La Solución Kajel Bloom)',
@@ -56,7 +56,7 @@ export const PresentationModal: React.FC = () => {
     },
     3: {
       time: 'Minuto 2:00 - 3:30 (Arquitectura de Software)',
-      text: '"A nivel de ingeniería, construimos una arquitectura moderna y escalable: en el Frontend, React y Tailwind CSS garantizan una interfaz fluida e intuitiva; en el Backend, Node.js y Express gestionan la concurrencia a través de colas con Redis y BullMQ para publicar puntualmente en TikTok, Instagram Graph API y Pinterest v5. Garantizamos seguridad de nivel bancario mediante OAuth 2.0 y cifrado AES-256 para los tokens corporativos."'
+      text: '"A nivel de ingeniería, construimos una arquitectura moderna y escalable: en el Frontend, React y Tailwind CSS garantizan una interfaz fluida e intuitiva; en el Backend, Node.js y Express gestionan la concurrencia a través de colas con Redis y BullMQ para publicar puntualmente en TikTok, Instagram Graph API y Facebook Graph & Messenger API v20. Garantizamos seguridad de nivel bancario mediante OAuth 2.0 y cifrado AES-256 para los tokens corporativos."'
     },
     4: {
       time: 'Minuto 3:30 - 4:30 (Impacto Medible & Retorno)',
@@ -176,7 +176,7 @@ export const PresentationModal: React.FC = () => {
                   La Crisis de la <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Omnicanalidad Visual</span> en las Marcas Peruanas
                 </h1>
                 <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  Las marcas de retail, moda y florerías en Perú pierden más de <strong>25 horas hombre semanales</strong> saltando caóticamente entre TikTok Creator Hub, Meta Business Suite y Pinterest. Durante hitos de viralidad masiva (como el fenómeno de las Flores Amarillas), operan con <strong>ceguera de datos, riesgo de linchamiento digital y gasto a ciegas en creadores</strong>.
+                  Las marcas de retail, moda y florerías en Perú pierden más de <strong>25 horas hombre semanales</strong> saltando caóticamente entre TikTok Creator Hub, Meta Business Suite y Facebook. Durante hitos de viralidad masiva (como el fenómeno de las Flores Amarillas), operan con <strong>ceguera de datos, riesgo de linchamiento digital y gasto a ciegas en creadores</strong>.
                 </p>
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <div className="bg-[#111c34]/80 border border-red-500/20 rounded-xl p-3.5 flex items-start gap-3">
@@ -203,8 +203,8 @@ export const PresentationModal: React.FC = () => {
                   <div className="bg-[#111c34]/80 border border-blue-500/20 rounded-xl p-3.5 flex items-start gap-3">
                     <span className="material-symbols-outlined text-blue-400 text-xl">link_off</span>
                     <div>
-                      <h4 className="text-xs font-bold text-white">Desconexión Pinterest</h4>
-                      <p className="text-[11px] text-slate-400 mt-0.5">Alta intención de compra desaprovechada por falta de sync de catálogo.</p>
+                      <h4 className="text-xs font-bold text-white">Desconexión Facebook</h4>
+                      <p className="text-[11px] text-slate-400 mt-0.5">Alta intención de compra desaprovechada por falta de sincronización con Messenger y Catálogo Meta.</p>
                     </div>
                   </div>
                 </div>
@@ -275,7 +275,7 @@ export const PresentationModal: React.FC = () => {
                     <span className="material-symbols-outlined text-amber-400">hub</span>
                     <div>
                       <h4 className="text-xs font-bold text-white">Centralización Omnicanal</h4>
-                      <p className="text-[11px] text-slate-400">TikTok Video API + Meta Graph v20 + Pinterest v5.</p>
+                      <p className="text-[11px] text-slate-400">TikTok Video API + Meta Graph v20 + Facebook Messenger API.</p>
                     </div>
                   </div>
                   <div className="p-3 bg-[#111c34] rounded-xl border border-[#1e2942] flex items-center gap-3">

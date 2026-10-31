@@ -3,7 +3,7 @@ import { useApp } from '../../context/AppContext';
 import { NavigationModule } from '../../types';
 
 export const Sidebar: React.FC = () => {
-  const { currentModule, setCurrentModule, setIsPresentationOpen, isSidebarOpen, setIsSidebarOpen } = useApp();
+  const { currentModule, setCurrentModule, isSidebarOpen, setIsSidebarOpen } = useApp();
 
   const navItems: Array<{
     id: NavigationModule;
@@ -121,23 +121,7 @@ export const Sidebar: React.FC = () => {
                 );
               })}
 
-              <div className="pt-2 mt-2 border-t border-[#222a3d]/50">
-                <button
-                  onClick={() => {
-                    setIsPresentationOpen(true);
-                    if (window.innerWidth < 1024) {
-                      setIsSidebarOpen(false);
-                    }
-                  }}
-                  className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-semibold bg-[#171f33] hover:bg-[#222a3d] text-[#ffc174] border border-[#ffc174]/20 transition-all"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-base text-[#ffc640]">slideshow</span>
-                    <span>Sustentación / Pitch 2026</span>
-                  </div>
-                  <span className="text-[10px] font-mono bg-[#ffc640]/20 text-[#ffc640] px-1.5 py-0.5 rounded">5 min</span>
-                </button>
-              </div>
+
             </nav>
           </div>
 
@@ -162,8 +146,8 @@ export const Sidebar: React.FC = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-[#f43f5e]"></span>
                 </div>
                 <div className="flex items-center justify-between py-0.5">
-                  <span>Pinterest Ads API v5</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#f87171]"></span>
+                  <span>Facebook Graph API v20</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1877F2]"></span>
                 </div>
               </div>
 

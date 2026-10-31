@@ -17,7 +17,7 @@ interface TicketItem {
   handle: string;
   name: string;
   avatar: string;
-  channel: 'ig' | 'tiktok' | 'pin';
+  channel: 'ig' | 'tiktok' | 'fb';
   channelText: string;
   slaBadge: string;
   isCriticalSla: boolean;
@@ -157,8 +157,8 @@ export const InboxComunitario: React.FC = () => {
       handle: '@andrea_decoraciones',
       name: 'Andrea Beltrán',
       avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBDMgTsuIkTALx2lNA14r5Qwu2A-ZTjD2ViF25nmaZo539R4Yi-VK1AmxFBqElNzzg7UzOyQ1k5cB-iidIvEkrMuYtmkhMQ35ISRVaN9d3TCfYHszTMW1QERaAGNvTqPoVAjv5Xu583cfaOaAu2hifiFKlY6LzZs_fzXKuoJCr9z_grrP51y9G4wRqkB_jU4Xgf_FYy1Jfbu-woQXBoyBCcsXanJjK-yNxsVCkcaT2sQhSYZWG0N96qzg',
-      channel: 'pin',
-      channelText: 'Pin Catálogo',
+      channel: 'fb',
+      channelText: 'Facebook Messenger',
       slaBadge: '25m SLA',
       isCriticalSla: false,
       subject: 'Consulta sobre catálogo mayorista corporativo',
@@ -169,7 +169,7 @@ export const InboxComunitario: React.FC = () => {
       tier: 'B2B Corporate',
       ticketCode: '#TICK-8943',
       advisor: 'Camila R.',
-      channelContext: 'Pinterest Pin guardado: "Catálogo Arreglos Florales Kraft Artesanal"',
+      channelContext: 'Facebook Messenger / Post: "Catálogo Arreglos Florales Kraft Artesanal"',
       location: 'San Isidro, Lima • Perú',
       totalSpent: 'S/ 1,450',
       orderCount: '1 ord.',
@@ -483,7 +483,7 @@ export const InboxComunitario: React.FC = () => {
               LIVE WEBSOCKET SYNC
             </span>
             <span className="text-[#a08e7a] text-xs hidden md:inline">|</span>
-            <span className="text-xs text-[#d8c3ad]">BANDEJA MULTICANAL TIKTOK, IG & PINTEREST</span>
+            <span className="text-xs text-[#d8c3ad]">BANDEJA MULTICANAL TIKTOK, IG & FACEBOOK</span>
           </div>
 
           <h1 className="text-xl sm:text-2xl font-bold text-[#dae2fd] tracking-tight">
@@ -561,7 +561,7 @@ export const InboxComunitario: React.FC = () => {
                 <option value="all">Todas las Redes</option>
                 <option value="tiktok">TikTok Video & Live</option>
                 <option value="ig">Instagram DMs & Reels</option>
-                <option value="pin">Pinterest Pins</option>
+                <option value="fb">Facebook Messenger & Posts</option>
               </select>
             </div>
 

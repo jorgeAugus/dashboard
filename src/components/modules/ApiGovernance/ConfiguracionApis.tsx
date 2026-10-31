@@ -65,11 +65,11 @@ export const ConfiguracionApis: React.FC = () => {
     },
     {
       code: '200 OK',
-      statusClass: 'text-[#ffc640]',
+      statusClass: 'text-[#1877F2]',
       time: '14:30:10.892',
       method: 'GET',
-      endpoint: '/api/v5/pinterest/catalogs/sync',
-      detail: '248 items actualizados en Feed (Merchant: PE-CAT-89201)',
+      endpoint: '/api/v20.0/facebook/catalogs/sync',
+      detail: '248 items actualizados en Catálogo Meta / Facebook Tienda',
       latency: '520ms [DONE]'
     },
     {
@@ -457,20 +457,20 @@ export const ConfiguracionApis: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 3: Pinterest */}
+          {/* Card 3: Facebook */}
           <div className="flex flex-col justify-between p-5 bg-[#131b2e] border border-[#222a3d] rounded-xl shadow-md">
             <div className="flex flex-col gap-3">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#222a3d] flex items-center justify-center text-[#f87171] font-bold text-lg">
-                    PIN
+                  <div className="w-10 h-10 rounded-lg bg-[#222a3d] flex items-center justify-center text-[#1877F2] font-bold text-lg">
+                    FB
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="font-bold text-sm text-[#dae2fd]">Pinterest Business API v5</h3>
-                      <span className="px-2 py-0.5 rounded bg-[#2d3449] text-[#ffc174] text-[10px] font-mono">Catálogo & Pins</span>
+                      <h3 className="font-bold text-sm text-[#dae2fd]">Facebook Graph & Messenger API v20.0</h3>
+                      <span className="px-2 py-0.5 rounded bg-[#2d3449] text-[#1877F2] text-[10px] font-mono">Páginas & Messenger</span>
                     </div>
-                    <span className="text-xs text-[#d8c3ad] font-mono">Merchant: PE-CAT-89201</span>
+                    <span className="text-xs text-[#d8c3ad] font-mono">Page ID: 104829104819024</span>
                   </div>
                 </div>
                 <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#171f33] text-emerald-400 text-[10px] font-semibold">
@@ -485,24 +485,24 @@ export const ConfiguracionApis: React.FC = () => {
                   <span className="text-[10px] text-emerald-400">248 productos sincronizados</span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-[#d8c3ad] uppercase font-semibold">Tableros Vinculados</span>
-                  <p className="text-[#dae2fd] font-mono font-semibold mt-0.5">14 Boards Activos</p>
-                  <span className="text-[10px] text-[#d8c3ad]">Idea Pins con Rich Tagging</span>
+                  <span className="text-[10px] text-[#d8c3ad] uppercase font-semibold">Messenger & Webhooks</span>
+                  <p className="text-[#dae2fd] font-mono font-semibold mt-0.5">Página Oficial Activa</p>
+                  <span className="text-[10px] text-[#d8c3ad]">Atención y DMs en tiempo real</span>
                 </div>
               </div>
 
               <div className="p-2 rounded bg-[#060e20] border border-[#222a3d] font-mono text-xs">
                 <div className="flex justify-between text-[10px] text-[#d8c3ad] mb-0.5">
-                  <span>Endpoint Ingesta de Feed XML / JSON</span>
+                  <span>Endpoint Webhook Messenger / Post Comments</span>
                   <span className="text-emerald-400">200 OK</span>
                 </div>
-                <span className="text-[#dae2fd] text-[11px] truncate block select-all">https://api.kajelbloom.pe/v1/feeds/pinterest-merchant.xml</span>
+                <span className="text-[#dae2fd] text-[11px] truncate block select-all">https://api.kajelbloom.pe/v1/webhooks/facebook-messenger</span>
               </div>
             </div>
 
             <div className="flex items-center justify-between pt-3 mt-3 border-t border-[#222a3d]">
               <button
-                onClick={() => showToast('Sincronización forzada de catálogo iniciada con Pinterest API')}
+                onClick={() => showToast('Sincronización forzada de catálogo iniciada con Facebook Graph API')}
                 className="px-3 py-1.5 rounded-lg bg-[#222a3d] hover:bg-[#31394d] text-[#ffc174] text-xs font-semibold flex items-center gap-1"
               >
                 <span className="material-symbols-outlined text-sm">cached</span>

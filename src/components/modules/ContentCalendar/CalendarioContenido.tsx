@@ -132,7 +132,7 @@ export const CalendarioContenido: React.FC = () => {
                 { id: 'todas', label: 'Todas' },
                 { id: 'tiktok', label: 'TikTok', dot: 'bg-[#22d3ee]' },
                 { id: 'instagram', label: 'Instagram', dot: 'bg-[#f43f5e]' },
-                { id: 'pinterest', label: 'Pinterest', dot: 'bg-[#f87171]' }
+                { id: 'facebook', label: 'Facebook', dot: 'bg-[#1877F2]' }
               ].map((n) => (
                 <button
                   key={n.id}
@@ -253,14 +253,14 @@ export const CalendarioContenido: React.FC = () => {
                   <span className="text-[10px] text-[#ffc640] font-mono">Horario sugerido (+34% interacción)</span>
                 </div>
 
-                {/* Card: Sábado 21 - Pinterest 09:00 AM */}
+                {/* Card: Sábado 21 - Facebook 09:00 AM */}
                 <div className="rounded-lg bg-[#171f33] p-3.5 flex flex-col gap-2.5 border border-[#222a3d] shadow-md hover:bg-[#222a3d]/70 transition-all cursor-pointer relative overflow-hidden group">
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#f87171]"></div>
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#1877F2]"></div>
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex items-center gap-1.5">
                       <span className="material-symbols-outlined text-base text-[#d8c3ad]/60">drag_indicator</span>
-                      <span className="px-1.5 py-0.5 rounded bg-red-500/15 text-red-400 text-[10px] font-bold">
-                        Pinterest Pin 2:3
+                      <span className="px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-400 text-[10px] font-bold">
+                        Facebook Post
                       </span>
                       <span className="text-[11px] text-[#d8c3ad] font-mono">09:00 AM</span>
                     </div>
@@ -587,7 +587,7 @@ export const CalendarioContenido: React.FC = () => {
               >
                 <option value="tiktok">TikTok Video (9:16)</option>
                 <option value="instagram">Instagram Reel / Carrusel</option>
-                <option value="pinterest">Pinterest Pin de Catálogo (2:3)</option>
+                <option value="facebook">Facebook Post / Álbum</option>
               </select>
             </div>
             <div className="flex justify-end gap-2 pt-2">

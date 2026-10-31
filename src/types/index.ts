@@ -37,7 +37,7 @@ export interface CalendarPostItem {
   id: string;
   title: string;
   hook: string;
-  platform: 'tiktok' | 'instagram' | 'pinterest';
+  platform: 'tiktok' | 'instagram' | 'facebook';
   format: string;
   scheduledTime: string;
   day: string;
@@ -60,7 +60,7 @@ export interface SupportTicketItem {
   clientName: string;
   clientAvatar: string;
   tier: 'Gold Flower Member' | 'Silver Member' | 'Standard';
-  platform: 'ig' | 'tiktok' | 'pin';
+  platform: 'ig' | 'tiktok' | 'fb';
   status: 'Nuevo' | 'En Proceso' | 'Escalado' | 'Resuelto';
   slaMinutesRemaining: number;
   title: string;

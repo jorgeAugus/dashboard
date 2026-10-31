@@ -40,8 +40,8 @@ export const SocialListeningSentinel: React.FC = () => {
     },
     {
       id: 'm-3',
-      platform: 'Pinterest Pin',
-      platformColor: 'bg-rose-500/10 text-rose-400',
+      platform: 'Facebook Post',
+      platformColor: 'bg-blue-500/10 text-blue-400',
       handle: '@claudia_aqp',
       time: 'Hace 32 min',
       sentiment: 'Intención de Compra Alta',
@@ -312,7 +312,7 @@ export const SocialListeningSentinel: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-1 p-1 rounded-lg bg-[#222a3d] text-xs font-medium">
-            {['todas', 'tiktok', 'instagram', 'pinterest'].map((p) => (
+            {['todas', 'tiktok', 'instagram', 'facebook'].map((p) => (
               <button
                 key={p}
                 onClick={() => setSelectedPlatformTag(p)}

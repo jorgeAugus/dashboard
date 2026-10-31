@@ -60,7 +60,7 @@ export const TableroAnalitico: React.FC = () => {
       metricBreakdown: [
         { label: 'TikTok (49%)', value: 'S/ 1,220 (14 ventas)', dot: 'bg-[#f59e0b]' },
         { label: 'Instagram (36%)', value: 'S/ 890 (10 ventas)', dot: 'bg-[#22d3ee]' },
-        { label: 'WhatsApp / Web (15%)', value: 'S/ 370 (4 ventas)', dot: 'bg-[#f87171]' }
+        { label: 'Facebook (15%)', value: 'S/ 370 (4 ventas)', dot: 'bg-[#1877F2]' }
       ]
     },
     tiktok: {
@@ -137,40 +137,40 @@ export const TableroAnalitico: React.FC = () => {
         { label: 'Guardados en colecciones', value: '52 guardados', dot: 'bg-emerald-400' }
       ]
     },
-    pinterest: {
-      name: 'Pinterest / Catálogo',
-      subtext: 'Inspiración botánica, envolturas Kraft y pedidos directos de catálogo',
-      badge: 'Catálogo Visual & Pines',
-      badgeColor: 'text-[#f87171] bg-[#f87171]/10',
+    facebook: {
+      name: 'Facebook',
+      subtext: 'Reels, Marketplace, Catálogo botánico y atención directa por Messenger',
+      badge: 'Meta Graph & Messenger',
+      badgeColor: 'text-[#1877F2] bg-[#1877F2]/10',
       reach: '580',
-      reachLabel: 'Impresiones de Pines de Catálogo',
+      reachLabel: 'Alcance e Impresiones en Facebook',
       reachGrowth: '+52% en búsquedas de regalos',
       er: '14.20%',
-      erLabel: 'Tasa récord de guardados en tableros',
+      erLabel: 'Tasa de interacción y mensajes',
       revenue: 'S/ 370',
       ordersCount: '4 pedidos',
       ticketLabel: 'Ticket promedio: S/ 92.50',
       kpi4Value: '74',
-      kpi4Label: 'Pines Guardados en Tableros',
-      kpi4Sub: '6.8% CTR hacia WhatsApp Tienda',
+      kpi4Label: 'Mensajes & Clics en Messenger',
+      kpi4Sub: '6.8% CTR hacia Tienda Online',
       kpi4Growth: 'Gran Interés',
-      pauta: 'S/ 25 Pines Promocionados',
+      pauta: 'S/ 25 Facebook Ads Promocionados',
       roas: 'ROAS 3.9x',
       sharePercent: 15,
       shareLabel: '15% de ventas totales',
-      recommendationTitle: 'Mejor Formato en Pinterest',
-      recommendationText: 'Pines verticales 2:3 con fondo Kraft artesanal y nombres descriptivos ("Ramo Flores Amarillas Lima"). Generan alta intención de compra en usuarios que buscan ideas de regalo.',
-      recommendationGrowth: '14.2% guardados',
-      sentimentTitle: 'Intención de Compra en Tableros',
+      recommendationTitle: 'Mejor Formato en Facebook',
+      recommendationText: 'Publicaciones de catálogo y Reels con imágenes en alta resolución de ramos Kraft artesanales. Generan alta intención de compra directa y consultas por Messenger.',
+      recommendationGrowth: '14.2% engagement',
+      sentimentTitle: 'Intención de Compra en Messenger & Posts',
       sentimentText: '97% Alta Intención · 3% Dudas de envío',
       sentimentPositive: 97,
       sentimentNeutral: 3,
-      chartColor: '#f87171',
+      chartColor: '#1877F2',
       chartPath: 'M 0,175 Q 100,170 200,160 T 400,145 T 470,110 T 600,135 T 700,130',
       chartArea: 'M 0,175 Q 100,170 200,160 T 400,145 T 470,110 T 600,135 T 700,130 L 700,180 L 0,180 Z',
       metricBreakdown: [
-        { label: 'Pines guardados en tableros', value: '74 pines guardados', dot: 'bg-[#f87171]' },
-        { label: 'Tasa de clic saliente (CTR)', value: '6.8% a WhatsApp', dot: 'bg-[#ffc640]' },
+        { label: 'Conversaciones en Messenger', value: '74 mensajes directos', dot: 'bg-[#1877F2]' },
+        { label: 'Tasa de clic saliente (CTR)', value: '6.8% a Tienda Online', dot: 'bg-[#ffc640]' },
         { label: 'Búsquedas de origen asociadas', value: 'Flores Amarillas Lima', dot: 'bg-emerald-400' }
       ]
     }
@@ -217,13 +217,13 @@ export const TableroAnalitico: React.FC = () => {
     {
       id: 'pub-3',
       title: 'Catálogo de Arreglos Florales en Papel Kraft Artesanal',
-      sub: 'Enlace directo a WhatsApp Tienda',
+      sub: 'Enlace directo a Facebook Messenger y Tienda',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtSc0lSalC8Gtun0xwj5xpGWAXN-4zqtkB7oSJBRUlMkkvJ1gyY89fjFjRBD6z-GHr1Wovr7BDDxKFbVIQMggnnU-uYdZQiG9B0GslCg6R6xCEFViRP0htC3cCdD1fT1Vi23KTByadkjdCJ8N47vUO4qP1GnE5e255zLwBRT_2vacFSLR5-ro86xel2r7qYxQgPIta8RoSnMByNq3Ac8bJLCOdHS5WklcFijkY2OeKPpnpHfvSLirOcA',
-      channel: 'pinterest',
-      format: 'Pin de Catálogo',
+      channel: 'facebook',
+      format: 'Facebook Post / Álbum',
       reach: '580',
       reachRaw: 580,
-      er: '14.2% Guardados',
+      er: '14.2% Interacción',
       erRaw: 14.2,
       revenue: 'S/ 480',
       revenueRaw: 480,
@@ -387,17 +387,17 @@ export const TableroAnalitico: React.FC = () => {
           </button>
           <button
             onClick={() => {
-              setActiveChannelFilter('pinterest');
-              showToast('Cargando estadísticas de Pinterest & Catálogo');
+              setActiveChannelFilter('facebook');
+              showToast('Cargando estadísticas de Facebook & Messenger');
             }}
             className={`px-3.5 py-1.5 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              activeChannelFilter === 'pinterest'
-                ? 'bg-[#222a3d] text-[#f87171] border border-[#f87171]/50 shadow-sm font-semibold'
+              activeChannelFilter === 'facebook'
+                ? 'bg-[#222a3d] text-[#1877F2] border border-[#1877F2]/50 shadow-sm font-semibold'
                 : 'text-[#8e98b0] hover:text-[#dae2fd] hover:bg-[#171f33]'
             }`}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#f87171]"></span>
-            Pinterest / Catálogo
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1877F2]"></span>
+            Facebook
           </button>
         </div>
       </section>
@@ -609,8 +609,8 @@ export const TableroAnalitico: React.FC = () => {
                   <circle cx="50" cy="50" r="38" fill="none" stroke="#f59e0b" strokeWidth="12" strokeDasharray="117 238.7" strokeDashoffset="0"></circle>
                   {/* IG 36% */}
                   <circle cx="50" cy="50" r="38" fill="none" stroke="#22d3ee" strokeWidth="12" strokeDasharray="86 238.7" strokeDashoffset="-117"></circle>
-                  {/* Pinterest 15% */}
-                  <circle cx="50" cy="50" r="38" fill="none" stroke="#f87171" strokeWidth="12" strokeDasharray="35.8 238.7" strokeDashoffset="-203"></circle>
+                  {/* Facebook 15% */}
+                  <circle cx="50" cy="50" r="38" fill="none" stroke="#1877F2" strokeWidth="12" strokeDasharray="35.8 238.7" strokeDashoffset="-203"></circle>
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                   <span className="text-base font-bold text-[#dae2fd]">S/ 2,480</span>

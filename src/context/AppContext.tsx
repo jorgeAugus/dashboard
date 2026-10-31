@@ -6,8 +6,8 @@ interface AppContextType {
   setCurrentModule: (mod: NavigationModule) => void;
   searchQuery: string;
   setSearchQuery: (q: string) => void;
-  activeChannelFilter: 'all' | 'tiktok' | 'instagram' | 'pinterest';
-  setActiveChannelFilter: (c: 'all' | 'tiktok' | 'instagram' | 'pinterest') => void;
+  activeChannelFilter: 'all' | 'tiktok' | 'instagram' | 'facebook';
+  setActiveChannelFilter: (c: 'all' | 'tiktok' | 'instagram' | 'facebook') => void;
   notificationsCount: number;
   clearNotifications: () => void;
   isPresentationOpen: boolean;
@@ -29,7 +29,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentModule, setCurrentModule] = useState<NavigationModule>('tablero-analitico');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeChannelFilter, setActiveChannelFilter] = useState<'all' | 'tiktok' | 'instagram' | 'pinterest'>('all');
+  const [activeChannelFilter, setActiveChannelFilter] = useState<'all' | 'tiktok' | 'instagram' | 'facebook'>('all');
   const [notificationsCount, setNotificationsCount] = useState(2);
   const [isPresentationOpen, setIsPresentationOpen] = useState(false);
   const [activeCampaign, setActiveCampaign] = useState('Kajel Perú - Campaña Flores Amarillas (21 de Septiembre)');

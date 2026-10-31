@@ -496,7 +496,7 @@ export const DirectorioInfluencers: React.FC = () => {
               <option value="todas">Todas las Plataformas</option>
               <option value="tiktok">TikTok</option>
               <option value="instagram">Instagram</option>
-              <option value="pinterest">Pinterest</option>
+              <option value="facebook">Facebook</option>
             </select>
             <select
               value={sortBy}

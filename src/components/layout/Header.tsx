@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { useAuth } from '../../context/AuthContext';
 
 interface HeaderProps {
   onToggleMobile?: () => void;
@@ -19,7 +18,6 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
     theme,
     toggleTheme
   } = useApp();
-  const { profile, openAuthModal, user } = useAuth();
   const [showNotifications, setShowNotifications] = useState(false);
 
   const notifications = [
@@ -171,33 +169,6 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobile }) => {
             <span className="material-symbols-outlined text-xl transition-transform duration-300 group-hover:rotate-45">
               {theme === 'dark' ? 'light_mode' : 'dark_mode'}
             </span>
-          </button>
-
-          {/* Profile Trigger */}
-          <button
-            onClick={openAuthModal}
-            className="flex items-center gap-2 pl-2 p-1 rounded-lg hover:bg-[#222a3d] transition-colors group text-left"
-            title="Gestionar Perfil y Autenticación Firebase"
-          >
-            <div className="relative">
-              <img
-                src={profile.avatarUrl}
-                alt="Profile Avatar"
-                className="w-8 h-8 rounded-full object-cover ring-1 ring-[#f59e0b]/40 group-hover:ring-[#f59e0b]"
-              />
-              <span
-                className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-[#0b1326] ${
-                  user ? 'bg-emerald-400' : 'bg-[#ffc640]'
-                }`}
-                title={user ? 'Conectado a Firebase' : 'Sesión Local Activa'}
-              ></span>
-            </div>
-            <div className="hidden xl:flex flex-col text-left">
-              <span className="text-xs font-semibold text-[#dae2fd] group-hover:text-[#ffc174] transition-colors">
-                {profile.displayName || profile.role}
-              </span>
-              <span className="text-[10px] text-[#d8c3ad] font-mono">{profile.email}</span>
-            </div>
           </button>
         </div>
       </div>
